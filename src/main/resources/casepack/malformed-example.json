@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "casepack-1.0",
+  "id": "cp-bad-1",
+  "title": "格式错误样例（导入器必须明确报错且不提交任何片段）",
+  "curves": [],
+  "measurements": [
+    {"id": "BAD-1", "labCode": "GSB-X1", "age14C": "not-a-number", "sigma14C": 20.0, "source": {"origin": "CASE_PACK", "detail": "坏数据：年龄不是数字"}}
+  ],
+  "offsets": [],
+  "sequences": []
+}

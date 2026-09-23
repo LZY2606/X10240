@@ -1,0 +1,152 @@
+{
+  "schemaVersion": "casepack-1.0",
+  "id": "cp-carbon-candidates-1",
+  "title": "碳年候选席：校准曲线、储库偏移与多峰年代证据",
+  "description": "离线年代学案例。初始基线后包含一次参数修订、一次只影响局部依赖的源数据改动、一次互相冲突的人工决定，并实际经过多峰/边界插值/储库偏移/BCE-CE 跨界/层序矛盾/曲线升版/并列区间。",
+  "fixedSeed": 20260919,
+  "curves": [
+    {"code": "SIMC", "version": "2026-v1", "role": "BASELINE"},
+    {"code": "SIMC", "version": "2026-v2", "role": "UPGRADE"}
+  ],
+  "eraSystem": {
+    "id": "era-bcece",
+    "code": "BCE_CE_ASTRO",
+    "name": "BCE/CE astronomical (no year 0)",
+    "anchorCalBp": 1950.0,
+    "note": "calBP=1950 为 1 BCE/1 CE 天文纪年边界"
+  },
+  "measurements": [
+    {
+      "id": "M-MULTI",
+      "labCode": "GSB-501",
+      "age14C": 2462.0,
+      "sigma14C": 28.0,
+      "ageUnit": "14C yr BP",
+      "sampleMaterial": "charred barley grain",
+      "offsetId": "OFF-NONE",
+      "source": {"origin": "CASE_PACK", "detail": "章节1/测量台账 GSB-501（多峰摆动带）"}
+    },
+    {
+      "id": "M-ANCHOR",
+      "labCode": "GSB-502",
+      "age14C": 1908.0,
+      "sigma14C": 22.0,
+      "ageUnit": "14C yr BP",
+      "sampleMaterial": "olive pit",
+      "offsetId": "OFF-NONE",
+      "source": {"origin": "CASE_PACK", "detail": "章节1/测量台账 GSB-502（BCE/CE 跨界峰）"}
+    },
+    {
+      "id": "M-MAR",
+      "labCode": "GSB-503",
+      "age14C": 3668.0,
+      "sigma14C": 30.0,
+      "ageUnit": "14C yr BP",
+      "sampleMaterial": "marine shell (patella)",
+      "offsetId": "OFF-MIXED",
+      "source": {"origin": "CASE_PACK", "detail": "章节1/测量台账 GSB-503（平坦海洋带+混合储库偏移）"}
+    },
+    {
+      "id": "M-TIE",
+      "labCode": "GSB-504",
+      "age14C": 912.0,
+      "sigma14C": 16.0,
+      "ageUnit": "14C yr BP",
+      "sampleMaterial": "short-lived seed",
+      "offsetId": "OFF-NONE",
+      "source": {"origin": "CASE_PACK", "detail": "章节1/测量台账 GSB-504（并列平台）"}
+    },
+    {
+      "id": "M-SEQ",
+      "labCode": "GSB-505",
+      "age14C": 2405.0,
+      "sigma14C": 24.0,
+      "ageUnit": "14C yr BP",
+      "sampleMaterial": "charcoal (twig)",
+      "offsetId": "OFF-NONE",
+      "source": {"origin": "CASE_PACK", "detail": "章节1/测量台账 GSB-505（层序下层）"}
+    },
+    {
+      "id": "M-SEQ2",
+      "labCode": "GSB-506",
+      "age14C": 2575.0,
+      "sigma14C": 24.0,
+      "ageUnit": "14C yr BP",
+      "sampleMaterial": "charcoal (twig)",
+      "offsetId": "OFF-NONE",
+      "source": {"origin": "CASE_PACK", "detail": "章节1/测量台账 GSB-506（层序上层，台账年龄顺序与地层相反）"}
+    }
+  ],
+  "offsets": [
+    {
+      "id": "OFF-NONE",
+      "code": "NONE",
+      "name": "无储库偏移",
+      "distribution": {"model": "DELTA_R", "components": [{"mean": 0.0, "sigma": 0.0, "weight": 1.0, "unit": "14C yr"}]},
+      "source": {"origin": "CASE_PACK", "detail": "章节1/偏移假设：陆地短年样品，ΔR=0±0"}
+    },
+    {
+      "id": "OFF-MIXED",
+      "code": "MARINE-MIXED",
+      "name": "海湾混合食性储库偏移（双峰先验）",
+      "distribution": {
+        "model": "MIXTURE",
+        "components": [
+          {"mean": 320.0, "sigma": 35.0, "weight": 0.6, "unit": "14C yr"},
+          {"mean": 430.0, "sigma": 45.0, "weight": 0.4, "unit": "14C yr"}
+        ]
+      },
+      "source": {"origin": "CASE_PACK", "detail": "章节1/现代贝类比测：两种食性混合，ΔR=320±35(0.6)/430±45(0.4)"}
+    },
+    {
+      "id": "OFF-MIXED-REV",
+      "code": "MARINE-MIXED",
+      "name": "海湾混合食性储库偏移（复测修订）",
+      "distribution": {
+        "model": "MIXTURE",
+        "components": [
+          {"mean": 295.0, "sigma": 30.0, "weight": 0.65, "unit": "14C yr"},
+          {"mean": 415.0, "sigma": 40.0, "weight": 0.35, "unit": "14C yr"}
+        ]
+      },
+      "revisionOf": "OFF-MIXED",
+      "source": {"origin": "CASE_PACK", "detail": "章节2/参数修订：新增 12 个现代样品复测"}
+    }
+  ],
+  "sequences": [
+    {
+      "id": "SEQ-1",
+      "type": "BEFORE",
+      "fromSampleId": "M-SEQ",
+      "toSampleId": "M-SEQ2",
+      "source": {"origin": "CASE_PACK", "detail": "章节1/地层记录：探沟 T2 第4层早于第3层"}
+    },
+    {
+      "id": "SEQ-2",
+      "type": "CONTEMPORANEOUS",
+      "fromSampleId": "M-ANCHOR",
+      "toSampleId": "M-TIE",
+      "windowCalBp": 40.0,
+      "source": {"origin": "CASE_PACK", "detail": "章节1/同活动面假设（预期不成立，用于检测误连）"}
+    }
+  ],
+  "exclusions": [
+    {
+      "id": "EXC-1",
+      "targetType": "SAMPLE",
+      "targetId": "M-MAR",
+      "reason": "海洋样品在基线核对阶段暂不纳入陆地年代框架，仅单独审阅",
+      "decidedBy": "reviewer@example.org",
+      "source": {"origin": "CASE_PACK", "detail": "章节1/排除决定：待储库偏移复审"}
+    }
+  ],
+  "chapters": [
+    {"id": "CH1", "title": "基线核对：六类来源逐项可溯", "action": "IMPORT_BASELINE"},
+    {"id": "CH2", "title": "产生候选：多峰/边界/偏移/BCE-CE/并列区间校准与层序分析", "action": "DERIVE_ALL"},
+    {"id": "CH3", "title": "参数修订：采用复测储库偏移 OFF-MIXED-REV 并重算 GSB-503", "action": "REVISE_OFFSET", "offsetRevisionId": "OFF-MIXED-REV", "measurementId": "M-MAR"},
+    {"id": "CH4", "title": "局部源数据改动：仅修订 GSB-505 标准差（24→31），只有其校准与层序过期", "action": "PATCH_MEASUREMENT", "measurementId": "M-SEQ", "sigma14C": 31.0},
+    {"id": "CH5", "title": "冲突人工决定：接受早模式（决定A）与否定同一区间（决定B）同时保留并标冲突", "action": "CONFLICTING_DECISIONS", "measurementId": "M-SEQ"},
+    {"id": "CH6", "title": "曲线升版：SIMC-2026-v1 → v2，仅多峰带相关结果过期", "action": "UPGRADE_CURVE", "fromCurveId": "SIMC-2026-v1", "toCurveVersion": "2026-v2"},
+    {"id": "CH7", "title": "导出、删除本地库、再导入：身份/顺序/来源关系保持", "action": "EXPORT_ROUNDTRIP"}
+  ]
+}
