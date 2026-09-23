@@ -1,0 +1,271 @@
+{
+ "curve_id": "SYNTH-20",
+ "version": "synth20-v1",
+ "successor_of": null,
+ "time_coordinate": "cal BP (years before 1950 CE)",
+ "c14_half_life_years": 5568,
+ "point_spacing_years": 5,
+ "provenance": {
+  "origin": "synthetic offline teaching curve shipped with chronocarbon case pack",
+  "authority": "chronocarbon case-pack SYNTH-20",
+  "document": "casepack/README.md",
+  "note": "Deterministic analytic wiggles; no public-network data."
+ },
+ "points": [
+  {
+   "cal_bp": 1850,
+   "c14_bp": 1847.089,
+   "sigma": 32.0
+  },
+  {
+   "cal_bp": 1855,
+   "c14_bp": 1849.728,
+   "sigma": 31.5
+  },
+  {
+   "cal_bp": 1860,
+   "c14_bp": 1850.933,
+   "sigma": 31.0
+  },
+  {
+   "cal_bp": 1865,
+   "c14_bp": 1850.191,
+   "sigma": 30.5
+  },
+  {
+   "cal_bp": 1870,
+   "c14_bp": 1847.035,
+   "sigma": 30.0
+  },
+  {
+   "cal_bp": 1875,
+   "c14_bp": 1841.188,
+   "sigma": 29.5
+  },
+  {
+   "cal_bp": 1880,
+   "c14_bp": 1832.748,
+   "sigma": 29.0
+  },
+  {
+   "cal_bp": 1885,
+   "c14_bp": 1822.344,
+   "sigma": 28.5
+  },
+  {
+   "cal_bp": 1890,
+   "c14_bp": 1811.228,
+   "sigma": 28.0
+  },
+  {
+   "cal_bp": 1895,
+   "c14_bp": 1801.22,
+   "sigma": 27.5
+  },
+  {
+   "cal_bp": 1900,
+   "c14_bp": 1794.509,
+   "sigma": 27.0
+  },
+  {
+   "cal_bp": 1905,
+   "c14_bp": 1793.32,
+   "sigma": 26.5
+  },
+  {
+   "cal_bp": 1910,
+   "c14_bp": 1799.517,
+   "sigma": 26.0
+  },
+  {
+   "cal_bp": 1915,
+   "c14_bp": 1814.225,
+   "sigma": 25.5
+  },
+  {
+   "cal_bp": 1920,
+   "c14_bp": 1837.555,
+   "sigma": 25.0
+  },
+  {
+   "cal_bp": 1925,
+   "c14_bp": 1868.457,
+   "sigma": 24.5
+  },
+  {
+   "cal_bp": 1930,
+   "c14_bp": 1904.735,
+   "sigma": 24.0
+  },
+  {
+   "cal_bp": 1935,
+   "c14_bp": 1943.212,
+   "sigma": 23.5
+  },
+  {
+   "cal_bp": 1940,
+   "c14_bp": 1980.07,
+   "sigma": 23.0
+  },
+  {
+   "cal_bp": 1945,
+   "c14_bp": 2011.337,
+   "sigma": 22.5
+  },
+  {
+   "cal_bp": 1950,
+   "c14_bp": 2033.509,
+   "sigma": 22.0
+  },
+  {
+   "cal_bp": 1955,
+   "c14_bp": 2044.151,
+   "sigma": 22.5
+  },
+  {
+   "cal_bp": 1960,
+   "c14_bp": 2042.377,
+   "sigma": 23.0
+  },
+  {
+   "cal_bp": 1965,
+   "c14_bp": 2029.035,
+   "sigma": 23.5
+  },
+  {
+   "cal_bp": 1970,
+   "c14_bp": 2006.553,
+   "sigma": 24.0
+  },
+  {
+   "cal_bp": 1975,
+   "c14_bp": 1978.516,
+   "sigma": 24.5
+  },
+  {
+   "cal_bp": 1980,
+   "c14_bp": 1949.07,
+   "sigma": 25.0
+  },
+  {
+   "cal_bp": 1985,
+   "c14_bp": 1922.342,
+   "sigma": 25.5
+  },
+  {
+   "cal_bp": 1990,
+   "c14_bp": 1901.946,
+   "sigma": 26.0
+  },
+  {
+   "cal_bp": 1995,
+   "c14_bp": 1890.637,
+   "sigma": 26.5
+  },
+  {
+   "cal_bp": 2000,
+   "c14_bp": 1890.1,
+   "sigma": 27.0
+  },
+  {
+   "cal_bp": 2005,
+   "c14_bp": 1900.859,
+   "sigma": 27.5
+  },
+  {
+   "cal_bp": 2010,
+   "c14_bp": 1922.3,
+   "sigma": 28.0
+  },
+  {
+   "cal_bp": 2015,
+   "c14_bp": 1952.788,
+   "sigma": 28.5
+  },
+  {
+   "cal_bp": 2020,
+   "c14_bp": 1989.864,
+   "sigma": 29.0
+  },
+  {
+   "cal_bp": 2025,
+   "c14_bp": 2030.506,
+   "sigma": 29.5
+  },
+  {
+   "cal_bp": 2030,
+   "c14_bp": 2071.413,
+   "sigma": 30.0
+  },
+  {
+   "cal_bp": 2035,
+   "c14_bp": 2109.331,
+   "sigma": 30.5
+  },
+  {
+   "cal_bp": 2040,
+   "c14_bp": 2141.379,
+   "sigma": 31.0
+  },
+  {
+   "cal_bp": 2045,
+   "c14_bp": 2165.387,
+   "sigma": 31.5
+  },
+  {
+   "cal_bp": 2050,
+   "c14_bp": 2180.177,
+   "sigma": 32.0
+  },
+  {
+   "cal_bp": 2055,
+   "c14_bp": 2185.719,
+   "sigma": 32.5
+  },
+  {
+   "cal_bp": 2060,
+   "c14_bp": 2183.106,
+   "sigma": 33.0
+  },
+  {
+   "cal_bp": 2065,
+   "c14_bp": 2174.31,
+   "sigma": 33.5
+  },
+  {
+   "cal_bp": 2070,
+   "c14_bp": 2161.789,
+   "sigma": 34.0
+  },
+  {
+   "cal_bp": 2075,
+   "c14_bp": 2148.015,
+   "sigma": 34.5
+  },
+  {
+   "cal_bp": 2080,
+   "c14_bp": 2135.076,
+   "sigma": 35.0
+  },
+  {
+   "cal_bp": 2085,
+   "c14_bp": 2124.419,
+   "sigma": 35.5
+  },
+  {
+   "cal_bp": 2090,
+   "c14_bp": 2116.779,
+   "sigma": 36.0
+  },
+  {
+   "cal_bp": 2095,
+   "c14_bp": 2112.271,
+   "sigma": 36.5
+  },
+  {
+   "cal_bp": 2100,
+   "c14_bp": 2110.576,
+   "sigma": 37.0
+  }
+ ]
+}
