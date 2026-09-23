@@ -1,0 +1,44 @@
+{
+ "pack": "casepack-revisions",
+ "narrative": "One parameter revision, one local source-data change, one curve upgrade, and two conflicting human decisions.",
+ "ops": [
+  {
+   "op": "revise",
+   "kind": "OFFSET",
+   "sourceId": "offset-marine-local",
+   "unit": "14C yr (DeltaR)",
+   "provenance": "revised paired-shell estimate, site report addendum 2026-06-02",
+   "raw": "{\"label\": \"local marine dR (2026 revision)\", \"deltaR\": -95.0, \"deltaRSigma\": 40.0, \"note\": \"addendum: 9 paired samples\"}"
+  },
+  {
+   "op": "revise",
+   "kind": "MEASUREMENT",
+   "sourceId": "KIA-55004",
+   "unit": "14C yr BP",
+   "provenance": "lab erratum KIA-2024-118-e1: sigma corrected 30 -> 25",
+   "raw": "{\"labCode\": \"KIA-55004\", \"bpAge\": 1725.0, \"sigma\": 25.0, \"material\": \"bone collagen\", \"note\": \"erratum: smaller sigma\"}"
+  },
+  {
+   "op": "revise",
+   "kind": "CURVE",
+   "sourceId": "curve-labcal",
+   "unit": "cal BP <-> 14C yr BP",
+   "provenance": "curve upgrade LabCal 2024 (supersedes 2020)",
+   "raw": "{\"name\": \"LabCal\", \"curveVersion\": \"2024\", \"points\": [{\"calBp\": 400.0, \"c14Age\": 528.47, \"sigma\": 23.0}, {\"calBp\": 450.0, \"c14Age\": 567.89, \"sigma\": 22.79}, {\"calBp\": 500.0, \"c14Age\": 586.54, \"sigma\": 22.27}, {\"calBp\": 550.0, \"c14Age\": 592.59, \"sigma\": 21.47}, {\"calBp\": 600.0, \"c14Age\": 602.27, \"sigma\": 20.4}, {\"calBp\": 650.0, \"c14Age\": 628.9, \"sigma\": 19.12}, {\"calBp\": 700.0, \"c14Age\": 674.18, \"sigma\": 17.68}, {\"calBp\": 750.0, \"c14Age\": 727.66, \"sigma\": 16.13}, {\"calBp\": 800.0, \"c14Age\": 775.01, \"sigma\": 15.47}, {\"calBp\": 850.0, \"c14Age\": 808.86, \"sigma\": 17.04}, {\"calBp\": 900.0, \"c14Age\": 834.43, \"sigma\": 18.54}, {\"calBp\": 950.0, \"c14Age\": 865.88, \"sigma\": 19.89}, {\"calBp\": 1000.0, \"c14Age\": 915.97, \"sigma\": 21.05}, {\"calBp\": 1050.0, \"c14Age\": 986.52, \"sigma\": 21.97}, {\"calBp\": 1100.0, \"c14Age\": 1066.57, \"sigma\": 22.61}, {\"calBp\": 1150.0, \"c14Age\": 1139.58, \"sigma\": 22.95}, {\"calBp\": 1200.0, \"c14Age\": 1194.62, \"sigma\": 22.97}, {\"calBp\": 1250.0, \"c14Age\": 1233.38, \"sigma\": 22.67}, {\"calBp\": 1300.0, \"c14Age\": 1268.21, \"sigma\": 22.07}, {\"calBp\": 1350.0, \"c14Age\": 1312.47, \"sigma\": 21.18}, {\"calBp\": 1400.0, \"c14Age\": 1370.31, \"sigma\": 20.05}, {\"calBp\": 1450.0, \"c14Age\": 1433.31, \"sigma\": 18.72}, {\"calBp\": 1500.0, \"c14Age\": 1486.38, \"sigma\": 17.24}, {\"calBp\": 1550.0, \"c14Age\": 1518.67, \"sigma\": 15.66}, {\"calBp\": 1600.0, \"c14Age\": 1531.7, \"sigma\": 15.93}, {\"calBp\": 1650.0, \"c14Age\": 1538.73, \"sigma\": 17.49}, {\"calBp\": 1700.0, \"c14Age\": 1555.83, \"sigma\": 18.95}, {\"calBp\": 1750.0, \"c14Age\": 1591.04, \"sigma\": 20.26}, {\"calBp\": 1800.0, \"c14Age\": 1639.42, \"sigma\": 21.35}, {\"calBp\": 1850.0, \"c14Age\": 1691.27, \"sigma\": 22.19}, {\"calBp\": 1900.0, \"c14Age\": 1735.73, \"sigma\": 22.74}, {\"calBp\": 1950.0, \"c14Age\": 1767.38, \"sigma\": 22.99}, {\"calBp\": 2000.0, \"c14Age\": 1792.76, \"sigma\": 22.91}, {\"calBp\": 2050.0, \"c14Age\": 1827.91, \"sigma\": 22.53}, {\"calBp\": 2100.0, \"c14Age\": 1885.11, \"sigma\": 21.84}, {\"calBp\": 2150.0, \"c14Age\": 1959.55, \"sigma\": 20.88}, {\"calBp\": 2200.0, \"c14Age\": 2036.3, \"sigma\": 19.68}, {\"calBp\": 2250.0, \"c14Age\": 2196.13, \"sigma\": 18.3}, {\"calBp\": 2300.0, \"c14Age\": 2390.05, \"sigma\": 16.78}, {\"calBp\": 2350.0, \"c14Age\": 2480.66, \"sigma\": 15.2}, {\"calBp\": 2400.0, \"c14Age\": 2483.0, \"sigma\": 16.39}, {\"calBp\": 2450.0, \"c14Age\": 2480.66, \"sigma\": 17.93}, {\"calBp\": 2500.0, \"c14Age\": 2475.0, \"sigma\": 19.35}, {\"calBp\": 2550.0, \"c14Age\": 2469.34, \"sigma\": 20.6}, {\"calBp\": 2600.0, \"c14Age\": 2467.0, \"sigma\": 21.62}, {\"calBp\": 2650.0, \"c14Age\": 2469.34, \"sigma\": 22.38}, {\"calBp\": 2700.0, \"c14Age\": 2481.47, \"sigma\": 22.85}, {\"calBp\": 2750.0, \"c14Age\": 2504.25, \"sigma\": 23.0}, {\"calBp\": 2800.0, \"c14Age\": 2539.37, \"sigma\": 22.83}, {\"calBp\": 2850.0, \"c14Age\": 2581.94, \"sigma\": 22.35}, {\"calBp\": 2900.0, \"c14Age\": 2629.82, \"sigma\": 21.58}, {\"calBp\": 2950.0, \"c14Age\": 2669.15, \"sigma\": 20.55}, {\"calBp\": 3000.0, \"c14Age\": 2693.39, \"sigma\": 19.29}, {\"calBp\": 3050.0, \"c14Age\": 2704.88, \"sigma\": 17.87}, {\"calBp\": 3100.0, \"c14Age\": 2717.85, \"sigma\": 16.32}, {\"calBp\": 3150.0, \"c14Age\": 2750.38, \"sigma\": 15.27}, {\"calBp\": 3200.0, \"c14Age\": 2809.39, \"sigma\": 16.85}, {\"calBp\": 3250.0, \"c14Age\": 2883.51, \"sigma\": 18.36}, {\"calBp\": 3300.0, \"c14Age\": 2952.76, \"sigma\": 19.74}, {\"calBp\": 3350.0, \"c14Age\": 3006.69, \"sigma\": 20.92}, {\"calBp\": 3400.0, \"c14Age\": 3047.39, \"sigma\": 21.87}, {\"calBp\": 3450.0, \"c14Age\": 3087.16, \"sigma\": 22.55}, {\"calBp\": 3500.0, \"c14Age\": 3138.88, \"sigma\": 22.92}, {\"calBp\": 3550.0, \"c14Age\": 3205.87, \"sigma\": 22.98}, {\"calBp\": 3600.0, \"c14Age\": 3278.78, \"sigma\": 22.73}, {\"calBp\": 3650.0, \"c14Age\": 3341.72, \"sigma\": 22.16}, {\"calBp\": 3700.0, \"c14Age\": 3383.28, \"sigma\": 21.31}, {\"calBp\": 3750.0, \"c14Age\": 3404.53, \"sigma\": 20.2}, {\"calBp\": 3800.0, \"c14Age\": 3418.27, \"sigma\": 18.89}, {\"calBp\": 3850.0, \"c14Age\": 3439.99, \"sigma\": 17.42}, {\"calBp\": 3900.0, \"c14Age\": 3477.14, \"sigma\": 15.86}, {\"calBp\": 3950.0, \"c14Age\": 3524.36, \"sigma\": 15.74}, {\"calBp\": 4000.0, \"c14Age\": 3568.07, \"sigma\": 17.3}, {\"calBp\": 4050.0, \"c14Age\": 3597.11, \"sigma\": 18.78}, {\"calBp\": 4100.0, \"c14Age\": 3611.55, \"sigma\": 20.1}, {\"calBp\": 4150.0, \"c14Age\": 3623.45, \"sigma\": 21.23}, {\"calBp\": 4200.0, \"c14Age\": 3648.82, \"sigma\": 22.1}, {\"calBp\": 4250.0, \"c14Age\": 3696.51, \"sigma\": 22.69}, {\"calBp\": 4300.0, \"c14Age\": 3762.19, \"sigma\": 22.98}, {\"calBp\": 4350.0, \"c14Age\": 3831.49, \"sigma\": 22.94}, {\"calBp\": 4400.0, \"c14Age\": 3890.26, \"sigma\": 22.59}, {\"calBp\": 4450.0, \"c14Age\": 3934.37, \"sigma\": 21.94}, {\"calBp\": 4500.0, \"c14Age\": 3972.15, \"sigma\": 21.01}, {\"calBp\": 4550.0, \"c14Age\": 4017.69, \"sigma\": 19.84}, {\"calBp\": 4600.0, \"c14Age\": 4079.86, \"sigma\": 18.48}, {\"calBp\": 4650.0, \"c14Age\": 4155.12, \"sigma\": 16.98}, {\"calBp\": 4700.0, \"c14Age\": 4229.26, \"sigma\": 15.4}, {\"calBp\": 4750.0, \"c14Age\": 4286.97, \"sigma\": 16.2}, {\"calBp\": 4800.0, \"c14Age\": 4322.33, \"sigma\": 17.75}, {\"calBp\": 4850.0, \"c14Age\": 4342.73, \"sigma\": 19.18}, {\"calBp\": 4900.0, \"c14Age\": 4363.37, \"sigma\": 20.46}, {\"calBp\": 4950.0, \"c14Age\": 4396.42, \"sigma\": 21.51}, {\"calBp\": 5000.0, \"c14Age\": 4442.51, \"sigma\": 22.3}, {\"calBp\": 5050.0, \"c14Age\": 4490.79, \"sigma\": 22.81}, {\"calBp\": 5100.0, \"c14Age\": 4527.41, \"sigma\": 23.0}, {\"calBp\": 5150.0, \"c14Age\": 4546.31, \"sigma\": 22.87}, {\"calBp\": 5200.0, \"c14Age\": 4554.36, \"sigma\": 22.43}, {\"calBp\": 5250.0, \"c14Age\": 4567.26, \"sigma\": 21.69}, {\"calBp\": 5300.0, \"c14Age\": 4598.91, \"sigma\": 20.69}, {\"calBp\": 5350.0, \"c14Age\": 4651.99, \"sigma\": 19.46}, {\"calBp\": 5400.0, \"c14Age\": 4716.46, \"sigma\": 18.05}, {\"calBp\": 5450.0, \"c14Age\": 4777.01, \"sigma\": 16.52}, {\"calBp\": 5500.0, \"c14Age\": 4824.07, \"sigma\": 15.07}, {\"calBp\": 5550.0, \"c14Age\": 4860.51, \"sigma\": 16.66}, {\"calBp\": 5600.0, \"c14Age\": 4899.11, \"sigma\": 18.18}, {\"calBp\": 5650.0, \"c14Age\": 4952.71, \"sigma\": 19.58}, {\"calBp\": 5700.0, \"c14Age\": 5024.23, \"sigma\": 20.79}, {\"calBp\": 5750.0, \"c14Age\": 5103.74, \"sigma\": 21.77}, {\"calBp\": 5800.0, \"c14Age\": 5174.81, \"sigma\": 22.48}, {\"calBp\": 5850.0, \"c14Age\": 5225.6, \"sigma\": 22.9}, {\"calBp\": 5900.0, \"c14Age\": 5256.77, \"sigma\": 22.99}, {\"calBp\": 5950.0, \"c14Age\": 5280.5, \"sigma\": 22.77}, {\"calBp\": 6000.0, \"c14Age\": 5311.44, \"sigma\": 22.24}, {\"calBp\": 6050.0, \"c14Age\": 5356.08, \"sigma\": 21.43}, {\"calBp\": 6100.0, \"c14Age\": 5408.24, \"sigma\": 20.35}, {\"calBp\": 6150.0, \"c14Age\": 5453.91, \"sigma\": 19.06}, {\"calBp\": 6200.0, \"c14Age\": 5481.92, \"sigma\": 17.61}]}"
+  },
+  {
+   "op": "adjudicate",
+   "measurement": "KIA-55001",
+   "verdict": "ACCEPTED",
+   "actor": "reviewer-a",
+   "reason": "plateau multi-peak accepted as the working chronology"
+  },
+  {
+   "op": "adjudicate",
+   "measurement": "KIA-55001",
+   "verdict": "REJECTED",
+   "actor": "reviewer-b",
+   "reason": "disputes plateau interpretation; conflict kept in history"
+  }
+ ]
+}
