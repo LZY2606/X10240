@@ -1,0 +1,44 @@
+# Synthetic IntCal20-like calibration curve for offline case pack (NOT real IntCal20 data).
+# Units: CAL_BP (years before 1950), C14_BP, sigma C14 years. Source: case-pack/curves/intcal20-synthetic-v1
+# The segment around calBP 2100-1850 is deliberately flat/wiggly to produce a multi-modal
+# posterior near the BCE/CE boundary; steep segments elsewhere give narrow intervals.
+calBP	C14BP	sigma
+2400	2385	18
+2350	2340	18
+2300	2300	17
+2250	2272	17
+2220	2258	16
+2200	2248	16
+2180	2246	16
+2160	2242	16
+2140	2238	15
+2120	2232	15
+2100	2224	15
+2080	2214	15
+2060	2204	15
+2040	2192	15
+2020	2180	15
+2000	2164	14
+1990	2154	14
+1980	2146	14
+1970	2140	14
+1960	2136	14
+1950	2135	14
+1940	2137	14
+1930	2141	14
+1920	2147	15
+1910	2155	15
+1900	2162	15
+1890	2166	15
+1880	2168	15
+1870	2167	15
+1860	2163	15
+1850	2156	15
+1830	2140	15
+1800	2108	16
+1750	2050	17
+1700	1995	18
+1650	1935	18
+1600	1875	19
+1550	1815	19
+1500	1755	20
