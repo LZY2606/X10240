@@ -1,0 +1,28 @@
+{
+  "title": "参数修订：S2 改用单一高斯储库偏移",
+  "commands": [
+    {
+      "type": "REGISTER_SOURCE",
+      "sourceId": "src-review",
+      "payload": {
+        "source": {
+          "id": "src-review-rev1",
+          "kind": "reviewer-note",
+          "title": "周会修订：S2 偏移假设改高斯",
+          "ref": "minutes/2026-09-review.md#rev1",
+          "receivedRevision": 2
+        }
+      }
+    },
+    {
+      "type": "SET_ASSUMPTION",
+      "sourceId": "src-review-rev1",
+      "payload": {
+        "sampleId": "S2",
+        "offsetId": "off-bay-gauss",
+        "reason": "周会裁定：证据不足以支持三情景，改用高斯 180±60",
+        "sourceId": "src-review-rev1"
+      }
+    }
+  ]
+}

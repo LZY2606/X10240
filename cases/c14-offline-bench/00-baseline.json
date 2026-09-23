@@ -1,0 +1,369 @@
+{
+  "projectId": "carbon-roundtable-2026",
+  "title": "碳年候选席：校准曲线、储库偏移与多峰年代证据",
+  "eraSystem": "BP / BCE-CE astronomical (year 0 = 1 BCE)",
+  "notes": "离线领域案例。所有领域量携带单位；原始输入经来源登记，修订以父子版本表达。",
+  "actor": "importer",
+  "sources": [
+    {
+      "id": "src-lab-alpha",
+      "kind": "lab-sheet",
+      "title": "Alpha 实验室测年报告单 A-2026-17",
+      "ref": "lab/A-2026-17.pdf"
+    },
+    {
+      "id": "src-curve-v1",
+      "kind": "calibration-curve",
+      "title": "IntCal-demo 离线校准曲线 v1",
+      "ref": "curves/intcal-demo-v1.csv"
+    },
+    {
+      "id": "src-marine",
+      "kind": "reservoir-study",
+      "title": "本地海湾储库偏移调查 2019",
+      "ref": "reservoir/bay-delta-r-2019.json"
+    },
+    {
+      "id": "src-strat",
+      "kind": "stratigraphic-note",
+      "title": "T3 探方层序记录",
+      "ref": "field/T3-strat.md"
+    },
+    {
+      "id": "src-review",
+      "kind": "reviewer-note",
+      "title": "年代学团队周会审阅纪要",
+      "ref": "minutes/2026-09-review.md"
+    }
+  ],
+  "curves": [
+    {
+      "id": "curve-intcal-demo-v1",
+      "name": "IntCal-demo",
+      "version": "v1",
+      "sourceId": "src-curve-v1",
+      "parentCurveId": null,
+      "knots": [
+        {
+          "calBp": 200,
+          "c14AgeBp": 240
+        },
+        {
+          "calBp": 250,
+          "c14AgeBp": 290
+        },
+        {
+          "calBp": 300,
+          "c14AgeBp": 340
+        },
+        {
+          "calBp": 350,
+          "c14AgeBp": 390
+        },
+        {
+          "calBp": 400,
+          "c14AgeBp": 440
+        },
+        {
+          "calBp": 450,
+          "c14AgeBp": 490
+        },
+        {
+          "calBp": 500,
+          "c14AgeBp": 540
+        },
+        {
+          "calBp": 550,
+          "c14AgeBp": 590
+        },
+        {
+          "calBp": 600,
+          "c14AgeBp": 640
+        },
+        {
+          "calBp": 650,
+          "c14AgeBp": 690
+        },
+        {
+          "calBp": 700,
+          "c14AgeBp": 740
+        },
+        {
+          "calBp": 750,
+          "c14AgeBp": 790
+        },
+        {
+          "calBp": 800,
+          "c14AgeBp": 840
+        },
+        {
+          "calBp": 850,
+          "c14AgeBp": 890
+        },
+        {
+          "calBp": 900,
+          "c14AgeBp": 940
+        },
+        {
+          "calBp": 950,
+          "c14AgeBp": 980
+        },
+        {
+          "calBp": 1000,
+          "c14AgeBp": 1015
+        },
+        {
+          "calBp": 1030,
+          "c14AgeBp": 1050
+        },
+        {
+          "calBp": 1060,
+          "c14AgeBp": 1045
+        },
+        {
+          "calBp": 1090,
+          "c14AgeBp": 1000
+        },
+        {
+          "calBp": 1120,
+          "c14AgeBp": 960
+        },
+        {
+          "calBp": 1150,
+          "c14AgeBp": 980
+        },
+        {
+          "calBp": 1180,
+          "c14AgeBp": 1030
+        },
+        {
+          "calBp": 1210,
+          "c14AgeBp": 1070
+        },
+        {
+          "calBp": 1240,
+          "c14AgeBp": 1090
+        },
+        {
+          "calBp": 1270,
+          "c14AgeBp": 1075
+        },
+        {
+          "calBp": 1300,
+          "c14AgeBp": 1045
+        },
+        {
+          "calBp": 1330,
+          "c14AgeBp": 1015
+        },
+        {
+          "calBp": 1360,
+          "c14AgeBp": 1000
+        },
+        {
+          "calBp": 1390,
+          "c14AgeBp": 1015
+        },
+        {
+          "calBp": 1420,
+          "c14AgeBp": 1050
+        },
+        {
+          "calBp": 1450,
+          "c14AgeBp": 1095
+        },
+        {
+          "calBp": 1500,
+          "c14AgeBp": 1530
+        },
+        {
+          "calBp": 1540,
+          "c14AgeBp": 1570
+        },
+        {
+          "calBp": 1580,
+          "c14AgeBp": 1610
+        },
+        {
+          "calBp": 1620,
+          "c14AgeBp": 1650
+        },
+        {
+          "calBp": 1660,
+          "c14AgeBp": 1690
+        },
+        {
+          "calBp": 1700,
+          "c14AgeBp": 1730
+        },
+        {
+          "calBp": 1740,
+          "c14AgeBp": 1770
+        },
+        {
+          "calBp": 1780,
+          "c14AgeBp": 1810
+        },
+        {
+          "calBp": 1820,
+          "c14AgeBp": 1850
+        },
+        {
+          "calBp": 1860,
+          "c14AgeBp": 1890
+        },
+        {
+          "calBp": 1900,
+          "c14AgeBp": 1930
+        },
+        {
+          "calBp": 1940,
+          "c14AgeBp": 1970
+        },
+        {
+          "calBp": 1980,
+          "c14AgeBp": 2010
+        }
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "m-S1-1",
+      "sampleId": "S1",
+      "labCode": "Alpha-7701",
+      "ageBp": 1000.0,
+      "sigmaBp": 30.0,
+      "sourceId": "src-lab-alpha",
+      "material": "charcoal",
+      "ageUnit": "14C yr BP",
+      "rawText": "1000 ± 30 BP (charred grain, context T3-C)"
+    },
+    {
+      "id": "m-S2-1",
+      "sampleId": "S2",
+      "labCode": "Alpha-7702",
+      "ageBp": 1050.0,
+      "sigmaBp": 40.0,
+      "sourceId": "src-lab-alpha",
+      "material": "marine shell",
+      "ageUnit": "14C yr BP",
+      "rawText": "1050 ± 40 BP (Ruditapes, context T3-B)"
+    },
+    {
+      "id": "m-S3-1",
+      "sampleId": "S3",
+      "labCode": "Alpha-7703",
+      "ageBp": 1930.0,
+      "sigmaBp": 70.0,
+      "sourceId": "src-lab-alpha",
+      "material": "peat",
+      "ageUnit": "14C yr BP",
+      "rawText": "1930 ± 70 BP (peat base, test BCE/CE crossing)"
+    },
+    {
+      "id": "m-S4-1",
+      "sampleId": "S4",
+      "labCode": "Alpha-7704",
+      "ageBp": 2075.0,
+      "sigmaBp": 25.0,
+      "sourceId": "src-lab-alpha",
+      "material": "bone",
+      "ageUnit": "14C yr BP",
+      "rawText": "2075 ± 25 BP (near youngest curve edge, boundary interpolation test)"
+    },
+    {
+      "id": "m-S5-1",
+      "sampleId": "S5",
+      "labCode": "Alpha-7705",
+      "ageBp": 1000.0,
+      "sigmaBp": 30.0,
+      "sourceId": "src-lab-alpha",
+      "material": "charcoal",
+      "ageUnit": "14C yr BP"
+    },
+    {
+      "id": "m-S6-1",
+      "sampleId": "S6",
+      "labCode": "Alpha-7706",
+      "ageBp": 1280.0,
+      "sigmaBp": 30.0,
+      "sourceId": "src-lab-alpha",
+      "material": "charcoal",
+      "ageUnit": "14C yr BP"
+    },
+    {
+      "id": "m-S7-1",
+      "sampleId": "S7",
+      "labCode": "Alpha-7707",
+      "ageBp": 320.0,
+      "sigmaBp": 25.0,
+      "sourceId": "src-lab-alpha",
+      "material": "bulk sediment",
+      "ageUnit": "14C yr BP",
+      "rawText": "320 ± 25 BP (bulk; modern contamination suspected)"
+    }
+  ],
+  "offsets": [
+    {
+      "id": "off-bay-gauss",
+      "name": "海湾储库偏移（高斯）",
+      "sourceId": "src-marine",
+      "meanBp": 180.0,
+      "sigmaBp": 60.0
+    },
+    {
+      "id": "off-bay-mix",
+      "name": "海湾储库偏移（情景混合）",
+      "sourceId": "src-marine",
+      "meanBp": 180.0,
+      "sigmaBp": 60.0,
+      "components": [
+        {
+          "shiftBp": 120.0,
+          "sigmaBp": 40.0,
+          "weight": 0.4
+        },
+        {
+          "shiftBp": 180.0,
+          "sigmaBp": 50.0,
+          "weight": 0.4
+        },
+        {
+          "shiftBp": 260.0,
+          "sigmaBp": 45.0,
+          "weight": 0.2
+        }
+      ]
+    }
+  ],
+  "assumptions": [
+    {
+      "sampleId": "S2",
+      "offsetId": "off-bay-mix",
+      "reason": "贝样位于河口混合带，采用三情景储库偏移",
+      "sourceId": "src-marine"
+    }
+  ],
+  "links": [
+    {
+      "link": {
+        "id": "link-S5-S6",
+        "olderSample": "S5",
+        "youngerSample": "S6",
+        "sourceId": "src-strat",
+        "note": "层位 T3-7 在下、T3-5 在上；记录却与测年矛盾"
+      }
+    }
+  ],
+  "exclusions": [
+    {
+      "exclusion": {
+        "sampleId": "S7",
+        "reason": "疑似现代污染，整体沉积物测年不纳入年代候选",
+        "sourceId": "src-review",
+        "decisionId": "dec-exclude-S7"
+      }
+    }
+  ]
+}

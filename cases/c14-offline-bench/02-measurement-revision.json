@@ -1,0 +1,23 @@
+{
+  "title": "局部源数据改动：S6 提交复测新值（父版本保留）",
+  "commands": [
+    {
+      "type": "SUBMIT_MEASUREMENT",
+      "sourceId": "src-lab-alpha",
+      "payload": {
+        "measurement": {
+          "id": "m-S6-2",
+          "sampleId": "S6",
+          "labCode": "Alpha-7706R",
+          "ageBp": 900.0,
+          "sigmaBp": 35.0,
+          "sourceId": "src-lab-alpha",
+          "material": "charcoal",
+          "parentMeasurementId": "m-S6-1",
+          "ageUnit": "14C yr BP",
+          "rawText": "900 ± 35 BP (re-run; m-S6-1 retained, not overwritten)"
+        }
+      }
+    }
+  ]
+}

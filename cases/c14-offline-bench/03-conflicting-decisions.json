@@ -1,0 +1,44 @@
+{
+  "title": "互相冲突的人工决定：S1 两种偏移调整并存，随后撤销其一",
+  "commands": [
+    {
+      "type": "DECIDE",
+      "sourceId": "src-review",
+      "payload": {
+        "decision": {
+          "id": "dec-S1-adjust-A",
+          "kind": "ADJUST_PARAMETER",
+          "subject": "S1",
+          "rationale": "为 S1 追加 -40 14C yr BP 老木效应修正",
+          "sourceId": "src-review"
+        }
+      }
+    },
+    {
+      "type": "DECIDE",
+      "sourceId": "src-review",
+      "payload": {
+        "decision": {
+          "id": "dec-S1-adjust-B",
+          "kind": "ADJUST_PARAMETER",
+          "subject": "S1",
+          "rationale": "拒绝老木修正，维持 S1 原测年（与 A 冲突）",
+          "sourceId": "src-review"
+        }
+      }
+    },
+    {
+      "type": "DECIDE",
+      "sourceId": "src-review",
+      "payload": {
+        "decision": {
+          "id": "dec-S1-revoke-A",
+          "kind": "REVOKE",
+          "subject": "dec-S1-adjust-A",
+          "rationale": "复核确认无老木证据，撤销 A；撤销动作本身留痕",
+          "sourceId": "src-review"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,213 @@
+{
+  "title": "曲线升版 v2 与并列日历区间裁定",
+  "commands": [
+    {
+      "type": "REGISTER_SOURCE",
+      "sourceId": "src-curve-v2",
+      "payload": {
+        "source": {
+          "id": "src-curve-v2",
+          "kind": "calibration-curve",
+          "title": "IntCal-demo 离线校准曲线 v2",
+          "ref": "curves/intcal-demo-v2.csv",
+          "receivedRevision": 2
+        }
+      }
+    },
+    {
+      "type": "REGISTER_CURVE",
+      "sourceId": "src-curve-v2",
+      "payload": {
+        "curve": {
+          "id": "curve-intcal-demo-v2",
+          "name": "IntCal-demo",
+          "version": "v2",
+          "sourceId": "src-curve-v2",
+          "parentCurveId": "curve-intcal-demo-v1",
+          "knots": [
+            {
+              "calBp": 200,
+              "c14AgeBp": 240
+            },
+            {
+              "calBp": 250,
+              "c14AgeBp": 290
+            },
+            {
+              "calBp": 300,
+              "c14AgeBp": 340
+            },
+            {
+              "calBp": 350,
+              "c14AgeBp": 390
+            },
+            {
+              "calBp": 400,
+              "c14AgeBp": 440
+            },
+            {
+              "calBp": 450,
+              "c14AgeBp": 490
+            },
+            {
+              "calBp": 500,
+              "c14AgeBp": 540
+            },
+            {
+              "calBp": 550,
+              "c14AgeBp": 590
+            },
+            {
+              "calBp": 600,
+              "c14AgeBp": 640
+            },
+            {
+              "calBp": 650,
+              "c14AgeBp": 690
+            },
+            {
+              "calBp": 700,
+              "c14AgeBp": 740
+            },
+            {
+              "calBp": 750,
+              "c14AgeBp": 790
+            },
+            {
+              "calBp": 800,
+              "c14AgeBp": 840
+            },
+            {
+              "calBp": 850,
+              "c14AgeBp": 890
+            },
+            {
+              "calBp": 900,
+              "c14AgeBp": 940
+            },
+            {
+              "calBp": 950,
+              "c14AgeBp": 980
+            },
+            {
+              "calBp": 1000,
+              "c14AgeBp": 1015
+            },
+            {
+              "calBp": 1030,
+              "c14AgeBp": 1050
+            },
+            {
+              "calBp": 1060,
+              "c14AgeBp": 1045
+            },
+            {
+              "calBp": 1090,
+              "c14AgeBp": 1018
+            },
+            {
+              "calBp": 1120,
+              "c14AgeBp": 978
+            },
+            {
+              "calBp": 1150,
+              "c14AgeBp": 998
+            },
+            {
+              "calBp": 1180,
+              "c14AgeBp": 1030
+            },
+            {
+              "calBp": 1210,
+              "c14AgeBp": 1070
+            },
+            {
+              "calBp": 1240,
+              "c14AgeBp": 1090
+            },
+            {
+              "calBp": 1270,
+              "c14AgeBp": 1063
+            },
+            {
+              "calBp": 1300,
+              "c14AgeBp": 1033
+            },
+            {
+              "calBp": 1330,
+              "c14AgeBp": 1003
+            },
+            {
+              "calBp": 1360,
+              "c14AgeBp": 1000
+            },
+            {
+              "calBp": 1390,
+              "c14AgeBp": 1015
+            },
+            {
+              "calBp": 1420,
+              "c14AgeBp": 1050
+            },
+            {
+              "calBp": 1450,
+              "c14AgeBp": 1095
+            },
+            {
+              "calBp": 1500,
+              "c14AgeBp": 1530
+            },
+            {
+              "calBp": 1540,
+              "c14AgeBp": 1570
+            },
+            {
+              "calBp": 1580,
+              "c14AgeBp": 1610
+            },
+            {
+              "calBp": 1620,
+              "c14AgeBp": 1650
+            },
+            {
+              "calBp": 1660,
+              "c14AgeBp": 1690
+            },
+            {
+              "calBp": 1700,
+              "c14AgeBp": 1730
+            },
+            {
+              "calBp": 1740,
+              "c14AgeBp": 1770
+            },
+            {
+              "calBp": 1780,
+              "c14AgeBp": 1810
+            },
+            {
+              "calBp": 1820,
+              "c14AgeBp": 1850
+            },
+            {
+              "calBp": 1860,
+              "c14AgeBp": 1890
+            },
+            {
+              "calBp": 1900,
+              "c14AgeBp": 1930
+            },
+            {
+              "calBp": 1940,
+              "c14AgeBp": 1970
+            },
+            {
+              "calBp": 1980,
+              "c14AgeBp": 2010
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
