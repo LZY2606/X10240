@@ -1,0 +1,80 @@
+{
+ "batch": "01-param-revision",
+ "description": "\u53c2\u6570\u4fee\u8ba2\uff1a\u66f2\u7ebf\u5347\u7248 1.0 -> 2.0\uff0c\u504f\u79fb\u5206\u5e03 OF-MAR-B \u4fee\u8ba2\uff1b\u4f9d\u8d56\u65e7\u7248\u7684\u7ed3\u679c\u8fc7\u671f\u4f46\u53ef\u67e5\u770b",
+ "events": [
+  {
+   "type": "source.imported",
+   "kind": "curveVersion",
+   "stream": "GSB-INTCAL-LIKE",
+   "raw": {
+    "curveId": "GSB-INTCAL-LIKE",
+    "curveVersion": "2.0",
+    "file": "gsb-intcal-v2.json",
+    "sha256": "e3f952a21b7e0295",
+    "rangeCalBP": [
+     1500,
+     3200
+    ]
+   },
+   "units": {
+    "rangeCalBP": "calBP"
+   },
+   "provenance": {
+    "origin": "repo:casepack/curves",
+    "reference": "offline bundled curve v2.0 (supersedes 1.0)",
+    "curator": "reviewer:lin"
+   }
+  },
+  {
+   "type": "source.imported",
+   "kind": "offsetDistribution",
+   "stream": "OF-MAR-B",
+   "raw": {
+    "mu": 280,
+    "sigma": 55,
+    "basis": "open-ocean Delta-R estimate B, revised after new mollusk data"
+   },
+   "units": {
+    "mu": "Delta-R, c14 years",
+    "sigma": "1-sigma, c14 years"
+   },
+   "provenance": {
+    "origin": "assumption-register",
+    "reference": "AR-3 rev.1",
+    "curator": "reviewer:wu"
+   }
+  },
+  {
+   "type": "params.adjusted",
+   "payload": {
+    "what": "curve upgrade 1.0 -> 2.0 and offset OF-MAR-B revision",
+    "detail": "affected derived results expire; stale results stay viewable but are not current",
+    "reviewer": "reviewer:lin"
+   }
+  },
+  {
+   "type": "calibration.compute",
+   "stream": "AT-1042",
+   "curveStream": "GSB-INTCAL-LIKE",
+   "offsetStream": "OF-TER"
+  },
+  {
+   "type": "calibration.compute",
+   "stream": "AT-1055",
+   "curveStream": "GSB-INTCAL-LIKE",
+   "offsetStream": "OF-MAR-A"
+  },
+  {
+   "type": "calibration.compute",
+   "stream": "AT-1060",
+   "curveStream": "GSB-INTCAL-LIKE",
+   "offsetStream": "OF-TER"
+  },
+  {
+   "type": "calibration.compute",
+   "stream": "AT-1071",
+   "curveStream": "GSB-INTCAL-LIKE",
+   "offsetStream": "OF-TER"
+  }
+ ]
+}

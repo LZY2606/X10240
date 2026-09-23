@@ -1,0 +1,291 @@
+{
+ "batch": "00-base",
+ "description": "\u521d\u59cb\u5bfc\u5165\uff1a\u539f\u6d4b\u91cf\u503c\u548c\u6807\u51c6\u5dee\u3001\u66f2\u7ebf\u7248\u672c\u3001\u504f\u79fb\u5206\u5e03\u3001\u5e74\u4ee3\u7cfb\u7edf\u3001\u5c42\u5e8f\u7ea6\u675f\u548c\u6392\u9664\u51b3\u5b9a\u5404\u81ea\u6709\u6765\u6e90",
+ "events": [
+  {
+   "type": "project.created",
+   "payload": {
+    "project": "carbon-seat",
+    "title": "\u78b3\u5e74\u5019\u9009\u5e2d\uff1a\u6821\u51c6\u66f2\u7ebf\u3001\u50a8\u5e93\u504f\u79fb\u4e0e\u591a\u5cf0\u5e74\u4ee3\u8bc1\u636e",
+    "site": "GSB-1211",
+    "note": "\u5e74\u4ee3\u5b66\u56e2\u961f\u5ba1\u9605\u65e5\u5386\u5e74\u4ee3\u5019\u9009"
+   }
+  },
+  {
+   "type": "source.imported",
+   "kind": "measurement",
+   "stream": "AT-1042",
+   "raw": {
+    "labCode": "AT-1042",
+    "c14AgeBP": 2440,
+    "sigma": 25,
+    "material": "charcoal",
+    "rawText": "2440 \u00b1 25 BP (charcoal)"
+   },
+   "units": {
+    "c14AgeBP": "conventional radiocarbon years BP",
+    "sigma": "1-sigma, c14 years"
+   },
+   "provenance": {
+    "origin": "lab-report-2026-041",
+    "reference": "PDF p.3",
+    "curator": "reviewer:lin"
+   }
+  },
+  {
+   "type": "source.imported",
+   "kind": "measurement",
+   "stream": "AT-1055",
+   "raw": {
+    "labCode": "AT-1055",
+    "c14AgeBP": 1990,
+    "sigma": 30,
+    "material": "marine shell",
+    "rawText": "1990 \u00b1 30 BP (marine shell)"
+   },
+   "units": {
+    "c14AgeBP": "conventional radiocarbon years BP",
+    "sigma": "1-sigma, c14 years"
+   },
+   "provenance": {
+    "origin": "lab-report-2026-041",
+    "reference": "PDF p.4",
+    "curator": "reviewer:lin"
+   }
+  },
+  {
+   "type": "source.imported",
+   "kind": "measurement",
+   "stream": "AT-1060",
+   "raw": {
+    "labCode": "AT-1060",
+    "c14AgeBP": 3195,
+    "sigma": 25,
+    "material": "charcoal",
+    "rawText": "3195 \u00b1 25 BP (charcoal)"
+   },
+   "units": {
+    "c14AgeBP": "conventional radiocarbon years BP",
+    "sigma": "1-sigma, c14 years"
+   },
+   "provenance": {
+    "origin": "lab-report-2026-041",
+    "reference": "PDF p.4",
+    "curator": "reviewer:lin"
+   }
+  },
+  {
+   "type": "source.imported",
+   "kind": "measurement",
+   "stream": "AT-1071",
+   "raw": {
+    "labCode": "AT-1071",
+    "c14AgeBP": 2600,
+    "sigma": 30,
+    "material": "charred seed",
+    "rawText": "2600 \u00b1 30 BP (charred seed)"
+   },
+   "units": {
+    "c14AgeBP": "conventional radiocarbon years BP",
+    "sigma": "1-sigma, c14 years"
+   },
+   "provenance": {
+    "origin": "lab-report-2026-042",
+    "reference": "PDF p.1",
+    "curator": "reviewer:wu"
+   }
+  },
+  {
+   "type": "source.imported",
+   "kind": "measurement",
+   "stream": "AT-1099",
+   "raw": {
+    "labCode": "AT-1099",
+    "c14AgeBP": 2350,
+    "sigma": 40,
+    "material": "charcoal",
+    "rawText": "2350 \u00b1 40 BP (charcoal)"
+   },
+   "units": {
+    "c14AgeBP": "conventional radiocarbon years BP",
+    "sigma": "1-sigma, c14 years"
+   },
+   "provenance": {
+    "origin": "lab-report-2026-042",
+    "reference": "PDF p.2",
+    "curator": "reviewer:wu"
+   }
+  },
+  {
+   "type": "source.imported",
+   "kind": "curveVersion",
+   "stream": "GSB-INTCAL-LIKE",
+   "raw": {
+    "curveId": "GSB-INTCAL-LIKE",
+    "curveVersion": "1.0",
+    "file": "gsb-intcal-v1.json",
+    "sha256": "85206fa0c40289e6",
+    "rangeCalBP": [
+     1500,
+     3200
+    ]
+   },
+   "units": {
+    "rangeCalBP": "calBP"
+   },
+   "provenance": {
+    "origin": "repo:casepack/curves",
+    "reference": "offline bundled curve v1.0",
+    "curator": "reviewer:lin"
+   }
+  },
+  {
+   "type": "source.imported",
+   "kind": "offsetDistribution",
+   "stream": "OF-TER",
+   "raw": {
+    "mu": 0,
+    "sigma": 0,
+    "basis": "terrestrial, no reservoir offset"
+   },
+   "units": {
+    "mu": "Delta-R, c14 years",
+    "sigma": "1-sigma, c14 years"
+   },
+   "provenance": {
+    "origin": "assumption-register",
+    "reference": "AR-1",
+    "curator": "reviewer:lin"
+   }
+  },
+  {
+   "type": "source.imported",
+   "kind": "offsetDistribution",
+   "stream": "OF-MAR-A",
+   "raw": {
+    "mu": 120,
+    "sigma": 40,
+    "basis": "local marine Delta-R estimate A"
+   },
+   "units": {
+    "mu": "Delta-R, c14 years",
+    "sigma": "1-sigma, c14 years"
+   },
+   "provenance": {
+    "origin": "assumption-register",
+    "reference": "AR-2",
+    "curator": "reviewer:lin"
+   }
+  },
+  {
+   "type": "source.imported",
+   "kind": "offsetDistribution",
+   "stream": "OF-MAR-B",
+   "raw": {
+    "mu": 300,
+    "sigma": 60,
+    "basis": "open-ocean Delta-R estimate B"
+   },
+   "units": {
+    "mu": "Delta-R, c14 years",
+    "sigma": "1-sigma, c14 years"
+   },
+   "provenance": {
+    "origin": "assumption-register",
+    "reference": "AR-3",
+    "curator": "reviewer:wu"
+   }
+  },
+  {
+   "type": "source.imported",
+   "kind": "eraSystem",
+   "stream": "ERA-MAIN",
+   "raw": {
+    "system": "calBP + BCE/CE",
+    "yearZero": "astronomical numbering, no year 0",
+    "referenceYearBP": 1950
+   },
+   "units": {
+    "referenceYearBP": "CE year"
+   },
+   "provenance": {
+    "origin": "project-convention",
+    "reference": "PC-1",
+    "curator": "reviewer:lin"
+   }
+  },
+  {
+   "type": "source.imported",
+   "kind": "stratConstraint",
+   "stream": "SC-1",
+   "raw": {
+    "older": "AT-1071",
+    "younger": "AT-1042",
+    "basis": "layer L7 below layer L4"
+   },
+   "units": {},
+   "provenance": {
+    "origin": "field-notes-2026",
+    "reference": "trench A section",
+    "curator": "reviewer:wu"
+   }
+  },
+  {
+   "type": "source.imported",
+   "kind": "stratConstraint",
+   "stream": "SC-2",
+   "raw": {
+    "older": "AT-1042",
+    "younger": "AT-1055",
+    "basis": "layer L4 below layer L2"
+   },
+   "units": {},
+   "provenance": {
+    "origin": "field-notes-2026",
+    "reference": "trench A section",
+    "curator": "reviewer:wu"
+   }
+  },
+  {
+   "type": "source.imported",
+   "kind": "exclusionDecision",
+   "stream": "XD-1",
+   "raw": {
+    "targetStream": "AT-1099",
+    "decision": "excluded",
+    "reason": "bag contamination during fieldwork",
+    "decidedBy": "reviewer:lin"
+   },
+   "units": {},
+   "provenance": {
+    "origin": "review-minutes-2026-09-01",
+    "reference": "minutes \u00a73",
+    "curator": "reviewer:lin"
+   }
+  },
+  {
+   "type": "calibration.compute",
+   "stream": "AT-1042",
+   "curveStream": "GSB-INTCAL-LIKE",
+   "offsetStream": "OF-TER"
+  },
+  {
+   "type": "calibration.compute",
+   "stream": "AT-1055",
+   "curveStream": "GSB-INTCAL-LIKE",
+   "offsetStream": "OF-MAR-A"
+  },
+  {
+   "type": "calibration.compute",
+   "stream": "AT-1060",
+   "curveStream": "GSB-INTCAL-LIKE",
+   "offsetStream": "OF-TER"
+  },
+  {
+   "type": "calibration.compute",
+   "stream": "AT-1071",
+   "curveStream": "GSB-INTCAL-LIKE",
+   "offsetStream": "OF-TER"
+  }
+ ]
+}
