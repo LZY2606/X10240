@@ -1,0 +1,26 @@
+{
+  "id": "baseline",
+  "title": "基线：原测量值和标准差、曲线版本、偏移分布、年代系统、层序约束和排除决定各自有来源",
+  "steps": [
+    {"op":"submit","stream":"M1","kind":"measurement","source":"实验室报告 LNK-2024-118","payload":{"labCode":"LNK-118","c14AgeBP":2450,"sigmaBP":35,"material":"骨胶原","unit":"14C yr BP","raw":"2450 ± 35 BP"}},
+    {"op":"submit","stream":"M2","kind":"measurement","source":"实验室报告 LNK-2024-119","payload":{"labCode":"LNK-119","c14AgeBP":2360,"sigmaBP":30,"material":"木炭","unit":"14C yr BP","raw":"2360 ± 30 BP"}},
+    {"op":"submit","stream":"M3","kind":"measurement","source":"实验室报告 LNK-2024-120","payload":{"labCode":"LNK-120","c14AgeBP":2850,"sigmaBP":40,"material":"海贝","unit":"14C yr BP","raw":"2850 ± 40 BP"}},
+    {"op":"submit","stream":"M4","kind":"measurement","source":"实验室报告 LNK-2024-121","payload":{"labCode":"LNK-121","c14AgeBP":2905,"sigmaBP":30,"material":"炭化种子","unit":"14C yr BP","raw":"2905 ± 30 BP"}},
+    {"op":"submit","stream":"M5","kind":"measurement","source":"实验室报告 LNK-2024-122","payload":{"labCode":"LNK-122","c14AgeBP":4440,"sigmaBP":25,"material":"泥炭","unit":"14C yr BP","raw":"4440 ± 25 BP"}},
+    {"op":"submit","stream":"M9","kind":"measurement","source":"实验室报告 LNK-2024-123（数值缺失）","payload":{"labCode":"LNK-123","unit":"14C yr BP","raw":"not reported","diagnostic":"实验室未报告数值；保留原始表示"}},
+    {"op":"submit","stream":"curve-main","kind":"curveRef","source":"内置曲线快照 INTCAL-SYN:2020","payload":{"curveId":"INTCAL-SYN","curveVersion":"2020","coordinateBasis":"cal BP (1950)"}},
+    {"op":"submit","stream":"offset-none","kind":"offsetDistribution","source":"陆生样品约定：无储库偏移","payload":{"kind":"normal","mean":0,"sigma":0,"unit":"14C yr"}},
+    {"op":"submit","stream":"offset-marine","kind":"offsetDistribution","source":"海洋储库数据库摘录 ΔR=180±40","payload":{"kind":"normal","mean":180,"sigma":40,"unit":"14C yr"}},
+    {"op":"submit","stream":"era-default","kind":"eraSystem","source":"年代系统约定：天文纪年","payload":{"system":"BCE/CE-astronomical","basis":"cal BP (1950)"}},
+    {"op":"submit","stream":"strat-1","kind":"stratConstraint","source":"发掘记录 2026-T3/T2","payload":{"olderStream":"M1","youngerStream":"M2","basis":"T3 叠压于 T2 之下"}},
+    {"op":"submit","stream":"strat-2","kind":"stratConstraint","source":"发掘记录 2026-T5/T4","payload":{"olderStream":"M4","youngerStream":"M3","basis":"T5 叠压于 T4 之下"}},
+    {"op":"submit","stream":"excl-M9","kind":"exclusionDecision","source":"审阅会纪要 2026-09-01 第 3 条","payload":{"sampleStream":"M9","excluded":true,"reason":"数值缺失，排除校准"}},
+    {"op":"calibrate","measure":"M1","curve":"curve-main","offset":"offset-none","era":"era-default"},
+    {"op":"calibrate","measure":"M2","curve":"curve-main","offset":"offset-none","era":"era-default"},
+    {"op":"calibrate","measure":"M3","curve":"curve-main","offset":"offset-marine","era":"era-default"},
+    {"op":"calibrate","measure":"M4","curve":"curve-main","offset":"offset-none","era":"era-default"},
+    {"op":"calibrate","measure":"M5","curve":"curve-main","offset":"offset-none","era":"era-default"},
+    {"op":"assessStrat","constraint":"strat-1"},
+    {"op":"assessStrat","constraint":"strat-2"}
+  ]
+}

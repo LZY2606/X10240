@@ -1,0 +1,52 @@
+{
+  "name": "碳年候选席：校准曲线、储库偏移与多峰年代证据",
+  "version": "1.1",
+  "steps": [
+    {"op":"submit","stream":"M1","kind":"measurement","source":"实验室报告 LNK-2024-118（骨胶原 AMS，层位 T3）","payload":{"labCode":"LNK-118","c14AgeBP":2450,"sigmaBP":35,"material":"骨胶原","unit":"14C yr BP","raw":"2450 ± 35 BP"}},
+    {"op":"submit","stream":"M2","kind":"measurement","source":"实验室报告 LNK-2024-119（木炭，层位 T2）","payload":{"labCode":"LNK-119","c14AgeBP":2360,"sigmaBP":30,"material":"木炭","unit":"14C yr BP","raw":"2360 ± 30 BP"}},
+    {"op":"submit","stream":"M3","kind":"measurement","source":"实验室报告 LNK-2024-120（海贝，层位 T4，海洋储库待校正）","payload":{"labCode":"LNK-120","c14AgeBP":2850,"sigmaBP":40,"material":"海贝","unit":"14C yr BP","raw":"2850 ± 40 BP"}},
+    {"op":"submit","stream":"M4","kind":"measurement","source":"实验室报告 LNK-2024-121（炭化种子，层位 T5）","payload":{"labCode":"LNK-121","c14AgeBP":2905,"sigmaBP":30,"material":"炭化种子","unit":"14C yr BP","raw":"2905 ± 30 BP"}},
+    {"op":"submit","stream":"M5","kind":"measurement","source":"实验室报告 LNK-2024-122（泥炭表层，层位 T1）","payload":{"labCode":"LNK-122","c14AgeBP":4440,"sigmaBP":25,"material":"泥炭","unit":"14C yr BP","raw":"4440 ± 25 BP"}},
+    {"op":"submit","stream":"M9","kind":"measurement","source":"实验室报告 LNK-2024-123（数值缺失，仅收到样品登记单）","payload":{"labCode":"LNK-123","unit":"14C yr BP","raw":"not reported","diagnostic":"实验室未报告 c14AgeBP/sigmaBP；保留原始表示，不参与校准"}},
+    {"op":"submit","stream":"curve-main","kind":"curveRef","source":"工作台内置离线曲线快照 INTCAL-SYN:2020（类 IntCal 合成，5 年节点）","payload":{"curveId":"INTCAL-SYN","curveVersion":"2020","coordinateBasis":"cal BP (1950)"}},
+    {"op":"submit","stream":"offset-none","kind":"offsetDistribution","source":"陆生样品约定：无海洋/硬水储库偏移","payload":{"kind":"normal","mean":0,"sigma":0,"unit":"14C yr"}},
+    {"op":"submit","stream":"offset-marine","kind":"offsetDistribution","source":"区域海洋储库数据库摘录 ΔR：180 ± 40（2024 版表 12）","payload":{"kind":"normal","mean":180,"sigma":40,"unit":"14C yr"}},
+    {"op":"submit","stream":"era-default","kind":"eraSystem","source":"项目年代系统约定：天文纪年（0 = 1 BCE），坐标基准 cal BP (1950)","payload":{"system":"BCE/CE-astronomical","basis":"cal BP (1950); astronomical year numbering"}},
+    {"op":"submit","stream":"strat-1","kind":"stratConstraint","source":"发掘记录 2026-T3/T2：层位 T3（M1）位于 T2（M2）之下，M1 应更老","payload":{"olderStream":"M1","youngerStream":"M2","basis":"T3 叠压于 T2 之下（探方 B 东壁剖面）"}},
+    {"op":"submit","stream":"strat-2","kind":"stratConstraint","source":"发掘记录 2026-T5/T4：层位 T5（M4）位于 T4（M3）之下，M4 应更老","payload":{"olderStream":"M4","youngerStream":"M3","basis":"T5 叠压于 T4 之下（探方 B 东壁剖面）"}},
+    {"op":"submit","stream":"excl-M9","kind":"exclusionDecision","source":"审阅会纪要 2026-09-01 第 3 条：数值缺失样品排除校准","payload":{"sampleStream":"M9","excluded":true,"reason":"实验室未报告数值，无法转换，留在原位置并附诊断"}},
+
+    {"op":"calibrate","measure":"M1","curve":"curve-main","offset":"offset-none","era":"era-default"},
+    {"op":"calibrate","measure":"M2","curve":"curve-main","offset":"offset-none","era":"era-default"},
+    {"op":"calibrate","measure":"M3","curve":"curve-main","offset":"offset-marine","era":"era-default"},
+    {"op":"calibrate","measure":"M4","curve":"curve-main","offset":"offset-none","era":"era-default"},
+    {"op":"calibrate","measure":"M5","curve":"curve-main","offset":"offset-none","era":"era-default"},
+    {"op":"assessStrat","constraint":"strat-1"},
+    {"op":"assessStrat","constraint":"strat-2"},
+
+    {"op":"adjudicate","target":"calib:M1","verdict":"accept","rationale":"接受 M1 的多峰 95.4% 区间作为候选，不压成平均年；待层序问题处理"},
+    {"op":"adjudicate","target":"calib:M1","verdict":"reject","rationale":"与层位 T3/T2 关系冲突，先拒绝整条校准候选（矛盾人工决定，待解决）"},
+    {"op":"resolve","target":"calib:M1","chosen":"undecided","note":"保留全部候选，层序冲突先在 strat-1 处理"},
+    {"op":"undo","target":"calib:M1"},
+    {"op":"resolve","target":"calib:M1","chosen":"verdict:accept","note":"层位方向重新核对后采纳多峰候选"},
+
+    {"op":"submit","stream":"offset-marine","kind":"offsetDistribution","source":"区域海洋储库数据库 2026 修订：ΔR 改为双峰混合分布（父版本：2024 版表 12）","payload":{"kind":"mixture","components":[{"weight":0.7,"mean":160,"sigma":30},{"weight":0.3,"mean":260,"sigma":25}],"unit":"14C yr"}},
+    {"op":"calibrate","measure":"M3","curve":"curve-main","offset":"offset-marine","era":"era-default"},
+
+    {"op":"submit","stream":"M2","kind":"measurement","source":"实验室更正报告 LNK-2024-119a：木炭 σ 由 30 更正为 45（父版本：LNK-2024-119）","payload":{"labCode":"LNK-119","c14AgeBP":2360,"sigmaBP":45,"material":"木炭","unit":"14C yr BP","raw":"2360 ± 45 BP（原件登记 2360 ± 30 BP）"}},
+    {"op":"calibrate","measure":"M2","curve":"curve-main","offset":"offset-none","era":"era-default"},
+
+    {"op":"submit","stream":"curve-main","kind":"curveRef","source":"工作台曲线升版 INTCAL-SYN:2024（父版本：2020，节点间距与坐标基准不变）","payload":{"curveId":"INTCAL-SYN","curveVersion":"2024","coordinateBasis":"cal BP (1950)"}},
+    {"op":"calibrate","measure":"M1","curve":"curve-main","offset":"offset-none","era":"era-default"},
+    {"op":"calibrate","measure":"M2","curve":"curve-main","offset":"offset-none","era":"era-default"},
+    {"op":"calibrate","measure":"M3","curve":"curve-main","offset":"offset-marine","era":"era-default"},
+    {"op":"calibrate","measure":"M4","curve":"curve-main","offset":"offset-none","era":"era-default"},
+    {"op":"calibrate","measure":"M5","curve":"curve-main","offset":"offset-none","era":"era-default"},
+    {"op":"assessStrat","constraint":"strat-1"},
+    {"op":"assessStrat","constraint":"strat-2"},
+
+    {"op":"adjudicate","target":"strat:strat-1","verdict":"accept","rationale":"选择候选 cand-exclude-younger：怀疑 M2 老木炭混入，需补样复核（不改动测量值）"},
+    {"op":"adjudicate","target":"strat:strat-1","verdict":"accept","rationale":"选择候选 cand-exclude-older：怀疑 M1 骨胶原受旧碳影响（与上一决定冲突）"},
+    {"op":"resolve","target":"strat:strat-1","chosen":"undecided","note":"两种离群解释都合法且证据不足，保留全部候选，标记无法唯一决定"}
+  ]
+}

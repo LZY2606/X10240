@@ -1,0 +1,12 @@
+{
+  "id": "ce-07-parallel-intervals",
+  "title": "并列日历区间：同一分布的多个 HPD 区间并列保留，不合并、不取平均",
+  "change": [],
+  "expect": {
+    "staleStreams": [],
+    "currentStreams": ["M1","M2","M3","M4","M5"],
+    "checks": [
+      {"type":"calib","stream":"M1","minIntervals95":2,"disjoint":true}
+    ]
+  }
+}

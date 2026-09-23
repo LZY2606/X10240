@@ -1,0 +1,15 @@
+{
+  "id": "ce-04-bce-ce-crossing",
+  "title": "BCE/CE 跨界：日历年区间跨越纪年边界时按天文纪年正确标注",
+  "change": [
+    {"op":"submit","stream":"M4","kind":"measurement","source":"实验室更正报告 LNK-2024-121a（2905→2910）","payload":{"labCode":"LNK-121","c14AgeBP":2910,"sigmaBP":30,"material":"炭化种子","unit":"14C yr BP","raw":"2910 ± 30 BP（原件 2905 ± 30 BP）"}},
+    {"op":"calibrate","measure":"M4","curve":"curve-main","offset":"offset-none","era":"era-default"}
+  ],
+  "expect": {
+    "staleStreams": ["M4"],
+    "currentStreams": ["M1","M2","M3","M5"],
+    "checks": [
+      {"type":"calib","stream":"M4","crossesEra":true}
+    ]
+  }
+}

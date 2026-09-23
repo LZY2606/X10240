@@ -1,0 +1,16 @@
+{
+  "id": "ce-05-strat-conflict",
+  "title": "层序矛盾：冲突产生候选调整而不改写测量；无法唯一决定时保留全部合法候选",
+  "change": [
+    {"op":"assessStrat","constraint":"strat-1"}
+  ],
+  "expect": {
+    "staleStreams": [],
+    "currentStreams": ["M1","M2","M3","M4","M5"],
+    "checks": [
+      {"type":"strat","constraint":"strat-1","status":"conflict","minCandidates":2},
+      {"type":"measurementUnchanged","stream":"M1"},
+      {"type":"measurementUnchanged","stream":"M2"}
+    ]
+  }
+}

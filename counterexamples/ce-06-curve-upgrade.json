@@ -1,0 +1,16 @@
+{
+  "id": "ce-06-curve-upgrade",
+  "title": "曲线升版：2020→2024 使依赖曲线的派生全部过期，旧结果仍可查看且不被覆盖",
+  "change": [
+    {"op":"submit","stream":"curve-main","kind":"curveRef","source":"曲线升版 INTCAL-SYN:2024（父版本 2020）","payload":{"curveId":"INTCAL-SYN","curveVersion":"2024","coordinateBasis":"cal BP (1950)"}},
+    {"op":"calibrate","measure":"M1","curve":"curve-main","offset":"offset-none","era":"era-default"}
+  ],
+  "expect": {
+    "staleStreams": ["M1","M2","M3","M4","M5"],
+    "currentStreams": [],
+    "checks": [
+      {"type":"calib","stream":"M1","curveVersion":"2024","minIntervals95":2},
+      {"type":"staleViewable","stream":"M1"}
+    ]
+  }
+}

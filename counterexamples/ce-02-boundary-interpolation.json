@@ -1,0 +1,16 @@
+{
+  "id": "ce-02-boundary-interpolation",
+  "title": "边界插值：曲线表边缘的截断与节点间线性插值在固定版本下可重现",
+  "change": [
+    {"op":"submit","stream":"M5","kind":"measurement","source":"实验室更正报告 LNK-2024-122a（σ 25→28）","payload":{"labCode":"LNK-122","c14AgeBP":4440,"sigmaBP":28,"material":"泥炭","unit":"14C yr BP","raw":"4440 ± 28 BP（原件 4440 ± 25 BP）"}},
+    {"op":"calibrate","measure":"M5","curve":"curve-main","offset":"offset-none","era":"era-default"}
+  ],
+  "expect": {
+    "staleStreams": ["M5"],
+    "currentStreams": ["M1","M2","M3","M4"],
+    "checks": [
+      {"type":"calib","stream":"M5","truncatedAtMin":true},
+      {"type":"reproducible","stream":"M5"}
+    ]
+  }
+}

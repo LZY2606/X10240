@@ -1,0 +1,16 @@
+{
+  "id": "ce-01-curve-multipeak",
+  "title": "曲线多峰：校准后的多峰分布不压成一个平均年；被采纳与未采纳的区间都保留",
+  "change": [
+    {"op":"adjudicate","target":"calib:M1","verdict":"accept","rationale":"采纳 95.4% 并列区间中的全部峰，不取平均年"},
+    {"op":"adjudicate","target":"calib:M1","verdict":"reject","rationale":"（未采纳记录）反对压缩为单一平均年的做法"}
+  ],
+  "expect": {
+    "staleStreams": [],
+    "currentStreams": ["M1","M2","M3","M4","M5"],
+    "checks": [
+      {"type":"calib","stream":"M1","minPeaks":2,"minIntervals95":2},
+      {"type":"adjudicationsKept","stream":"M1","count":2}
+    ]
+  }
+}

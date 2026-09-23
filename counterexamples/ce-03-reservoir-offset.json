@@ -1,0 +1,16 @@
+{
+  "id": "ce-03-reservoir-offset",
+  "title": "储库偏移分布：单源改动（偏移分布修订）只使海洋样品的派生过期",
+  "change": [
+    {"op":"submit","stream":"offset-marine","kind":"offsetDistribution","source":"海洋储库数据库 2026 修订：双峰混合 ΔR","payload":{"kind":"mixture","components":[{"weight":0.7,"mean":160,"sigma":30},{"weight":0.3,"mean":260,"sigma":25}],"unit":"14C yr"}},
+    {"op":"calibrate","measure":"M3","curve":"curve-main","offset":"offset-marine","era":"era-default"}
+  ],
+  "expect": {
+    "staleStreams": ["M3"],
+    "currentStreams": ["M1","M2","M4","M5"],
+    "checks": [
+      {"type":"calibChanged","stream":"M3"},
+      {"type":"staleViewable","stream":"M3"}
+    ]
+  }
+}
