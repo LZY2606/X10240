@@ -1,0 +1,23 @@
+[
+ {
+  "constraintId": "seq-01",
+  "olderSampleId": "KIA-3003",
+  "youngerSampleId": "KIA-3002",
+  "basis": "Layer 1 below Layer 2",
+  "sourceRef": "field-notes:trench T4 stratigraphy"
+ },
+ {
+  "constraintId": "seq-02",
+  "olderSampleId": "KIA-3002",
+  "youngerSampleId": "KIA-3001",
+  "basis": "Layer 2 below Layer 3",
+  "sourceRef": "field-notes:trench T4 stratigraphy"
+ },
+ {
+  "constraintId": "seq-03",
+  "olderSampleId": "KIA-3004",
+  "youngerSampleId": "KIA-3001",
+  "basis": "shell in Layer 2 below Layer 3",
+  "sourceRef": "field-notes:trench T4 stratigraphy"
+ }
+]

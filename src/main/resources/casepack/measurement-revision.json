@@ -1,0 +1,9 @@
+{
+ "sampleId": "KIA-3003",
+ "labCode": "KIA-3003",
+ "c14Age": 2050.0,
+ "sigma": 35.0,
+ "material": "charcoal (Layer 1, bottom)",
+ "chronology": "BP",
+ "sourceRef": "lab-report:KIA/2026/031 sheet3 rev.1 (replicated)"
+}

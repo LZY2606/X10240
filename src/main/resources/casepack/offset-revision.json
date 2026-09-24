@@ -1,0 +1,8 @@
+{
+ "offsetId": "dR-east",
+ "label": "local marine reservoir correction (east coast, revised est.)",
+ "deltaR": 350.0,
+ "deltaRSigma": 45.0,
+ "unit": "yr",
+ "sourceRef": "marine-reservoir-db:entry M-77 rev.2026"
+}

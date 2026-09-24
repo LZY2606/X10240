@@ -1,0 +1,38 @@
+[
+ {
+  "sampleId": "KIA-3001",
+  "labCode": "KIA-3001",
+  "c14Age": 1955.0,
+  "sigma": 30.0,
+  "material": "charred seed (Layer 3, top)",
+  "chronology": "BP",
+  "sourceRef": "lab-report:KIA/2026/031 sheet1"
+ },
+ {
+  "sampleId": "KIA-3002",
+  "labCode": "KIA-3002",
+  "c14Age": 2130.0,
+  "sigma": 30.0,
+  "material": "charcoal (Layer 2)",
+  "chronology": "BP",
+  "sourceRef": "lab-report:KIA/2026/031 sheet2"
+ },
+ {
+  "sampleId": "KIA-3003",
+  "labCode": "KIA-3003",
+  "c14Age": 2050.0,
+  "sigma": 30.0,
+  "material": "charcoal (Layer 1, bottom)",
+  "chronology": "BP",
+  "sourceRef": "lab-report:KIA/2026/031 sheet3"
+ },
+ {
+  "sampleId": "KIA-3004",
+  "labCode": "KIA-3004",
+  "c14Age": 2450.0,
+  "sigma": 35.0,
+  "material": "marine shell (Layer 2)",
+  "chronology": "BP",
+  "sourceRef": "lab-report:KIA/2026/032 sheet1"
+ }
+]

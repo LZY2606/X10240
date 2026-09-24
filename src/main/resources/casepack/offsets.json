@@ -1,0 +1,26 @@
+[
+ {
+  "offsetId": "dR-none",
+  "label": "terrestrial, no reservoir offset",
+  "deltaR": 0.0,
+  "deltaRSigma": 0.0,
+  "unit": "yr",
+  "sourceRef": "lab-protocol:P-11 terrestrial"
+ },
+ {
+  "offsetId": "dR-east",
+  "label": "local marine reservoir correction (east coast)",
+  "deltaR": 320.0,
+  "deltaRSigma": 40.0,
+  "unit": "yr",
+  "sourceRef": "marine-reservoir-db:entry M-77"
+ },
+ {
+  "offsetId": "dR-alt",
+  "label": "alternative marine reservoir correction (open ocean)",
+  "deltaR": 420.0,
+  "deltaRSigma": 60.0,
+  "unit": "yr",
+  "sourceRef": "marine-reservoir-db:entry M-91"
+ }
+]

@@ -1,0 +1,25 @@
+{
+ "name": "碳年候选席：校准曲线、储库偏移与多峰年代证据",
+ "narrative": "年代学团队把实验室测得的 radiocarbon age 与校准曲线、储库偏移和层序关系组合，审阅日历年代候选。先建立基线(测量/曲线版本/偏移分布/年代系统/层序约束/排除决定各自有来源)，再依次触发曲线多峰、边界插值、储库偏移分布、BCE/CE 跨界、层序矛盾、曲线升版与并列日历区间。",
+ "steps": [
+  {"op": "registerCurve", "file": "curve-v1.json", "why": "基线: 固定曲线版本 v1"},
+  {"op": "importMeasurements", "file": "measurements.json", "why": "基线: 原测量值与标准差, 各带来源"},
+  {"op": "assumeOffsets", "file": "offsets.json", "why": "基线: 储库偏移分布假设"},
+  {"op": "addConstraints", "file": "sequence.json", "why": "基线: 层序约束"},
+  {"op": "calibrate", "sample": "KIA-3001", "offset": "dR-none", "why": "BCE/CE 跨界 + 曲线多峰"},
+  {"op": "calibrate", "sample": "KIA-3002", "offset": "dR-none", "why": "边界插值"},
+  {"op": "calibrate", "sample": "KIA-3003", "offset": "dR-none", "why": "层序矛盾伏笔"},
+  {"op": "calibrate", "sample": "KIA-3004", "offset": "dR-east", "why": "储库偏移分布"},
+  {"op": "calibrate", "sample": "KIA-3004", "offset": "dR-alt", "why": "不同偏移假设并列"},
+  {"op": "decideInterval", "sample": "KIA-3001", "intervalIndex": 0, "accept": true, "actor": "reviewer-a", "rationale": "主峰区间与层位相符", "why": "排除决定各带来源"},
+  {"op": "reviseOffset", "file": "offset-revision.json", "why": "参数修订: 只影响依赖 dR-east 的结果"},
+  {"op": "recalibrate", "sample": "KIA-3004", "offset": "dR-east", "why": "重算受影响对象"},
+  {"op": "reviseMeasurement", "file": "measurement-revision.json", "why": "只影响局部依赖的源数据改动"},
+  {"op": "recalibrate", "sample": "KIA-3003", "offset": "dR-none", "why": "局部重算, 其他结果不过期"},
+  {"op": "decideCandidate", "constraint": "seq-01", "kind": "outlier-older", "accept": true, "actor": "reviewer-a", "rationale": "底层炭屑可能再沉积", "why": "人工决定(第一次)"},
+  {"op": "decideCandidate", "constraint": "seq-01", "kind": "outlier-older", "accept": false, "actor": "reviewer-b", "rationale": "再沉积证据不足, 反对排除", "why": "互相冲突的人工决定"},
+  {"op": "undoLastDecisionBy", "actor": "reviewer-b", "undoActor": "lead-chronologist", "rationale": "组会裁定: 维持 reviewer-a 的排除, 撤销 reviewer-b 的反对", "why": "冲突解决与撤销写入历史"},
+  {"op": "registerCurve", "file": "curve-v2.json", "why": "曲线升版"},
+  {"op": "calibrateAll", "offsets": {"KIA-3001": "dR-none", "KIA-3002": "dR-none", "KIA-3003": "dR-none", "KIA-3004": "dR-east"}, "why": "升版后重算, 旧结果保留但标记过期"}
+ ]
+}
