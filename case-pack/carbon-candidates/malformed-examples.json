@@ -1,0 +1,42 @@
+{
+  "format": "carbon-candidates-malformed/1",
+  "note": "导入层必须拒绝并给出诊断的格式错误样例；每个样例可单独粘贴到导入框验证",
+  "examples": [
+    {
+      "name": "curve-non-numeric-sigma",
+      "kind": "curve-csv",
+      "text": "calBP,c14AgeBP,sigma\n600,600.0,15\n610,634.4,abc\n",
+      "expectError": "sigma"
+    },
+    {
+      "name": "curve-unsorted-grid",
+      "kind": "curve-csv",
+      "text": "calBP,c14AgeBP,sigma\n620,664.6,15\n600,600.0,15\n",
+      "expectError": "ascending"
+    },
+    {
+      "name": "sample-missing-sigma",
+      "kind": "sample-json",
+      "text": "{\"id\":\"S-X1\",\"labCode\":\"BK-X1\",\"description\":\"缺标准差\",\"measurement\":{\"ageBP\":1400,\"unit\":\"BP\"},\"sourceRef\":\"SRC-LAB-2026-011\"}",
+      "expectError": "sigma"
+    },
+    {
+      "name": "sample-negative-sigma",
+      "kind": "sample-json",
+      "text": "{\"id\":\"S-X2\",\"labCode\":\"BK-X2\",\"description\":\"负标准差\",\"measurement\":{\"ageBP\":1400,\"sigma\":-5,\"unit\":\"BP\"},\"sourceRef\":\"SRC-LAB-2026-011\"}",
+      "expectError": "sigma"
+    },
+    {
+      "name": "sample-unknown-era-system",
+      "kind": "sample-json",
+      "text": "{\"id\":\"S-X3\",\"labCode\":\"BK-X3\",\"description\":\"未知年代系统\",\"measurement\":{\"ageBP\":1400,\"sigma\":30,\"unit\":\"BP\"},\"eraSystem\":\"ROCOCO\",\"sourceRef\":\"SRC-LAB-2026-011\"}",
+      "expectError": "eraSystem"
+    },
+    {
+      "name": "constraint-unknown-sample",
+      "kind": "constraint-json",
+      "text": "{\"id\":\"C-X1\",\"olderSampleId\":\"S-404\",\"youngerSampleId\":\"S-001\",\"sourceRef\":\"SRC-STRAT-SECTION-7\"}",
+      "expectError": "unknown sample"
+    }
+  ]
+}

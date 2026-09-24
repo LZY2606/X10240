@@ -1,0 +1,84 @@
+{
+  "format": "carbon-candidates-casepack/1",
+  "project": {
+    "id": "prj-carbon-candidates",
+    "name": "碳年候选席：校准曲线、储库偏移与多峰年代证据",
+    "narrative": "年代学团队把实验室测得的 radiocarbon age 与 SynCal-1 教学曲线、储库偏移和层序关系组合，审阅日历年代候选。基线完整保留原测量值和标准差、曲线版本、偏移分布、年代系统、层序约束和排除决定各自来源；随后剧本逐步触发曲线多峰、边界插值、储库偏移分布、BCE/CE 跨界、层序矛盾、曲线升版与并列日历区间。"
+  },
+  "sources": [
+    {"ref": "SRC-LAB-2026-011", "kind": "lab-report", "title": "Beta 实验室 2026-011 批次测量报告（原测量值与标准差）"},
+    {"ref": "SRC-LAB-2026-014", "kind": "lab-memo", "title": "实验室更正备忘录：S-004 测量值更正"},
+    {"ref": "SRC-CURVE-SYNCAL1", "kind": "curve-release", "title": "SynCal-1 v1.0 合成教学校准曲线（非 IntCal）"},
+    {"ref": "SRC-CURVE-SYNCAL1-V2", "kind": "curve-release", "title": "SynCal-1 v2.0 合成教学校准曲线（平台段移动、误差收紧）"},
+    {"ref": "SRC-STRAT-SECTION-7", "kind": "stratigraphy", "title": "7 号剖面层序记录"},
+    {"ref": "SRC-RESERVOIR-EST", "kind": "reservoir-estimate", "title": "潟湖贝类储库偏移初估 N(150,30)"},
+    {"ref": "SRC-RESERVOIR-REV", "kind": "reservoir-estimate", "title": "储库偏移修订：双群混合 0.7·N(120,25)+0.3·N(400,40)"},
+    {"ref": "SRC-REVIEW-001", "kind": "review-decision", "title": "初审：排除扰动层样品 S-006"},
+    {"ref": "SRC-REVIEW-002", "kind": "review-decision", "title": "层序矛盾裁定：排除疑受污染的 S-001"},
+    {"ref": "SRC-REVIEW-003", "kind": "review-decision", "title": "审阅者甲：采纳 S-002 早段区间"},
+    {"ref": "SRC-REVIEW-004", "kind": "review-decision", "title": "审阅者乙：采纳 S-002 晚段区间（与甲冲突）"},
+    {"ref": "SRC-REVIEW-005", "kind": "review-decision", "title": "并列区间裁定：S-005 两个日历区间并列保留"}
+  ],
+  "curves": [
+    {"name": "SynCal-1", "version": "1.0", "resource": "carbon-candidates/syncal1_v1.csv", "sourceRef": "SRC-CURVE-SYNCAL1"}
+  ],
+  "samples": [
+    {"id": "S-001", "labCode": "BK-2601", "description": "木炭，文化层 L2", "measurement": {"ageBP": 1400, "sigma": 30, "unit": "BP"}, "reservoir": {"type": "none"}, "eraSystem": "CAL_BP", "sourceRef": "SRC-LAB-2026-011"},
+    {"id": "S-002", "labCode": "BK-2602", "description": "炭化种子，文化层 L3", "measurement": {"ageBP": 1250, "sigma": 25, "unit": "BP"}, "reservoir": {"type": "none"}, "eraSystem": "CAL_BP", "sourceRef": "SRC-LAB-2026-011"},
+    {"id": "S-003", "labCode": "BK-2603", "description": "人骨，墓葬 M1（剖面最底层）", "measurement": {"ageBP": 1950, "sigma": 40, "unit": "BP"}, "reservoir": {"type": "none"}, "eraSystem": "BCE_CE", "sourceRef": "SRC-LAB-2026-011"},
+    {"id": "S-004", "labCode": "BK-2604", "description": "贝类，岸滩沉积 L1（最年轻层）", "measurement": {"ageBP": 615, "sigma": 25, "unit": "BP"}, "reservoir": {"type": "none"}, "eraSystem": "CAL_BP", "sourceRef": "SRC-LAB-2026-011"},
+    {"id": "S-005", "labCode": "BK-2605", "description": "贝类，潟湖沉积（储库偏移样品）", "measurement": {"ageBP": 1400, "sigma": 35, "unit": "BP"}, "reservoir": {"type": "normal", "deltaR": 150, "sigma": 30}, "eraSystem": "CAL_BP", "sourceRef": "SRC-RESERVOIR-EST"},
+    {"id": "S-006", "labCode": "BK-2606", "description": "炭屑，扰动层（初审排除）", "measurement": {"ageBP": 1100, "sigma": 60, "unit": "BP"}, "reservoir": {"type": "none"}, "eraSystem": "CAL_BP", "sourceRef": "SRC-LAB-2026-011"}
+  ],
+  "constraints": [
+    {"id": "C-1", "olderSampleId": "S-003", "youngerSampleId": "S-002", "note": "M1 墓葬被 L3 叠压，墓葬更老", "sourceRef": "SRC-STRAT-SECTION-7"},
+    {"id": "C-2", "olderSampleId": "S-002", "youngerSampleId": "S-001", "note": "L3 在 L2 之下，L3 更老", "sourceRef": "SRC-STRAT-SECTION-7"},
+    {"id": "C-4", "olderSampleId": "S-002", "youngerSampleId": "S-004", "note": "L3 在 L1 之下", "sourceRef": "SRC-STRAT-SECTION-7"}
+  ],
+  "baselineDecisions": [
+    {"kind": "EXCLUDE_SAMPLE", "targetSampleId": "S-006", "rationale": "扰动层炭屑，实验室标记可能混杂，初审排除", "sourceRef": "SRC-REVIEW-001"}
+  ],
+  "script": [
+    {"id": "step-1", "op": "import-baseline", "title": "导入基线：曲线 v1.0、6 个样品、3 条层序约束、1 条排除决定（各自带来源）",
+     "expect": {"sampleCount": 6, "constraintCount": 3, "curveVersions": {"SynCal-1": "1.0"}, "excludedSamples": ["S-006"]}},
+    {"id": "step-2", "op": "calibrate-all", "title": "校准全部样品：S-001 曲线多峰、S-003 BCE/CE 跨界、S-004 边界截断诊断",
+     "expect": {"minIntervals": {"S-001": 2}, "intervalCrosses": {"S-003": 1950}, "diagnostic": {"S-004": "TRUNCATED_AT_BOUNDARY"}, "runStatus": {"S-001": "CURRENT", "S-003": "CURRENT"}}},
+    {"id": "step-3", "op": "run-sequence", "title": "首次层序评估：C-2 与校准结果矛盾",
+     "expect": {"sequenceStatus": "CONTRADICTION", "conflictOn": ["C-2"]}},
+    {"id": "step-4", "op": "decide", "kind": "EXCLUDE_SAMPLE", "targetSampleId": "S-001", "rationale": "S-001 与层序矛盾，疑受老碳污染，排除后重评", "sourceRef": "SRC-REVIEW-002",
+     "expect": {"excludedSamples": ["S-001", "S-006"]}},
+    {"id": "step-5", "op": "run-sequence", "title": "排除 S-001 后重评：层序一致但 S-002 多峰，保留全部合法候选",
+     "expect": {"sequenceStatusIn": ["CONSISTENT", "AMBIGUOUS"], "minCandidates": 2}},
+    {"id": "step-6", "op": "revise-sample", "sampleId": "S-005", "sourceRef": "SRC-RESERVOIR-REV",
+     "patch": {"reservoir": {"type": "mixture", "components": [{"weight": 0.7, "deltaR": 120, "sigma": 25}, {"weight": 0.3, "deltaR": 400, "sigma": 40}]}},
+     "title": "参数修订：S-005 储库偏移改为双群混合分布",
+     "expect": {"staleSamples": ["S-005"], "currentSamples": ["S-002", "S-003", "S-004"]}},
+    {"id": "step-7", "op": "calibrate", "sampleId": "S-005", "title": "重校 S-005：储库偏移分布产生额外峰",
+     "expect": {"minIntervals": {"S-005": 2}, "runStatus": {"S-005": "CURRENT"}}},
+    {"id": "step-8", "op": "revise-sample", "sampleId": "S-004", "sourceRef": "SRC-LAB-2026-014",
+     "patch": {"measurement": {"ageBP": 625, "sigma": 25, "unit": "BP"}},
+     "title": "局部源数据改动：实验室更正 S-004 测量值，仅 S-004 的结果过期",
+     "expect": {"staleSamples": ["S-004"], "currentSamples": ["S-002", "S-003", "S-005"]}},
+    {"id": "step-9", "op": "calibrate", "sampleId": "S-004", "title": "重校 S-004（新测量值仍在边界附近）",
+     "expect": {"runStatus": {"S-004": "CURRENT"}, "diagnostic": {"S-004": "TRUNCATED_AT_BOUNDARY"}}},
+    {"id": "step-10", "op": "decide", "kind": "ACCEPT_INTERVAL", "targetSampleId": "S-002", "intervalIndex": 0, "rationale": "审阅者甲采纳 S-002 最可能区间", "sourceRef": "SRC-REVIEW-003",
+     "expect": {"acceptedIntervals": {"S-002": 1}}},
+    {"id": "step-11", "op": "decide", "kind": "ACCEPT_INTERVAL", "targetSampleId": "S-002", "intervalIndex": 2, "rationale": "审阅者乙采纳 S-002 另一不相交区间（非并列，构成冲突）", "sourceRef": "SRC-REVIEW-004",
+     "expect": {"decisionConflict": true}},
+    {"id": "step-12", "op": "supersede-decision", "step": "step-11", "mode": "RESOLVE", "reason": "团队裁定保留甲的采纳，否定乙的冲突采纳",
+     "expect": {"decisionConflict": false, "acceptedIntervals": {"S-002": 1}}},
+    {"id": "step-13", "op": "supersede-decision", "step": "step-12", "mode": "UNDO", "reason": "演示撤销：恢复乙的采纳，冲突重新出现",
+     "expect": {"decisionConflict": true}},
+    {"id": "step-14", "op": "supersede-decision", "step": "step-11", "mode": "RESOLVE", "reason": "再次裁定：否定乙的采纳（最终状态）",
+     "expect": {"decisionConflict": false}},
+    {"id": "step-15", "op": "import-curve", "name": "SynCal-1", "version": "2.0", "resource": "carbon-candidates/syncal1_v2.csv", "sourceRef": "SRC-CURVE-SYNCAL1-V2",
+     "title": "曲线升版：SynCal-1 v2.0 发布，依赖 v1.0 的结果全部过期但仍可查看",
+     "expect": {"curveVersions": {"SynCal-1": "2.0"}, "staleSamples": ["S-002", "S-003", "S-004", "S-005"]}},
+    {"id": "step-16", "op": "recompute-stale", "title": "按 v2.0 重算：S-003 跨界区间随平台段移动",
+     "expect": {"runStatus": {"S-003": "CURRENT"}, "intervalCrosses": {"S-003": 2010}, "staleRunKept": "S-003"}},
+    {"id": "step-17", "op": "decide", "kind": "ACCEPT_INTERVAL", "targetSampleId": "S-005", "intervalIndex": 0, "parallel": true, "rationale": "S-005 多峰，并列采纳第一区间", "sourceRef": "SRC-REVIEW-005",
+     "expect": {"acceptedIntervals": {"S-005": 1}}},
+    {"id": "step-18", "op": "decide", "kind": "ACCEPT_INTERVAL", "targetSampleId": "S-005", "intervalIndex": 1, "parallel": true, "rationale": "并列采纳第二区间：并列日历区间不压成一个平均年", "sourceRef": "SRC-REVIEW-005",
+     "expect": {"acceptedIntervals": {"S-005": 2}, "decisionConflict": false}}
+  ]
+}
