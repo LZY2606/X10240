@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>放射性碳年代校准 · 多峰分布工作台</title>
+<style>
+:root{--bg:#f4f6fa;--card:#fff;--line:#dbe1ec;--ink:#1c2536;--mut:#5b6678;--accent:#1f4e9c;--ok:#0b6e4f;--warn:#b07c0f;--bad:#b23b3b;}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,"PingFang SC","Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink)}
+header{background:#10233f;color:#fff;padding:12px 20px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+header h1{font-size:17px;margin:0;font-weight:600}
+header .meta{font-size:12px;color:#aebfd9}
+button{border:1px solid var(--line);background:#fff;border-radius:7px;padding:6px 12px;font-size:13px;cursor:pointer}
+button.primary{background:var(--accent);color:#fff;border-color:var(--accent)}
+button.danger{color:var(--bad);border-color:#e3b9b9}
+button.small{padding:3px 8px;font-size:12px}
+.wrap{display:grid;grid-template-columns:300px 1fr 360px;gap:14px;padding:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px;margin-bottom:14px}
+.card h2{font-size:13px;margin:0 0 10px;text-transform:uppercase;letter-spacing:.04em;color:var(--mut)}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:8px}
+table{width:100%;border-collapse:collapse;font-size:12.5px}
+th,td{text-align:left;padding:5px 6px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--mut);font-weight:600}
+.pill{display:inline-block;border-radius:99px;padding:1px 8px;font-size:11px;border:1px solid var(--line)}
+.pill.ok{color:var(--ok);border-color:#bfe0d4;background:#eef8f3}
+.pill.warn{color:var(--warn);border-color:#ecd9a8;background:#fdf6e3}
+.pill.bad{color:var(--bad);border-color:#e6bcbc;background:#fbeeee}
+.pill.info{color:var(--accent);border-color:#c2d2ea;background:#eef3fb}
+.stale{color:var(--bad);font-weight:600}
+.sid{font-family:ui-monospace,Menlo,monospace;font-size:10.5px;color:#8290a5;word-break:break-all}
+.svgbox{overflow:auto;border:1px solid var(--line);border-radius:8px;background:#fff;margin-bottom:10px}
+.svgbox svg{display:block;width:100%;height:auto}
+details{margin:4px 0;border:1px solid var(--line);border-radius:8px;padding:6px 8px;background:#fbfcfe}
+details summary{cursor:pointer;font-size:12.5px;font-weight:600}
+pre{background:#0f1b2d;color:#d8e2f2;border-radius:8px;padding:9px;font-size:11px;overflow:auto;max-height:280px}
+input,textarea,select{font:inherit;padding:5px 8px;border:1px solid var(--line);border-radius:6px}
+textarea{width:100%;min-height:90px;font-family:ui-monospace,monospace;font-size:11.5px}
+.hist{max-height:260px;overflow:auto;font-size:11.5px}
+.hist .ev{padding:5px 6px;border-left:3px solid var(--line);margin-bottom:4px;background:#fafbfe;cursor:pointer}
+.hist .ev.cur{border-left-color:var(--accent);background:#eef3fb}
+.muted{color:var(--mut);font-size:11.5px}
+.tag{font-family:ui-monospace,monospace;font-size:10px;background:#eef2f8;border-radius:4px;padding:0 5px}
+a{color:var(--accent)}
+.toast{position:fixed;bottom:18px;right:18px;background:#10233f;color:#fff;padding:9px 14px;border-radius:8px;font-size:13px;display:none}
+</style>
+</head>
+<body>
+<header>
+  <h1>放射性碳 / 年代校准 / 多峰分布工作台</h1>
+  <span class="meta" id="projMeta">未打开项目</span>
+  <span style="flex:1"></span>
+  <button class="primary" onclick="loadCase()">载入离线案例「碳年候选席」</button>
+  <button onclick="refreshState()">刷新</button>
+  <button onclick="exportBundle()">导出事件包</button>
+  <button onclick="document.getElementById('importFile').click()">导入事件包</button>
+  <input type="file" id="importFile" accept="application/json" style="display:none" onchange="importBundle(event)"/>
+  <button class="danger" onclick="resetAll()">清空本地数据库</button>
+</header>
+
+<div class="wrap">
+  <div>
+    <div class="card">
+      <h2>源材料与版本</h2>
+      <div id="sources"></div>
+    </div>
+    <div class="card">
+      <h2>导入实验室表格</h2>
+      <textarea id="sheet">labCode,c14Age,sigma,unit,material
+GSB-M09,2010,18,14C BP,charcoal
+GSB-M10,notanumber,20,14C BP,seed</textarea>
+      <div class="row"><button class="small" onclick="importSheet()">提交（保留原始表示）</button></div>
+      <div class="muted">格式错误的行不会阻塞其它行；无法转换的值留在原位并带诊断。</div>
+    </div>
+    <div class="card">
+      <h2>历史事件（可回到旧结论）</h2>
+      <div class="hist" id="history"></div>
+    </div>
+  </div>
+
+  <div>
+    <div class="card">
+      <h2>校准曲线（固定版本）</h2>
+      <div class="svgbox" id="curveSvg"><div class="muted" style="padding:20px">载入案例后显示。</div></div>
+      <div class="sid" id="curveSid"></div>
+    </div>
+    <div class="card">
+      <h2>测量 → 校准概率密度</h2>
+      <table id="measTable"></table>
+      <div id="focus"></div>
+    </div>
+  </div>
+
+  <div>
+    <div class="card">
+      <h2>层序关系</h2>
+      <div class="svgbox" id="seqSvg"></div>
+      <div id="seqList"></div>
+    </div>
+    <div class="card">
+      <h2>复核裁定</h2>
+      <div id="reviewPanel" class="muted">在中间表格选择一条测量。</div>
+    </div>
+    <div class="card">
+      <h2>区间积分证据</h2>
+      <div class="row">
+        从 calBP <input id="intFrom" size="6"/> 到 <input id="intTo" size="6"/>
+        <button class="small" onclick="integrate()">积分</button>
+      </div>
+      <pre id="integralOut" class="muted">选中测量后可对任意区间求归一化网格积分。</pre>
+    </div>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+<script src="/static/app.js"></script>
+</body>
+</html>
