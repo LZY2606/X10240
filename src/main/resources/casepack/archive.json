@@ -1,0 +1,1474 @@
+{
+ "archiveId": "carbon-candidate-bench-archive",
+ "title": "碳年候选席：校准曲线、储库偏移与多峰年代证据",
+ "version": "1.0.0",
+ "description": "放射性碳/年代校准/多峰分布离线反例档案。基线保存原测量值与标准差、曲线版本、偏移分布、年代系统、层序约束与排除决定的各自来源；剧本每次只改动一个直接来源。",
+ "baseline": [
+  {
+   "key": "era1",
+   "kind": "ERA_SYSTEM",
+   "provenance": "年代学团队方法手册 v3 §2（Stuiver & Polach 1977 约定；无 0 年）",
+   "unit": "calBP/BCE/CE",
+   "payload": {
+    "system": "calBP",
+    "referenceYear": 1950,
+    "noYearZero": true,
+    "note": "astronomical year 0 = 1 BCE"
+   }
+  },
+  {
+   "key": "curve1",
+   "kind": "CURVE",
+   "provenance": "离线校准曲线档案 intcal-shim-1（合成垫片曲线，固定版本，离线可重放）",
+   "unit": "calBP",
+   "payload": {
+    "name": "intcal-shim-1",
+    "synthetic": true,
+    "formula": "c14(t)=t-150+340*exp(-((t-2600)/450)^2)*sin((t-2600)/110)",
+    "sigmaFormula": "constant 25 BP",
+    "gridStep": 50.0,
+    "range": [
+     0,
+     6000
+    ],
+    "points": [
+     {
+      "calBp": 0,
+      "c14Age": -150.0,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 50,
+      "c14Age": -100.0,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 100,
+      "c14Age": -50.0,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 150,
+      "c14Age": 0.0,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 200,
+      "c14Age": 50.0,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 250,
+      "c14Age": 100.0,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 300,
+      "c14Age": 150.0,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 350,
+      "c14Age": 200.0,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 400,
+      "c14Age": 250.0,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 450,
+      "c14Age": 300.0,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 500,
+      "c14Age": 350.0,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 550,
+      "c14Age": 400.0,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 600,
+      "c14Age": 450.0,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 650,
+      "c14Age": 500.0,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 700,
+      "c14Age": 550.0,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 750,
+      "c14Age": 600.0,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 800,
+      "c14Age": 650.0,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 850,
+      "c14Age": 700.0,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 900,
+      "c14Age": 750.0,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 950,
+      "c14Age": 800.0,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 1000,
+      "c14Age": 850.0,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 1050,
+      "c14Age": 900.0,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 1100,
+      "c14Age": 950.0,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 1150,
+      "c14Age": 999.99,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 1200,
+      "c14Age": 1050.0,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 1250,
+      "c14Age": 1100.01,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 1300,
+      "c14Age": 1150.05,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 1350,
+      "c14Age": 1200.14,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 1400,
+      "c14Age": 1250.28,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 1450,
+      "c14Age": 1300.42,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 1500,
+      "c14Age": 1350.47,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 1550,
+      "c14Age": 1400.18,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 1600,
+      "c14Age": 1449.2,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 1650,
+      "c14Age": 1497.2,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 1700,
+      "c14Age": 1544.1,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 1750,
+      "c14Age": 1590.48,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 1800,
+      "c14Age": 1637.95,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 1850,
+      "c14Age": 1689.22,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 1900,
+      "c14Age": 1747.57,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 1950,
+      "c14Age": 1815.42,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 2000,
+      "c14Age": 1892.35,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 2050,
+      "c14Age": 1973.2,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 2100,
+      "c14Age": 2047.55,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 2150,
+      "c14Age": 2101.69,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 2200,
+      "c14Age": 2123.26,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 2250,
+      "c14Age": 2107.47,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 2300,
+      "c14Age": 2062.24,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 2350,
+      "c14Age": 2009.32,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 2400,
+      "c14Age": 1979.44,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 2450,
+      "c14Age": 2002.26,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 2500,
+      "c14Age": 2094.68,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 2550,
+      "c14Age": 2252.55,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 2600,
+      "c14Age": 2450.0,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 2650,
+      "c14Age": 2647.45,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 2700,
+      "c14Age": 2805.32,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 2750,
+      "c14Age": 2897.74,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 2800,
+      "c14Age": 2920.56,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 2850,
+      "c14Age": 2890.68,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 2900,
+      "c14Age": 2837.76,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 2950,
+      "c14Age": 2792.53,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 3000,
+      "c14Age": 2776.74,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 3050,
+      "c14Age": 2798.31,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 3100,
+      "c14Age": 2852.45,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 3150,
+      "c14Age": 2926.8,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 3200,
+      "c14Age": 3007.65,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 3250,
+      "c14Age": 3084.58,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 3300,
+      "c14Age": 3152.43,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 3350,
+      "c14Age": 3210.78,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 3400,
+      "c14Age": 3262.05,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 3450,
+      "c14Age": 3309.52,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 3500,
+      "c14Age": 3355.9,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 3550,
+      "c14Age": 3402.8,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 3600,
+      "c14Age": 3450.8,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 3650,
+      "c14Age": 3499.82,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 3700,
+      "c14Age": 3549.53,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 3750,
+      "c14Age": 3599.58,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 3800,
+      "c14Age": 3649.72,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 3850,
+      "c14Age": 3699.86,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 3900,
+      "c14Age": 3749.95,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 3950,
+      "c14Age": 3799.99,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 4000,
+      "c14Age": 3850.0,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 4050,
+      "c14Age": 3900.01,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 4100,
+      "c14Age": 3950.0,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 4150,
+      "c14Age": 4000.0,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 4200,
+      "c14Age": 4050.0,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 4250,
+      "c14Age": 4100.0,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 4300,
+      "c14Age": 4150.0,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 4350,
+      "c14Age": 4200.0,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 4400,
+      "c14Age": 4250.0,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 4450,
+      "c14Age": 4300.0,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 4500,
+      "c14Age": 4350.0,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 4550,
+      "c14Age": 4400.0,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 4600,
+      "c14Age": 4450.0,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 4650,
+      "c14Age": 4500.0,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 4700,
+      "c14Age": 4550.0,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 4750,
+      "c14Age": 4600.0,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 4800,
+      "c14Age": 4650.0,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 4850,
+      "c14Age": 4700.0,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 4900,
+      "c14Age": 4750.0,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 4950,
+      "c14Age": 4800.0,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 5000,
+      "c14Age": 4850.0,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 5050,
+      "c14Age": 4900.0,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 5100,
+      "c14Age": 4950.0,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 5150,
+      "c14Age": 5000.0,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 5200,
+      "c14Age": 5050.0,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 5250,
+      "c14Age": 5100.0,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 5300,
+      "c14Age": 5150.0,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 5350,
+      "c14Age": 5200.0,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 5400,
+      "c14Age": 5250.0,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 5450,
+      "c14Age": 5300.0,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 5500,
+      "c14Age": 5350.0,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 5550,
+      "c14Age": 5400.0,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 5600,
+      "c14Age": 5450.0,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 5650,
+      "c14Age": 5500.0,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 5700,
+      "c14Age": 5550.0,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 5750,
+      "c14Age": 5600.0,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 5800,
+      "c14Age": 5650.0,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 5850,
+      "c14Age": 5700.0,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 5900,
+      "c14Age": 5750.0,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 5950,
+      "c14Age": 5800.0,
+      "sigma": 25.0
+     },
+     {
+      "calBp": 6000,
+      "c14Age": 5850.0,
+      "sigma": 25.0
+     }
+    ]
+   }
+  },
+  {
+   "key": "off1",
+   "kind": "RESERVOIR_OFFSET",
+   "provenance": "海洋/湖泊储库调查站点 SH-07 报告（ΔR 均值与标准差）",
+   "unit": "14C years",
+   "payload": {
+    "mean": 280.0,
+    "sigma": 60.0,
+    "station": "SH-07"
+   }
+  },
+  {
+   "key": "m1",
+   "kind": "MEASUREMENT",
+   "provenance": "实验室 LabX 报告 LX-2026-014（木炭，AMS）",
+   "unit": "BP ± 1 sigma",
+   "payload": {
+    "labCode": "LAB-0001",
+    "ageBp": 2850.0,
+    "sigma": 30.0,
+    "material": "charcoal",
+    "sampleName": "charred beam, trench A"
+   }
+  },
+  {
+   "key": "m2",
+   "kind": "MEASUREMENT",
+   "provenance": "实验室 LabX 报告 LX-2026-015（贝壳，AMS）",
+   "unit": "BP ± 1 sigma",
+   "payload": {
+    "labCode": "LAB-0002",
+    "ageBp": 3100.0,
+    "sigma": 35.0,
+    "material": "shell",
+    "sampleName": "marine shell, midden"
+   }
+  },
+  {
+   "key": "m3",
+   "kind": "MEASUREMENT",
+   "provenance": "实验室 LabX 报告 LX-2026-016（骨胶原，AMS）",
+   "unit": "BP ± 1 sigma",
+   "payload": {
+    "labCode": "LAB-0003",
+    "ageBp": 1900.0,
+    "sigma": 60.0,
+    "material": "bone collagen",
+    "sampleName": "human burial B-12"
+   }
+  },
+  {
+   "key": "m4",
+   "kind": "MEASUREMENT",
+   "provenance": "实验室 LabX 报告 LX-2026-017（泥炭纤维素）",
+   "unit": "BP ± 1 sigma",
+   "payload": {
+    "labCode": "LAB-0004",
+    "ageBp": 5850.0,
+    "sigma": 50.0,
+    "material": "peat",
+    "sampleName": "basal peat core P-3"
+   }
+  },
+  {
+   "key": "m5",
+   "kind": "MEASUREMENT",
+   "provenance": "实验室 LabX 报告 LX-2026-018（木炭，I 层）",
+   "unit": "BP ± 1 sigma",
+   "payload": {
+    "labCode": "LAB-0005",
+    "ageBp": 2400.0,
+    "sigma": 25.0,
+    "material": "charcoal",
+    "sampleName": "stratum I hearth"
+   }
+  },
+  {
+   "key": "m6",
+   "kind": "MEASUREMENT",
+   "provenance": "实验室 LabX 报告 LX-2026-019（木炭，II 层）",
+   "unit": "BP ± 1 sigma",
+   "payload": {
+    "labCode": "LAB-0006",
+    "ageBp": 2300.0,
+    "sigma": 25.0,
+    "material": "charcoal",
+    "sampleName": "stratum II hearth"
+   }
+  },
+  {
+   "key": "m7",
+   "kind": "MEASUREMENT",
+   "provenance": "实验室 LabX 报告 LX-2026-020（沉积物全样）",
+   "unit": "BP ± 1 sigma",
+   "payload": {
+    "labCode": "LAB-0007",
+    "ageBp": 3200.0,
+    "sigma": 40.0,
+    "material": "bulk sediment",
+    "sampleName": "bulk sediment, unit Q"
+   }
+  },
+  {
+   "key": "seq1",
+   "kind": "SEQUENCE_CONSTRAINT",
+   "provenance": "发掘记录 EX-09 层序图：II 层低于 I 层，故 LAB-0006 应早于 LAB-0005",
+   "unit": "stratigraphic order (older -> younger)",
+   "payload": {
+    "before": "LAB-0006",
+    "after": "LAB-0005",
+    "note": "stratum II below stratum I (section EX-09)"
+   }
+  },
+  {
+   "key": "excl1",
+   "kind": "EXCLUSION_DECISION",
+   "provenance": "QA 会议纪要 2026-09-10：LAB-0007 腐殖酸污染，排除",
+   "unit": "decision text",
+   "payload": {
+    "targetLabCode": "LAB-0007",
+    "excluded": true,
+    "reason": "humic contamination, bulk sediment QA failed",
+    "author": "reviewer-chen"
+   }
+  }
+ ],
+ "revisions": {
+  "off2": {
+   "key": "off2",
+   "kind": "RESERVOIR_OFFSET",
+   "provenance": "站点 SH-07 修订报告（2026 批次，ΔR 改为显式样本混合分布）",
+   "unit": "14C years",
+   "payload": {
+    "mean": 345.0,
+    "sigma": 34.0,
+    "samples": [
+     300.0,
+     330.0,
+     360.0,
+     390.0
+    ],
+    "station": "SH-07",
+    "revisionNote": "four paired samples, equal mixture weight"
+   }
+  },
+  "curve2": {
+   "key": "curve2",
+   "kind": "CURVE",
+   "provenance": "离线校准曲线档案 intcal-shim-2（曲线升版：振幅/基线/误差栏修订）",
+   "unit": "calBP",
+   "payload": {
+    "name": "intcal-shim-2",
+    "synthetic": true,
+    "formula": "c14(t)=t-140+240*exp(-((t-2600)/450)^2)*sin((t-2600)/110)",
+    "sigmaFormula": "constant 22 BP",
+    "gridStep": 50.0,
+    "range": [
+     0,
+     6000
+    ],
+    "supersedes": "intcal-shim-1",
+    "points": [
+     {
+      "calBp": 0,
+      "c14Age": -140.0,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 50,
+      "c14Age": -90.0,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 100,
+      "c14Age": -40.0,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 150,
+      "c14Age": 10.0,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 200,
+      "c14Age": 60.0,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 250,
+      "c14Age": 110.0,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 300,
+      "c14Age": 160.0,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 350,
+      "c14Age": 210.0,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 400,
+      "c14Age": 260.0,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 450,
+      "c14Age": 310.0,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 500,
+      "c14Age": 360.0,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 550,
+      "c14Age": 410.0,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 600,
+      "c14Age": 460.0,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 650,
+      "c14Age": 510.0,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 700,
+      "c14Age": 560.0,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 750,
+      "c14Age": 610.0,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 800,
+      "c14Age": 660.0,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 850,
+      "c14Age": 710.0,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 900,
+      "c14Age": 760.0,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 950,
+      "c14Age": 810.0,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 1000,
+      "c14Age": 860.0,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 1050,
+      "c14Age": 910.0,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 1100,
+      "c14Age": 960.0,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 1150,
+      "c14Age": 1010.0,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 1200,
+      "c14Age": 1060.0,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 1250,
+      "c14Age": 1110.01,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 1300,
+      "c14Age": 1160.04,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 1350,
+      "c14Age": 1210.1,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 1400,
+      "c14Age": 1260.2,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 1450,
+      "c14Age": 1310.3,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 1500,
+      "c14Age": 1360.33,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 1550,
+      "c14Age": 1410.12,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 1600,
+      "c14Age": 1459.44,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 1650,
+      "c14Age": 1508.03,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 1700,
+      "c14Age": 1555.84,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 1750,
+      "c14Age": 1603.28,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 1800,
+      "c14Age": 1651.49,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 1850,
+      "c14Age": 1702.39,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 1900,
+      "c14Age": 1758.28,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 1950,
+      "c14Age": 1820.89,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 2000,
+      "c14Age": 1889.9,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 2050,
+      "c14Age": 1961.67,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 2100,
+      "c14Age": 2028.86,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 2150,
+      "c14Age": 2081.78,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 2200,
+      "c14Age": 2111.71,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 2250,
+      "c14Age": 2115.27,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 2300,
+      "c14Age": 2098.05,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 2350,
+      "c14Age": 2075.4,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 2400,
+      "c14Age": 2069.02,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 2450,
+      "c14Age": 2099.83,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 2500,
+      "c14Age": 2179.78,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 2550,
+      "c14Age": 2305.92,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 2600,
+      "c14Age": 2460.0,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 2650,
+      "c14Age": 2614.08,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 2700,
+      "c14Age": 2740.22,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 2750,
+      "c14Age": 2820.17,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 2800,
+      "c14Age": 2850.98,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 2850,
+      "c14Age": 2844.6,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 2900,
+      "c14Age": 2821.95,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 2950,
+      "c14Age": 2804.73,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 3000,
+      "c14Age": 2808.29,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 3050,
+      "c14Age": 2838.22,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 3100,
+      "c14Age": 2891.14,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 3150,
+      "c14Age": 2958.33,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 3200,
+      "c14Age": 3030.1,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 3250,
+      "c14Age": 3099.11,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 3300,
+      "c14Age": 3161.72,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 3350,
+      "c14Age": 3217.61,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 3400,
+      "c14Age": 3268.51,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 3450,
+      "c14Age": 3316.72,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 3500,
+      "c14Age": 3364.16,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 3550,
+      "c14Age": 3411.97,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 3600,
+      "c14Age": 3460.56,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 3650,
+      "c14Age": 3509.88,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 3700,
+      "c14Age": 3559.67,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 3750,
+      "c14Age": 3609.7,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 3800,
+      "c14Age": 3659.8,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 3850,
+      "c14Age": 3709.9,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 3900,
+      "c14Age": 3759.96,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 3950,
+      "c14Age": 3809.99,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 4000,
+      "c14Age": 3860.0,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 4050,
+      "c14Age": 3910.0,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 4100,
+      "c14Age": 3960.0,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 4150,
+      "c14Age": 4010.0,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 4200,
+      "c14Age": 4060.0,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 4250,
+      "c14Age": 4110.0,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 4300,
+      "c14Age": 4160.0,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 4350,
+      "c14Age": 4210.0,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 4400,
+      "c14Age": 4260.0,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 4450,
+      "c14Age": 4310.0,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 4500,
+      "c14Age": 4360.0,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 4550,
+      "c14Age": 4410.0,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 4600,
+      "c14Age": 4460.0,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 4650,
+      "c14Age": 4510.0,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 4700,
+      "c14Age": 4560.0,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 4750,
+      "c14Age": 4610.0,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 4800,
+      "c14Age": 4660.0,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 4850,
+      "c14Age": 4710.0,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 4900,
+      "c14Age": 4760.0,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 4950,
+      "c14Age": 4810.0,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 5000,
+      "c14Age": 4860.0,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 5050,
+      "c14Age": 4910.0,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 5100,
+      "c14Age": 4960.0,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 5150,
+      "c14Age": 5010.0,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 5200,
+      "c14Age": 5060.0,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 5250,
+      "c14Age": 5110.0,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 5300,
+      "c14Age": 5160.0,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 5350,
+      "c14Age": 5210.0,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 5400,
+      "c14Age": 5260.0,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 5450,
+      "c14Age": 5310.0,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 5500,
+      "c14Age": 5360.0,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 5550,
+      "c14Age": 5410.0,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 5600,
+      "c14Age": 5460.0,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 5650,
+      "c14Age": 5510.0,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 5700,
+      "c14Age": 5560.0,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 5750,
+      "c14Age": 5610.0,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 5800,
+      "c14Age": 5660.0,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 5850,
+      "c14Age": 5710.0,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 5900,
+      "c14Age": 5760.0,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 5950,
+      "c14Age": 5810.0,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 6000,
+      "c14Age": 5860.0,
+      "sigma": 22.0
+     }
+    ]
+   }
+  },
+  "m2rev": {
+   "key": "m2rev",
+   "kind": "MEASUREMENT",
+   "provenance": "实验室 LabX 勘误 LX-2026-015-err1（贝壳 sigma 复核 35→28）",
+   "unit": "BP ± 1 sigma",
+   "payload": {
+    "labCode": "LAB-0002",
+    "ageBp": 3100.0,
+    "sigma": 28.0,
+    "material": "shell",
+    "sampleName": "marine shell, midden"
+   }
+  }
+ },
+ "scenarios": [
+  {
+   "id": "scn-multimodal",
+   "title": "曲线多峰",
+   "expectation": "LAB-0001 的 68% HDR 出现多个并列日历区间，峰值不被压成平均年"
+  },
+  {
+   "id": "scn-parallel-intervals",
+   "title": "并列日历区间",
+   "expectation": "并列区间作为一等候选分别列出，各带区间概率"
+  },
+  {
+   "id": "scn-boundary",
+   "title": "边界插值",
+   "expectation": "请求网格超出曲线范围时钳到端点并保留诊断"
+  },
+  {
+   "id": "scn-reservoir",
+   "title": "储库偏移分布",
+   "expectation": "显式样本走混合分布；偏移修订只使依赖它的结果过期"
+  },
+  {
+   "id": "scn-bce-ce",
+   "title": "BCE/CE 跨界",
+   "expectation": "LAB-0003 区间跨越 1 BCE/1 CE 并标记"
+  },
+  {
+   "id": "scn-sequence",
+   "title": "层序矛盾",
+   "expectation": "层序冲突产生候选调整，测量不被改写，全部合法候选保留"
+  },
+  {
+   "id": "scn-curve-upgrade",
+   "title": "曲线升版",
+   "expectation": "intcal-shim-2 取代 v1，旧派生过期但可查看；指纹与区间均改变"
+  },
+  {
+   "id": "scn-local-invalidation",
+   "title": "局部依赖改动",
+   "expectation": "LAB-0002 测量修订只使其自身派生过期"
+  },
+  {
+   "id": "scn-conflict-decisions",
+   "title": "冲突人工决定",
+   "expectation": "ACCEPT 与 REJECT 并列时状态 CONFLICTED，撤销其一后消解"
+  }
+ ]
+}
