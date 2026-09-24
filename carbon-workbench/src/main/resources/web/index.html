@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>碳年候选席 · 放射性碳校准与多峰年代证据工作台</title>
+<style>
+  :root { --ink:#1a202c; --muted:#4a5568; --line:#cbd5e0; --bg:#f7fafc; --panel:#fff;
+    --blue:#2b6cb0; --green:#2f855a; --orange:#dd6b20; --red:#c53030; --pink:#d53f8c; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:-apple-system,"Helvetica Neue",Arial,"PingFang SC","Microsoft YaHei",sans-serif;
+    background:var(--bg); color:var(--ink); font-size:14px; }
+  header { background:#1a365d; color:#fff; padding:14px 22px; }
+  header h1 { margin:0; font-size:18px; }
+  header p { margin:4px 0 0; color:#bee3f8; font-size:12px; }
+  .wrap { max-width:1180px; margin:0 auto; padding:18px 22px 60px; }
+  .panel { background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:14px 16px; margin:14px 0; }
+  .panel h2 { margin:0 0 10px; font-size:15px; }
+  .row { display:flex; gap:12px; flex-wrap:wrap; align-items:center; }
+  table { border-collapse:collapse; width:100%; font-size:12.5px; }
+  th,td { border:1px solid #e2e8f0; padding:5px 8px; text-align:left; vertical-align:top; }
+  th { background:#edf2f7; }
+  .mono { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:11.5px; }
+  .tag { display:inline-block; padding:1px 7px; border-radius:10px; font-size:11px; color:#fff; }
+  .t-current{background:var(--green);} .t-stale{background:var(--muted);} .t-unknown{background:var(--pink);}
+  .t-ok{background:var(--green);} .t-conflict{background:var(--red);}
+  button { background:var(--blue); color:#fff; border:0; border-radius:6px; padding:6px 12px; cursor:pointer; font-size:12.5px; }
+  button.secondary { background:#4a5568; } button.danger { background:var(--red); } button.ghost { background:#edf2f7; color:var(--ink); }
+  select,input,textarea { font:inherit; padding:5px 8px; border:1px solid var(--line); border-radius:6px; background:#fff; }
+  textarea { width:100%; min-height:120px; }
+  details { border:1px dashed #cbd5e0; border-radius:6px; padding:6px 10px; margin:8px 0; background:#fbfdff; }
+  summary { cursor:pointer; font-weight:600; }
+  .small { font-size:11.5px; color:var(--muted); }
+  .src { color:#553c9a; }
+  .evidence { background:#fffaf0; border:1px solid #f6ad55; border-radius:6px; padding:10px; margin-top:8px; }
+  .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  svg { max-width:100%; height:auto; background:#fff; border:1px solid #e2e8f0; border-radius:6px; }
+  .timeline { max-height:260px; overflow:auto; border:1px solid #e2e8f0; border-radius:6px; }
+  .timeline .ev { padding:5px 9px; border-bottom:1px solid #edf2f7; font-size:12px; cursor:pointer; }
+  .timeline .ev:hover { background:#ebf8ff; }
+  .pill { padding:1px 6px; border-radius:4px; background:#e2e8f0; font-size:10.5px; margin-right:4px; }
+  @media (max-width:900px){ .grid2{grid-template-columns:1fr;} }
+</style>
+</head>
+<body>
+<header>
+  <h1>碳年候选席 — 校准曲线 · 储库偏移 · 多峰年代证据</h1>
+  <p>原测量不可覆盖；派生值携带算法版本 / 参数指纹 / 直接来源；多峰分布保留为分布而非平均年；历史事件可回看当时依赖与结论。</p>
+</header>
+<div class="wrap">
+
+<div class="panel">
+  <div class="row" style="justify-content:space-between">
+    <div class="row">
+      <strong>项目</strong><span id="proj" class="mono">(未导入)</span>
+      <span id="viewAsOf" class="small"></span>
+    </div>
+    <div class="row">
+      <button class="ghost" onclick="loadSnapshot()">刷新</button>
+      <a href="/api/export" target="_blank"><button class="secondary" type="button">导出 bundle</button></a>
+      <label class="small">回看事件
+        <select id="eventSelect" onchange="viewAt(this.value)"></select>
+      </label>
+      <button class="ghost" onclick="backToHead()">回到当前</button>
+    </div>
+  </div>
+</div>
+
+<div class="panel">
+  <h2>1 · 导入离线领域案例包（rgsb-casepack-1）</h2>
+  <details open>
+    <summary>粘贴或选择仓库内样例 <span class="small">samples/ 目录即“碳年候选席”离线包</span></summary>
+    <div class="row" style="margin:8px 0">
+      <button class="ghost" onclick="loadSample('/samples/carbon-seat-case.json')">载入碳年候选席案例包</button>
+      <button class="ghost" onclick="loadSample('/samples/bad-format.json')">载入故意格式错误包</button>
+      <input type="file" id="packFile" accept="application/json"/>
+    </div>
+    <textarea id="packText" placeholder="粘贴 rgsb-casepack-1 JSON"></textarea>
+    <div class="row" style="margin-top:8px">
+      <button onclick="importPack()">导入（原始输入提交后不可覆盖，修订以 rev 版本表达）</button>
+      <button class="secondary" onclick="importBundleFile()">导入 bundle（删除本地数据库后用于恢复）</button>
+      <input type="file" id="bundleFile" accept="application/json"/>
+    </div>
+    <div id="importMsg" class="small"></div>
+  </details>
+</div>
+
+<div class="panel">
+  <h2>2 · 基线核对：每个要素各自有来源</h2>
+  <div id="sources"></div>
+</div>
+
+<div class="panel">
+  <h2>3 · 校准曲线（版本固定，分段线性插值可重现）</h2>
+  <div id="curveSvg"></div>
+  <div id="curveMeta" class="small"></div>
+</div>
+
+<div class="panel">
+  <h2>4 · 产生候选：测量 × 曲线版本 × 偏移假设</h2>
+  <div class="row">
+    <label>测量 <select id="mSel"></select></label>
+    <label>曲线 <select id="cSel"></select></label>
+    <label>储库偏移 <select id="oSel"></select></label>
+    <button onclick="calibrate()">产生校准候选（保留全部多峰）</button>
+    <button class="ghost" onclick="calibrateAll()">对所有测量批量产生</button>
+  </div>
+  <div id="results"></div>
+</div>
+
+<div class="panel">
+  <h2>5 · 储库偏移假设对比</h2>
+  <div class="row">
+    <label>测量 <select id="cmpSel" onchange="renderOffsets()"></select></label>
+  </div>
+  <div id="offsetSvg"></div>
+</div>
+
+<div class="panel">
+  <h2>6 · 层序关系（冲突只产生候选调整，不改写测量）</h2>
+  <button onclick="runSequence()">运行层序检查</button>
+  <div id="seqSvg" style="margin-top:10px"></div>
+  <div id="seqCands"></div>
+</div>
+
+<div class="panel">
+  <h2>7 · 裁定历史（接受 / 否定 / 参数调整；冲突与撤销入历史）</h2>
+  <div id="decisions"></div>
+</div>
+
+<div class="panel">
+  <h2>8 · 事件流水（点击任一旧事件 → 恢复当时依赖版本与可见结论）</h2>
+  <div class="small" style="margin-bottom:6px">派生结果在直接来源变化后标记 STALE：仍可查看，但不能冒充当前结果。</div>
+  <div id="timeline" class="timeline"></div>
+</div>
+
+</div>
+<script>
+let SNAP = null;
+let VIEW_AT = null;
+async function getJSON(url){ const r = await fetch(url); if(!r.ok) throw new Error(url+" "+r.status); return r.json(); }
+async function postForm(url, params){
+  const body = new URLSearchParams(params).toString();
+  const r = await fetch(url,{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body});
+  return r.json();
+}
+async function postJSON(url, obj){
+  const r = await fetch(url,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(obj)});
+  if(!r.ok) throw new Error((await r.text()));
+  return r.json();
+}
+function yearLabel(y){ return y>=1 ? y+' CE' : (y===0?'1 BCE':(1-y)+' BCE'); }
+function esc(s){ return String(s==null?'':s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c])); }
+
+async function loadSample(path){
+  const t = await (await fetch(path)).text();
+  document.getElementById('packText').value = t;
+}
+
+async function importPack(){
+  const msg = document.getElementById('importMsg');
+  const r = await fetch('/api/import-pack',{method:'POST',body:document.getElementById('packText').value});
+  const j = await r.json();
+  if(j.accepted){
+    msg.innerHTML = '<span style="color:#2f855a">导入成功，事件数 '+j.importedEventIds.length+'</span>' +
+      (j.diagnostics.length?'；诊断：'+j.diagnostics.map(d=>esc(d.severity+': '+d.message)).join('；'):'');
+    VIEW_AT=null; await loadSnapshot();
+  } else {
+    msg.innerHTML = '<div style="color:#c53030"><b>格式错误（已拒绝，未写入任何事件）：</b><ul>'+
+      j.diagnostics.map(d=>'<li><b>'+esc(d.severity)+'</b> '+esc(d.section)+' '+esc(d.location)+' — '+esc(d.message)+
+      (d.rawValue?' <span class="mono">'+esc(d.rawValue)+'</span>':'')+'</li>').join('')+'</ul></div>';
+  }
+}
+document.getElementById('packFile').addEventListener('change', e=>{
+  const f=e.target.files[0]; if(!f) return;
+  const rd=new FileReader(); rd.onload=()=>document.getElementById('packText').value=rd.result; rd.readAsText(f);
+});
+document.getElementById('bundleFile').addEventListener('change', async e=>{
+  const f=e.target.files[0]; if(!f) return;
+  const text=await f.text();
+  const r=await fetch('/api/import-bundle',{method:'POST',headers:{'Content-Type':'application/json'},body:text});
+  if(!r.ok){ alert('bundle 导入失败 '+r.status); return; }
+  VIEW_AT=null; loadSnapshot();
+});
+function importBundleFile(){ document.getElementById('bundleFile').click(); }
