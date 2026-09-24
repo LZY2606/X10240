@@ -1,0 +1,97 @@
+{
+  "packageId": "carbon-candidate-bench-v1",
+  "title": "碳年候选席：校准曲线、储库偏移与多峰年代证据",
+  "calendarEra": "astronomical_signed_year",
+  "radiocarbonUnit": "14C yr BP",
+  "curveVersions": [
+    {
+      "id": "curve-intcal-mini-2024",
+      "label": "IntCal-like mini curve 2024",
+      "yearUnit": "calendar_year_astronomical",
+      "radiocarbonUnit": "14C yr BP",
+      "points": [
+        {"calendarYear": -100, "radiocarbonAge": 2100}, {"calendarYear": -90, "radiocarbonAge": 2090},
+        {"calendarYear": -80, "radiocarbonAge": 2080}, {"calendarYear": -70, "radiocarbonAge": 2070},
+        {"calendarYear": -60, "radiocarbonAge": 2060}, {"calendarYear": -50, "radiocarbonAge": 2050},
+        {"calendarYear": -40, "radiocarbonAge": 2040}, {"calendarYear": -30, "radiocarbonAge": 2030},
+        {"calendarYear": -20, "radiocarbonAge": 2020}, {"calendarYear": -10, "radiocarbonAge": 2010},
+        {"calendarYear": 0, "radiocarbonAge": 2000}, {"calendarYear": 10, "radiocarbonAge": 1990},
+        {"calendarYear": 20, "radiocarbonAge": 1980}, {"calendarYear": 30, "radiocarbonAge": 1970},
+        {"calendarYear": 40, "radiocarbonAge": 1960}, {"calendarYear": 50, "radiocarbonAge": 1950},
+        {"calendarYear": 60, "radiocarbonAge": 1940}, {"calendarYear": 70, "radiocarbonAge": 1930},
+        {"calendarYear": 80, "radiocarbonAge": 1920}, {"calendarYear": 90, "radiocarbonAge": 1910},
+        {"calendarYear": 100, "radiocarbonAge": 1900}, {"calendarYear": 110, "radiocarbonAge": 1890},
+        {"calendarYear": 120, "radiocarbonAge": 1880}, {"calendarYear": 130, "radiocarbonAge": 1870},
+        {"calendarYear": 140, "radiocarbonAge": 1860}, {"calendarYear": 150, "radiocarbonAge": 1850},
+        {"calendarYear": 160, "radiocarbonAge": 1840}, {"calendarYear": 170, "radiocarbonAge": 1830},
+        {"calendarYear": 180, "radiocarbonAge": 1820}, {"calendarYear": 190, "radiocarbonAge": 1810},
+        {"calendarYear": 200, "radiocarbonAge": 1800}, {"calendarYear": 210, "radiocarbonAge": 1790},
+        {"calendarYear": 220, "radiocarbonAge": 1780}, {"calendarYear": 230, "radiocarbonAge": 1770},
+        {"calendarYear": 240, "radiocarbonAge": 1760}, {"calendarYear": 250, "radiocarbonAge": 1750},
+        {"calendarYear": 260, "radiocarbonAge": 1740}, {"calendarYear": 270, "radiocarbonAge": 1730},
+        {"calendarYear": 280, "radiocarbonAge": 1720}, {"calendarYear": 290, "radiocarbonAge": 1710},
+        {"calendarYear": 300, "radiocarbonAge": 1700}, {"calendarYear": 310, "radiocarbonAge": 1690},
+        {"calendarYear": 320, "radiocarbonAge": 1680}, {"calendarYear": 330, "radiocarbonAge": 1670},
+        {"calendarYear": 340, "radiocarbonAge": 1660}, {"calendarYear": 350, "radiocarbonAge": 1650},
+        {"calendarYear": 360, "radiocarbonAge": 1640}, {"calendarYear": 370, "radiocarbonAge": 1630},
+        {"calendarYear": 380, "radiocarbonAge": 1620}, {"calendarYear": 390, "radiocarbonAge": 1610},
+        {"calendarYear": 400, "radiocarbonAge": 1600}, {"calendarYear": 410, "radiocarbonAge": 1590},
+        {"calendarYear": 420, "radiocarbonAge": 1580}
+      ]
+    },
+    {
+      "id": "curve-intcal-mini-2025",
+      "label": "IntCal-like mini curve 2025",
+      "parentId": "curve-intcal-mini-2024",
+      "yearUnit": "calendar_year_astronomical",
+      "radiocarbonUnit": "14C yr BP",
+      "points": [
+        {"calendarYear": -100, "radiocarbonAge": 2100}, {"calendarYear": -90, "radiocarbonAge": 2090},
+        {"calendarYear": -80, "radiocarbonAge": 2080}, {"calendarYear": -70, "radiocarbonAge": 2070},
+        {"calendarYear": -60, "radiocarbonAge": 2060}, {"calendarYear": -50, "radiocarbonAge": 2050},
+        {"calendarYear": -40, "radiocarbonAge": 2040}, {"calendarYear": -30, "radiocarbonAge": 2030},
+        {"calendarYear": -20, "radiocarbonAge": 2020}, {"calendarYear": -10, "radiocarbonAge": 2010},
+        {"calendarYear": 0, "radiocarbonAge": 2000}, {"calendarYear": 10, "radiocarbonAge": 1990},
+        {"calendarYear": 20, "radiocarbonAge": 1980}, {"calendarYear": 30, "radiocarbonAge": 1970},
+        {"calendarYear": 40, "radiocarbonAge": 1960}, {"calendarYear": 50, "radiocarbonAge": 1950},
+        {"calendarYear": 60, "radiocarbonAge": 1940}, {"calendarYear": 70, "radiocarbonAge": 1930},
+        {"calendarYear": 80, "radiocarbonAge": 1920}, {"calendarYear": 90, "radiocarbonAge": 1910},
+        {"calendarYear": 100, "radiocarbonAge": 1900}, {"calendarYear": 110, "radiocarbonAge": 1890},
+        {"calendarYear": 120, "radiocarbonAge": 1880}, {"calendarYear": 130, "radiocarbonAge": 1870},
+        {"calendarYear": 140, "radiocarbonAge": 1860}, {"calendarYear": 150, "radiocarbonAge": 1850},
+        {"calendarYear": 160, "radiocarbonAge": 1840}, {"calendarYear": 170, "radiocarbonAge": 1830},
+        {"calendarYear": 180, "radiocarbonAge": 1820}, {"calendarYear": 190, "radiocarbonAge": 1810},
+        {"calendarYear": 200, "radiocarbonAge": 1800}, {"calendarYear": 210, "radiocarbonAge": 1790},
+        {"calendarYear": 220, "radiocarbonAge": 1780}, {"calendarYear": 230, "radiocarbonAge": 1770},
+        {"calendarYear": 240, "radiocarbonAge": 1760}, {"calendarYear": 250, "radiocarbonAge": 1835},
+        {"calendarYear": 260, "radiocarbonAge": 1740}, {"calendarYear": 270, "radiocarbonAge": 1730},
+        {"calendarYear": 280, "radiocarbonAge": 1720}, {"calendarYear": 290, "radiocarbonAge": 1710},
+        {"calendarYear": 300, "radiocarbonAge": 1700}, {"calendarYear": 310, "radiocarbonAge": 1690},
+        {"calendarYear": 320, "radiocarbonAge": 1680}, {"calendarYear": 330, "radiocarbonAge": 1670},
+        {"calendarYear": 340, "radiocarbonAge": 1660}, {"calendarYear": 350, "radiocarbonAge": 1650},
+        {"calendarYear": 360, "radiocarbonAge": 1640}, {"calendarYear": 370, "radiocarbonAge": 1630},
+        {"calendarYear": 380, "radiocarbonAge": 1620}, {"calendarYear": 390, "radiocarbonAge": 1610},
+        {"calendarYear": 400, "radiocarbonAge": 1600}, {"calendarYear": 410, "radiocarbonAge": 1590},
+        {"calendarYear": 420, "radiocarbonAge": 1580}
+      ]
+    }
+  ],
+  "measurements": [
+    {"id": "m-alpha", "label": "Trench A charred seed", "radiocarbonAge": "2000", "sigma": "30", "unit": "14C yr BP", "curveId": "curve-intcal-mini-2024", "reservoirId": "res-marine-mixed", "sourceRef": "lab-sheet-2024:L12", "rawText": "2000 ± 30 BP"},
+    {"id": "m-beta", "label": "Trench A charcoal", "radiocarbonAge": "1800", "sigma": "25", "unit": "14C yr BP", "curveId": "curve-intcal-mini-2024", "reservoirId": "res-marine-mixed", "sourceRef": "lab-sheet-2024:L18", "rawText": "1800 ± 25 BP"},
+    {"id": "m-gamma", "label": "Upper cut charcoal", "radiocarbonAge": "1980", "sigma": "35", "unit": "14C yr BP", "curveId": "curve-intcal-mini-2024", "reservoirId": "res-marine-mixed", "sourceRef": "field-notes-07:C4", "rawText": "1980 ± 35 BP"},
+    {"id": "m-edge", "label": "Lower boundary twig", "radiocarbonAge": "1605", "sigma": "20", "unit": "14C yr BP", "curveId": "curve-intcal-mini-2024", "reservoirId": "res-zero", "sourceRef": "boundary-book:B2", "rawText": "1605 ± 20 BP"},
+    {"id": "m-modern-root", "label": "Modern root excluded in field", "radiocarbonAge": "105", "sigma": "15", "unit": "14C yr BP", "curveId": "curve-intcal-mini-2024", "reservoirId": "res-zero", "sourceRef": "contamination-log:R1", "rawText": "105 ± 15 BP"}
+  ],
+  "reservoirs": [
+    {"id": "res-zero", "label": "No reservoir correction", "mean": "0", "sigma": "0", "unit": "14C yr"},
+    {"id": "res-marine-mixed", "label": "Mixed estuary reservoir distribution", "mean": "50", "sigma": "20", "unit": "14C yr"}
+  ],
+  "sequences": [
+    {"id": "seq-alpha-before-beta", "olderId": "m-alpha", "youngerId": "m-beta", "sourceRef": "section-drawing:F3"},
+    {"id": "seq-alpha-before-gamma", "olderId": "m-alpha", "youngerId": "m-gamma", "sourceRef": "field-notes-07:C4"}
+  ],
+  "exclusions": [
+    {"id": "exc-modern-root", "targetId": "m-modern-root", "decision": "excluded", "reason": "Visible modern root contamination; retained as negative evidence.", "sourceRef": "specialist-meeting-2024-05#decision-3"}
+  ]
+}

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>放射性碳年代校准工作台</title>
+<style>
+:root{--bg:#f8fafc;--card:#fff;--ink:#0f172a;--muted:#64748b;--line:#e2e8f0;--blue:#2563eb;--amber:#b45309;--red:#b91c1c;--green:#047857}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+header{padding:22px 28px;background:#0f172a;color:white}header h1{margin:0 0 4px;font-size:22px}header p{margin:0;color:#cbd5e1}
+main{display:grid;grid-template-columns:330px 1fr;gap:16px;padding:16px 24px}.panel{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;margin-bottom:14px;box-shadow:0 1px 2px #0f172a0a}
+h2{font-size:16px;margin:0 0 10px}h3{font-size:13px;margin:12px 0 6px;color:#334155}.muted{color:var(--muted)}.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+button,.button{border:1px solid #cbd5e1;background:#fff;border-radius:8px;padding:7px 10px;cursor:pointer;font:inherit}button.primary{background:var(--blue);color:white;border-color:var(--blue)}button.danger{color:var(--red)}button:disabled{opacity:.45;cursor:not-allowed}
+.badge{display:inline-block;border-radius:999px;padding:2px 8px;font-size:12px;font-weight:600}.current{background:#dcfce7;color:var(--green)}.stale{background:#f1f5f9;color:#475569}.conflict{background:#ffedd5;color:var(--amber)}.ok{background:#dbeafe;color:#1d4ed8}.truncated{background:#fee2e2;color:var(--red)}
+.record{border-top:1px solid var(--line);padding:9px 0}.id{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;color:#475569;word-break:break-all}
+details{border:1px solid var(--line);border-radius:8px;padding:8px;margin:6px 0;background:#f8fafc}summary{cursor:pointer;font-weight:600}pre{white-space:pre-wrap;word-break:break-word;background:#0f172a;color:#dbeafe;padding:10px;border-radius:8px;max-height:260px;overflow:auto;font-size:11px}
+svg{width:100%;height:auto;border:1px solid var(--line);border-radius:10px;background:white}.timeline{max-height:360px;overflow:auto}.event{padding:7px;border-left:3px solid #cbd5e1;margin-bottom:6px;background:#f8fafc;border-radius:0 6px 6px 0}.event.system{border-left-color:#0f766e}.event.decision{border-left-color:#f59e0b}
+input,select,textarea{width:100%;border:1px solid #cbd5e1;border-radius:8px;padding:7px;font:inherit}label{display:block;font-size:12px;color:#475569;margin:7px 0}.interval{border-left:3px solid var(--blue);padding:6px 8px;background:#eff6ff;margin:6px 0;border-radius:0 6px 6px 0}.evidence{font-size:12px;background:white;border:1px dashed #cbd5e1;padding:7px;margin-top:6px}
+.toast{position:fixed;right:20px;bottom:20px;background:#0f172a;color:white;padding:10px 14px;border-radius:10px;display:none}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+</style>
+</head>
+<body>
+<header><h1>放射性碳 / 年代校准 / 多峰分布工作台</h1><p>从实验室测量、曲线版本、储库分布、层序约束到人工裁定的可重放证据链</p></header>
+<main>
+<aside>
+<section class="panel"><h2>1. 来源基线</h2><div id="sources"></div></section>
+<section class="panel"><h2>2. 边界叙事操作</h2><div class="row">
+<button class="primary" onclick="postJson('/api/revisions/reservoir',{reservoirId:'res-marine-mixed',mean:70,sigma:25,sourceRef:'tidal-note:9',version:'v2'})">修订储库分布</button>
+<button onclick="post('/api/demo/measurement-edge')">只改边界源数据</button>
+<button onclick="post('/api/demo/curve-upgrade')">升版曲线（仅 beta）</button>
+<button onclick="postJson('/api/decisions',{sequenceId:'seq-alpha-before-gamma',action:'relax_constraint',selectedYears:[],rationale:'接受层序冲突并保留候选'})">处理层序矛盾</button>
+<button onclick="postJson('/api/decisions/undo',{rationale:'撤销上一条人工裁定'})">撤销裁定</button>
+</div><p class="muted">每步都是不可变事件；局部改动只令直接依赖过期。</p></section>
+<section class="panel"><h2>导入 / 导出 / 删除后重建</h2><div class="row"><a class="button" href="/api/export">导出 JSON</a><button onclick="resetDemo()">删除并重建案例</button></div><label>粘贴导出档案后导入（需空库；先删除/重置）</label><textarea id="importText" rows="5"></textarea><button onclick="importProject()">导入档案</button></section>
+<section class="panel"><h2>历史复核</h2><div class="row"><button onclick="loadState()">回到当前</button></div><div id="timeline" class="timeline"></div></section>
+</aside>
+<section>
+<section class="panel"><h2>3. 曲线、密度与层序关系</h2><img id="svg" src="/api/svg" alt="calibration svg"></section>
+<section class="panel"><h2>4. 日历年代候选与积分证据</h2><div id="calibrations"></div></section>
+<section class="panel"><h2>5. 层序约束、候选调整与人工决定</h2><div id="sequences"></div><div id="decisions"></div></section>
+<section class="panel"><h2>机器可读判定事件</h2><div id="findings"></div></section>
+</section>
+</main><div id="toast" class="toast"></div>
+<script>
+let state=null;
+async function loadState(url='/api/state'){ state=await fetch(url).then(r=>r.json()); document.getElementById('svg').src='/api/svg?ts='+Date.now(); render(); }
+async function post(url, body){ const r=await fetch(url,{method:'POST',headers:{'Content-Type':'application/json'},body:body?JSON.stringify(body):''}); const data=await r.json(); if(!r.ok){alert((data.diagnostics||['error']).join('\n'));return} state=data; document.getElementById('svg').src='/api/svg?ts='+Date.now(); render(); }
+const postJson=post;
+function esc(v){return String(v??'').replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]))}
+function era(y){return y<0?-y+' BCE':y===0?'0 BCE/CE':y+' CE'}
+function render(){renderSources();renderCalibrations();renderSequences();renderDecisions();renderFindings();renderTimeline();}
+function renderSources(){const el=document.getElementById('sources');el.innerHTML=`<p><b>${esc(state.title)}</b></p><p class="muted">${esc(state.packageId)} · ${esc(state.calendarEra)}</p>
+<h3>原测量值（原始表示不可覆盖）</h3>${Object.values(state.measurements).map(m=>`<div class="record"><b>${m.seriesId}</b> ${m.excluded?'<span class="badge truncated">excluded</span>':''}<br>${esc(m.rawText)} → <span class="id">${m.seriesId}@${m.version}</span><br><span class="muted">曲线 ${m.curveId} · 储库 ${m.reservoirSeriesId} · 来源 ${esc(m.sourceRef)}</span></div>`).join('')}
+<h3>曲线版本</h3>${Object.values(state.curves).map(c=>`<div class="record"><b>${c.id}</b>${c.parentId?' ← '+c.parentId:''}<br><span class="muted">${c.points.length} points · linear yearly interpolation</span></div>`).join('')}
+<h3>储库偏移分布</h3>${Object.values(state.reservoirs).map(r=>`<div class="record"><b>${r.seriesId}@${r.version}</b>: ${r.mean} ± ${r.sigma} ${r.unit}<br><span class="muted">来源 ${r.sourceRef}</span></div>`).join('')}`}
+function renderCalibrations(){document.getElementById('calibrations').innerHTML=Object.values(state.measurements).filter(m=>!m.excluded).map(m=>{const list=state.calibrations.filter(c=>c.measurementSeriesId===m.seriesId);const c=list[list.length-1];return `<details><summary>${m.seriesId} — ${m.label} <span class="badge ${c.status==='current'?'current':'truncated'}">${c.status}</span> <span class="muted">${c.modes.length} modes</span></summary>
+<p class="muted">Stable result: <span class="id">${c.stableId}</span><br>算法 ${c.algorithmVersion} · 参数指纹 <span class="id">${c.parameterFingerprint}</span></p>
+${c.intervals.map(i=>`<div class="interval"><b>${i.level}</b> ${era(i.startYear)}–${era(i.endYear)} · P=${i.probability.toFixed(4)} · <span class="id">${i.stableId}</span><details class="evidence"><summary>展开积分证据</summary><p>${i.integralBasis}</p><pre>${esc(JSON.stringify({years:i.years,probability:i.probability,curve:c.curveId,reservoir:c.reservoirSeriesId+'@'+c.reservoirVersion,evidence:c.integralEvidence},null,2))}</pre></details></div>`).join('')}
+${list.length>1?`<h3>历史/过期版本仍保留</h3>${list.map(old=>`<span class="badge ${old.status==='stale'?'stale':'current'}">${old.status} ${old.stableId.slice(0,8)}</span>`).join(' ')}`:''}
+${c.diagnostic?`<p class="badge truncated">${c.diagnostic}</p>`:''}</details>`}).join('')}
+function renderSequences(){document.getElementById('sequences').innerHTML=(state.sequenceStatuses||[]).map(s=>`<div class="record"><b>${s.sequenceId}</b> <span class="badge ${s.state==='compatible'?'ok':'conflict'}">${s.state}</span><p>${s.reason}</p><p>older modes: ${s.olderCandidateYears.map(era).join(', ')}<br>younger modes: ${s.youngerCandidateYears.map(era).join(', ')}</p><div class="muted">证据：${s.evidenceRefs.map(x=>`<span class="id">${x}</span>`).join(' · ')}</div>${s.legalAdjustmentCandidates.map(c=>`<details><summary>${c.kind}</summary><p>${c.description}</p><p>preservesMeasurement=${c.preservesMeasurement}</p></details>`).join('')}<div class="row"><button onclick="decide('${s.sequenceId}','accept_younger_gamma_override')">接受并列候选</button><button class="danger" onclick="decide('${s.sequenceId}','reject_gamma_interval')">否定</button><button onclick="decide('${s.sequenceId}','revise_reservoir_assumption')">形成储库调整候选</button></div></div>`).join('')}
+function decide(sequenceId,action){postJson('/api/decisions',{sequenceId,action,selectedYears:[],rationale:prompt('裁定依据','页面审阅决定')||'页面审阅决定'})}
+function renderDecisions(){document.getElementById('decisions').innerHTML='<h3>人工决定与撤销历史</h3>'+(state.decisions||[]).map(d=>`<div class="record"><span class="badge ${d.state==='undone'?'stale':'conflict'}">${d.state}</span> <b>${d.action}</b> → ${d.targetId}<br><span class="muted">${d.rationale} · ${d.sourceRef}</span><br><span class="id">${d.eventId}</span>${d.undoneBy?` · undone by <span class="id">${d.undoneBy}</span>`:''}</div>`).join('')||'<p class="muted">暂无裁定。</p>'}
+function renderFindings(){document.getElementById('findings').innerHTML=(state.findings||[]).map(f=>`<details><summary><span class="badge ${f.severity==='warning'?'conflict':'ok'}">${f.code}</span> ${f.objectIds.join(', ')}</summary><pre>${esc(JSON.stringify(f,null,2))}</pre></details>`).join('')}
+function renderTimeline(){document.getElementById('timeline').innerHTML=(state.events||[]).map(e=>`<div class="event ${e.type.includes('decision')?'decision':'system'}"><button onclick="loadState('/api/state?atEventId=${e.eventId}')">查看</button> <b>${e.seq}. ${e.type}</b><br><span class="id">${e.eventId}</span><br><span class="muted">${e.at} · ${e.actor}</span></div>`).join('')}
+async function importProject(){const r=await fetch('/api/import-project',{method:'POST',headers:{'Content-Type':'application/json'},body:document.getElementById('importText').value});const d=await r.json();if(!r.ok)alert((d.diagnostics||[]).join('\n'));else {state=d;render();alert('导入成功，身份与顺序保持')}}
+async function resetDemo(){await fetch('/api/reset',{method:'POST'});loadState()}
+loadState();
+</script>
+</body>
+</html>
