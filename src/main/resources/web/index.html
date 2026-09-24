@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>放射性碳多峰年代工作台</title>
+<style>
+:root { color-scheme: light; --ink:#18202a; --muted:#64748b; --line:#d7dee8; --blue:#2563eb; --red:#dc2626; --amber:#d97706; --green:#15803d; --bg:#f6f8fb; --card:#fff; }
+body { margin:0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:var(--bg); color:var(--ink); }
+header { padding:18px 24px; background:#0f172a; color:white; }
+header h1 { margin:0 0 4px; font-size:20px; }
+header p { margin:0; color:#cbd5e1; font-size:13px; }
+main { padding:18px 24px; display:grid; gap:14px; }
+.toolbar, .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px; box-shadow:0 1px 2px rgba(15,23,42,.04); }
+button { border:1px solid #94a3b8; background:white; border-radius:8px; padding:7px 10px; margin:2px; cursor:pointer; font-size:13px; }
+button.primary { background:var(--blue); color:white; border-color:var(--blue); }
+button.danger { color:var(--red); border-color:#fca5a5; }
+button:disabled { opacity:.45; cursor:not-allowed; }
+.grid { display:grid; grid-template-columns:1.25fr 1fr; gap:14px; }
+.grid3 { display:grid; grid-template-columns:1fr 1fr 1fr; gap:14px; }
+h2 { font-size:15px; margin:0 0 10px; }
+h3 { font-size:13px; margin:12px 0 6px; color:#334155; }
+.small { font-size:12px; color:var(--muted); }
+.badge { display:inline-block; border-radius:999px; padding:2px 8px; font-size:11px; margin:2px; border:1px solid var(--line); }
+.status-CURRENT, .status-MULTIMODAL, .status-CONSISTENT, .status-PARALLEL_CURRENT_LOCAL_SEGMENTS_UNCHANGED { background:#dcfce7; color:#166534; }
+.status-STALE_DEPENDENCY_CHANGED, .status-FIXED_VERSION_ARCHIVE { background:#fef3c7; color:#92400e; }
+.status-SEQUENCE_CONFLICT, .status-CONFLICT, .status-CYCLE_CONFLICT { background:#fee2e2; color:#991b1b; }
+.status-REJECTED_BY_HUMAN, .status-REJECTED_EMPTY_SUPPORT { background:#e2e8f0; color:#475569; }
+table { width:100%; border-collapse:collapse; font-size:12px; }
+th, td { border-bottom:1px solid var(--line); padding:6px; text-align:left; vertical-align:top; }
+code, .stable-id { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size:11px; color:#334155; }
+.stable-id { display:block; word-break:break-all; }
+.details { border-top:1px dashed var(--line); margin-top:8px; padding-top:8px; display:none; }
+.details.open { display:block; }
+svg { width:100%; height:auto; border:1px solid var(--line); border-radius:8px; background:white; }
+.axis { stroke:#64748b; stroke-width:1; }
+.line-curve { fill:none; stroke:#0f766e; stroke-width:2; }
+.area-density { fill:#93c5fd; opacity:.8; }
+.line-density { fill:none; stroke:#1d4ed8; stroke-width:1.5; }
+.interval { fill:#f59e0b; opacity:.35; }
+.relation { stroke:#64748b; stroke-width:2; marker-end:url(#arrow); }
+.relation.conflict { stroke:var(--red); }
+.node { fill:#e0f2fe; stroke:#0369a1; stroke-width:1.5; }
+.toast { position:fixed; right:20px; bottom:20px; background:#0f172a; color:white; padding:10px 14px; border-radius:10px; display:none; max-width:420px; }
+input, select, textarea { border:1px solid #94a3b8; border-radius:8px; padding:7px; min-width:120px; }
+#trace { min-height:80px; white-space:pre-wrap; }
+@media (max-width: 1000px) { .grid, .grid3 { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>放射性碳 / 年代校准 / 多峰分布工作台</h1>
+  <p>从实验室 14C age、校准曲线、储库偏移和层序关系审阅日历年代候选；所有显示值带稳定身份。</p>
+</header>
+<main>
+  <section class="toolbar">
+    <button class="primary" id="loadCase">导入离线案例</button>
+    <button id="stage1">阶段1：修订储库权重</button>
+    <button id="stage2">阶段2：局部曲线升版</button>
+    <button id="stage3">阶段3：互斥人工决定</button>
+    <button id="export">导出</button>
+    <button id="importExport">模拟删除库后导入导出文件</button>
+    <button id="reload">重开复核</button>
+    <label class="small">历史回看 <input id="asOf" type="number" min="0" step="1"></label>
+    <button id="asOfApply">应用旧事件序号</button>
+    <button id="asOfClear">回到当前</button>
+    <span id="projectTitle" class="small"></span>
+  </section>
+
+  <section class="card">
+    <h2>审阅叙事与诊断</h2>
+    <div id="diagnostics"></div>
+    <div class="small">固定坐标基准：<code>CAL_BP_CE1950</code>；BCE/CE 使用无零年规则，1950 BP 为 1 BCE / 1 CE 跨界。</div>
+  </section>
+
+  <section class="grid">
+    <div class="card">
+      <h2>校准曲线与观测</h2>
+      <div id="curveSvg"></div>
+      <h3>曲线版本来源</h3><div id="curveList"></div>
+    </div>
+    <div class="card">
+      <h2>校准概率密度与不同偏移假设</h2>
+      <select id="densitySelect"></select>
+      <div id="densitySvg"></div>
+      <div id="reservoirList"></div>
+    </div>
+  </section>
+
+  <section class="grid">
+    <div class="card">
+      <h2>日历候选区间（多峰并列，不压成平均年）</h2>
+      <div id="intervalTable"></div>
+    </div>
+    <div class="card">
+      <h2>层序关系与候选调整</h2>
+      <div id="sequenceSvg"></div>
+      <div id="sequenceTable"></div>
+    </div>
+  </section>
+
+  <section class="grid3">
+    <div class="card"><h2>原始输入与版本谱系</h2><div id="sourceTable"></div></div>
+    <div class="card"><h2>人工决定、拒绝原因与撤销</h2><div id="decisionTable"></div></div>
+    <div class="card"><h2>事件历史 / 逐步重放</h2><div id="eventTable"></div></div>
+  </section>
+
+  <section class="card">
+    <h2>来源—计算—决定追踪</h2>
+    <div id="trace" class="stable-id">点击任一区间、候选、结果或事件查看来源路径、算法版本、参数指纹和积分证据。</div>
+  </section>
+</main>
+<div id="toast" class="toast"></div>
+<script src="/app.js"></script>
+</body>
+</html>
