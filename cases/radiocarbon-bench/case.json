@@ -1,0 +1,1334 @@
+{
+ "caseId": "radiocarbon-bench",
+ "title": "碳年候选席：校准曲线、储库偏移与多峰年代证据",
+ "description": "年代学团队把实验室测得的 radiocarbon age 与校准曲线、储库偏移和层序关系组合，审阅日历年代候选。",
+ "baseline": {
+  "sources": [
+   {
+    "kind": "curve",
+    "id": "src-curve-intcal-like",
+    "payload": {
+     "name": "IntCal-like 演示曲线",
+     "citation": "本仓库内置合成曲线 v1（教学用，非真实 IntCal）",
+     "unit": "c14 yr BP vs cal BP",
+     "coordinateBasis": "cal BP (1950 CE 起算)",
+     "points": [
+      {
+       "calBp": 0,
+       "c14Age": -350.0,
+       "sigma": 25.0
+      },
+      {
+       "calBp": 50,
+       "c14Age": -288.08,
+       "sigma": 26.25
+      },
+      {
+       "calBp": 100,
+       "c14Age": -226.63,
+       "sigma": 27.47
+      },
+      {
+       "calBp": 150,
+       "c14Age": -166.12,
+       "sigma": 28.66
+      },
+      {
+       "calBp": 200,
+       "c14Age": -106.96,
+       "sigma": 29.79
+      },
+      {
+       "calBp": 250,
+       "c14Age": -49.51,
+       "sigma": 30.85
+      },
+      {
+       "calBp": 300,
+       "c14Age": 5.92,
+       "sigma": 31.82
+      },
+      {
+       "calBp": 350,
+       "c14Age": 59.13,
+       "sigma": 32.68
+      },
+      {
+       "calBp": 400,
+       "c14Age": 109.97,
+       "sigma": 33.41
+      },
+      {
+       "calBp": 450,
+       "c14Age": 158.43,
+       "sigma": 34.02
+      },
+      {
+       "calBp": 500,
+       "c14Age": 204.56,
+       "sigma": 34.49
+      },
+      {
+       "calBp": 550,
+       "c14Age": 248.51,
+       "sigma": 34.81
+      },
+      {
+       "calBp": 600,
+       "c14Age": 290.53,
+       "sigma": 34.97
+      },
+      {
+       "calBp": 650,
+       "c14Age": 330.93,
+       "sigma": 34.99
+      },
+      {
+       "calBp": 700,
+       "c14Age": 370.1,
+       "sigma": 34.84
+      },
+      {
+       "calBp": 750,
+       "c14Age": 408.47,
+       "sigma": 34.54
+      },
+      {
+       "calBp": 800,
+       "c14Age": 446.5,
+       "sigma": 34.09
+      },
+      {
+       "calBp": 850,
+       "c14Age": 484.67,
+       "sigma": 33.5
+      },
+      {
+       "calBp": 900,
+       "c14Age": 523.45,
+       "sigma": 32.78
+      },
+      {
+       "calBp": 950,
+       "c14Age": 563.29,
+       "sigma": 31.94
+      },
+      {
+       "calBp": 1000,
+       "c14Age": 604.59,
+       "sigma": 30.98
+      },
+      {
+       "calBp": 1050,
+       "c14Age": 647.71,
+       "sigma": 29.94
+      },
+      {
+       "calBp": 1100,
+       "c14Age": 692.9,
+       "sigma": 28.82
+      },
+      {
+       "calBp": 1150,
+       "c14Age": 740.38,
+       "sigma": 27.63
+      },
+      {
+       "calBp": 1200,
+       "c14Age": 790.23,
+       "sigma": 26.41
+      },
+      {
+       "calBp": 1250,
+       "c14Age": 842.46,
+       "sigma": 25.17
+      },
+      {
+       "calBp": 1300,
+       "c14Age": 896.99,
+       "sigma": 26.08
+      },
+      {
+       "calBp": 1350,
+       "c14Age": 953.63,
+       "sigma": 27.31
+      },
+      {
+       "calBp": 1400,
+       "c14Age": 1012.12,
+       "sigma": 28.51
+      },
+      {
+       "calBp": 1450,
+       "c14Age": 1072.12,
+       "sigma": 29.65
+      },
+      {
+       "calBp": 1500,
+       "c14Age": 1133.24,
+       "sigma": 30.72
+      },
+      {
+       "calBp": 1550,
+       "c14Age": 1195.01,
+       "sigma": 31.69
+      },
+      {
+       "calBp": 1600,
+       "c14Age": 1256.99,
+       "sigma": 32.57
+      },
+      {
+       "calBp": 1650,
+       "c14Age": 1318.69,
+       "sigma": 33.32
+      },
+      {
+       "calBp": 1700,
+       "c14Age": 1379.65,
+       "sigma": 33.95
+      },
+      {
+       "calBp": 1750,
+       "c14Age": 1439.42,
+       "sigma": 34.44
+      },
+      {
+       "calBp": 1800,
+       "c14Age": 1497.62,
+       "sigma": 34.78
+      },
+      {
+       "calBp": 1850,
+       "c14Age": 1553.92,
+       "sigma": 34.96
+      },
+      {
+       "calBp": 1900,
+       "c14Age": 1608.08,
+       "sigma": 34.99
+      },
+      {
+       "calBp": 1950,
+       "c14Age": 1659.91,
+       "sigma": 34.87
+      },
+      {
+       "calBp": 2000,
+       "c14Age": 1709.35,
+       "sigma": 34.59
+      },
+      {
+       "calBp": 2050,
+       "c14Age": 1755.97,
+       "sigma": 34.16
+      },
+      {
+       "calBp": 2100,
+       "c14Age": 1793.78,
+       "sigma": 33.59
+      },
+      {
+       "calBp": 2150,
+       "c14Age": 1791.13,
+       "sigma": 32.88
+      },
+      {
+       "calBp": 2200,
+       "c14Age": 1716.63,
+       "sigma": 32.06
+      },
+      {
+       "calBp": 2250,
+       "c14Age": 1689.88,
+       "sigma": 31.12
+      },
+      {
+       "calBp": 2300,
+       "c14Age": 1847.37,
+       "sigma": 30.08
+      },
+      {
+       "calBp": 2350,
+       "c14Age": 2047.86,
+       "sigma": 28.97
+      },
+      {
+       "calBp": 2400,
+       "c14Age": 2151.81,
+       "sigma": 27.79
+      },
+      {
+       "calBp": 2450,
+       "c14Age": 2178.38,
+       "sigma": 26.58
+      },
+      {
+       "calBp": 2500,
+       "c14Age": 2177.27,
+       "sigma": 25.33
+      },
+      {
+       "calBp": 2550,
+       "c14Age": 2183.16,
+       "sigma": 25.92
+      },
+      {
+       "calBp": 2600,
+       "c14Age": 2207.79,
+       "sigma": 27.15
+      },
+      {
+       "calBp": 2650,
+       "c14Age": 2246.2,
+       "sigma": 28.35
+      },
+      {
+       "calBp": 2700,
+       "c14Age": 2291.38,
+       "sigma": 29.5
+      },
+      {
+       "calBp": 2750,
+       "c14Age": 2340.02,
+       "sigma": 30.58
+      },
+      {
+       "calBp": 2800,
+       "c14Age": 2391.25,
+       "sigma": 31.57
+      },
+      {
+       "calBp": 2850,
+       "c14Age": 2444.84,
+       "sigma": 32.46
+      },
+      {
+       "calBp": 2900,
+       "c14Age": 2500.63,
+       "sigma": 33.23
+      },
+      {
+       "calBp": 2950,
+       "c14Age": 2558.39,
+       "sigma": 33.87
+      },
+      {
+       "calBp": 3000,
+       "c14Age": 2617.81,
+       "sigma": 34.38
+      },
+      {
+       "calBp": 3050,
+       "c14Age": 2678.51,
+       "sigma": 34.74
+      },
+      {
+       "calBp": 3100,
+       "c14Age": 2740.06,
+       "sigma": 34.95
+      },
+      {
+       "calBp": 3150,
+       "c14Age": 2802.02,
+       "sigma": 35.0
+      },
+      {
+       "calBp": 3200,
+       "c14Age": 2863.89,
+       "sigma": 34.89
+      },
+      {
+       "calBp": 3250,
+       "c14Age": 2925.21,
+       "sigma": 34.63
+      },
+      {
+       "calBp": 3300,
+       "c14Age": 2985.52,
+       "sigma": 34.23
+      },
+      {
+       "calBp": 3350,
+       "c14Age": 3044.42,
+       "sigma": 33.67
+      },
+      {
+       "calBp": 3400,
+       "c14Age": 3101.55,
+       "sigma": 32.98
+      },
+      {
+       "calBp": 3450,
+       "c14Age": 3156.62,
+       "sigma": 32.17
+      },
+      {
+       "calBp": 3500,
+       "c14Age": 3209.44,
+       "sigma": 31.25
+      },
+      {
+       "calBp": 3550,
+       "c14Age": 3259.88,
+       "sigma": 30.22
+      },
+      {
+       "calBp": 3600,
+       "c14Age": 3307.94,
+       "sigma": 29.12
+      },
+      {
+       "calBp": 3650,
+       "c14Age": 3353.69,
+       "sigma": 27.95
+      },
+      {
+       "calBp": 3700,
+       "c14Age": 3397.3,
+       "sigma": 26.74
+      },
+      {
+       "calBp": 3750,
+       "c14Age": 3439.02,
+       "sigma": 25.5
+      },
+      {
+       "calBp": 3800,
+       "c14Age": 3479.18,
+       "sigma": 25.75
+      },
+      {
+       "calBp": 3850,
+       "c14Age": 3518.19,
+       "sigma": 26.99
+      },
+      {
+       "calBp": 3900,
+       "c14Age": 3556.47,
+       "sigma": 28.2
+      },
+      {
+       "calBp": 3950,
+       "c14Age": 3594.49,
+       "sigma": 29.35
+      },
+      {
+       "calBp": 4000,
+       "c14Age": 3632.73,
+       "sigma": 30.44
+      },
+      {
+       "calBp": 4050,
+       "c14Age": 3671.65,
+       "sigma": 31.44
+      },
+      {
+       "calBp": 4100,
+       "c14Age": 3711.71,
+       "sigma": 32.35
+      },
+      {
+       "calBp": 4150,
+       "c14Age": 3753.3,
+       "sigma": 33.14
+      },
+      {
+       "calBp": 4200,
+       "c14Age": 3796.75,
+       "sigma": 33.8
+      },
+      {
+       "calBp": 4250,
+       "c14Age": 3842.32,
+       "sigma": 34.32
+      },
+      {
+       "calBp": 4300,
+       "c14Age": 3890.19,
+       "sigma": 34.7
+      },
+      {
+       "calBp": 4350,
+       "c14Age": 3940.44,
+       "sigma": 34.93
+      },
+      {
+       "calBp": 4400,
+       "c14Age": 3993.07,
+       "sigma": 35.0
+      },
+      {
+       "calBp": 4450,
+       "c14Age": 4047.97,
+       "sigma": 34.92
+      },
+      {
+       "calBp": 4500,
+       "c14Age": 4104.94,
+       "sigma": 34.68
+      },
+      {
+       "calBp": 4550,
+       "c14Age": 4163.71,
+       "sigma": 34.29
+      },
+      {
+       "calBp": 4600,
+       "c14Age": 4223.93,
+       "sigma": 33.75
+      },
+      {
+       "calBp": 4650,
+       "c14Age": 4285.18,
+       "sigma": 33.08
+      },
+      {
+       "calBp": 4700,
+       "c14Age": 4347.03,
+       "sigma": 32.29
+      },
+      {
+       "calBp": 4750,
+       "c14Age": 4408.99,
+       "sigma": 31.38
+      },
+      {
+       "calBp": 4800,
+       "c14Age": 4470.6,
+       "sigma": 30.37
+      }
+     ]
+    }
+   },
+   {
+    "kind": "offset",
+    "id": "src-offset-terrestrial",
+    "payload": {
+     "name": "陆生样品（无储库偏移）",
+     "mean": 0.0,
+     "sigma": 0.0,
+     "unit": "^14C yr",
+     "coordinateBasis": "offset on conventional ^14C age"
+    }
+   },
+   {
+    "kind": "offset",
+    "id": "src-offset-marine",
+    "payload": {
+     "name": "海洋储库偏移（局地 ΔR 已并入）",
+     "mean": 400.0,
+     "sigma": 60.0,
+     "unit": "^14C yr",
+     "coordinateBasis": "offset on conventional ^14C age",
+     "distribution": "normal",
+     "note": "储库偏移以分布给出，不是单点"
+    }
+   },
+   {
+    "kind": "era-system",
+    "id": "src-era-system",
+    "payload": {
+     "system": "astronomical",
+     "note": "天文纪年：0 = 1 BCE，-1 = 2 BCE；calBP 相对 1950 CE",
+     "coordinateBasis": "astronomical year numbering"
+    }
+   },
+   {
+    "kind": "sequence-constraint",
+    "id": "src-sequence-trench1",
+    "payload": {
+     "context": "探方 T1 地层：第 4 层在下，第 2 层在上",
+     "pairs": [
+      {
+       "older": "src-measurement-oxa-5",
+       "younger": "src-measurement-oxa-6"
+      }
+     ],
+     "coordinateBasis": "stratigraphic order (older -> younger)"
+    }
+   },
+   {
+    "kind": "measurement",
+    "id": "src-measurement-oxa-1",
+    "payload": {
+     "labCode": "OxA-1",
+     "raw": "OxA-1: 1750.0±30.0 BP",
+     "bp": 1750.0,
+     "sigma": 30.0,
+     "unit": "BP (conventional ^14C yr)",
+     "coordinateBasis": "conventional radiocarbon years BP",
+     "material": "charcoal",
+     "note": "Hallstatt 式摆动区样品，预期多峰"
+    }
+   },
+   {
+    "kind": "measurement",
+    "id": "src-measurement-oxa-2",
+    "payload": {
+     "labCode": "OxA-2",
+     "raw": "OxA-2: 4900.0±70.0 BP",
+     "bp": 4900.0,
+     "sigma": 70.0,
+     "unit": "BP (conventional ^14C yr)",
+     "coordinateBasis": "conventional radiocarbon years BP",
+     "material": "bone collagen",
+     "note": "超出曲线高端端点，触发边界插值钳制"
+    }
+   },
+   {
+    "kind": "measurement",
+    "id": "src-measurement-oxa-3",
+    "payload": {
+     "labCode": "OxA-3",
+     "raw": "OxA-3: 3400.0±40.0 BP",
+     "bp": 3400.0,
+     "sigma": 40.0,
+     "unit": "BP (conventional ^14C yr)",
+     "coordinateBasis": "conventional radiocarbon years BP",
+     "material": "marine shell",
+     "note": "海洋样品，用于储库偏移分布对照"
+    }
+   },
+   {
+    "kind": "measurement",
+    "id": "src-measurement-oxa-4",
+    "payload": {
+     "labCode": "OxA-4",
+     "raw": "OxA-4: 1600.0±45.0 BP",
+     "bp": 1600.0,
+     "sigma": 45.0,
+     "unit": "BP (conventional ^14C yr)",
+     "coordinateBasis": "conventional radiocarbon years BP",
+     "material": "grain",
+     "note": "日历年分布跨越 BCE/CE 边界"
+    }
+   },
+   {
+    "kind": "measurement",
+    "id": "src-measurement-oxa-5",
+    "payload": {
+     "labCode": "OxA-5",
+     "raw": "OxA-5: 2900.0±35.0 BP",
+     "bp": 2900.0,
+     "sigma": 35.0,
+     "unit": "BP (conventional ^14C yr)",
+     "coordinateBasis": "conventional radiocarbon years BP",
+     "material": "charcoal",
+     "note": "T1 第 4 层（层序记录为较老）"
+    }
+   },
+   {
+    "kind": "measurement",
+    "id": "src-measurement-oxa-6",
+    "payload": {
+     "labCode": "OxA-6",
+     "raw": "OxA-6: 3050.0±35.0 BP",
+     "bp": 3050.0,
+     "sigma": 35.0,
+     "unit": "BP (conventional ^14C yr)",
+     "coordinateBasis": "conventional radiocarbon years BP",
+     "material": "charcoal",
+     "note": "T1 第 2 层（层序记录为较年轻）"
+    }
+   },
+   {
+    "kind": "measurement",
+    "id": "src-measurement-oxa-7",
+    "payload": {
+     "labCode": "OxA-7",
+     "raw": "OxA-7: 1200.0±30.0 BP",
+     "bp": 1200.0,
+     "sigma": 30.0,
+     "unit": "BP (conventional ^14C yr)",
+     "coordinateBasis": "conventional radiocarbon years BP",
+     "material": "bone",
+     "note": "受污染样品，基线中已被排除"
+    }
+   },
+   {
+    "kind": "exclusion-decision",
+    "id": "src-exclusion-oxa-7",
+    "payload": {
+     "target": "src-measurement-oxa-7",
+     "reason": "骨样受腐殖酸污染，实验室建议排除",
+     "decidedBy": "lab-reviewer",
+     "note": "排除决定本身也是带来源的一等数据"
+    }
+   }
+  ]
+ },
+ "script": [
+  {
+   "op": "note",
+   "text": "baseline: 原测量值/曲线版本/偏移分布/年代系统/层序约束/排除决定各自有来源"
+  },
+  {
+   "op": "submitBaseline"
+  },
+  {
+   "op": "note",
+   "text": "scenario:curve-multimodal 曲线多峰"
+  },
+  {
+   "op": "calibrate",
+   "measurement": "src-measurement-oxa-1",
+   "curve": "src-curve-intcal-like",
+   "offset": "src-offset-terrestrial",
+   "as": "cal-multimodal"
+  },
+  {
+   "op": "decide",
+   "target": "$cal-multimodal",
+   "interval": 0,
+   "action": "accept-interval",
+   "reviewer": "reviewer-A",
+   "rationale": "接受最老峰对应区间，多峰不压成平均年"
+  },
+  {
+   "op": "note",
+   "text": "scenario:boundary-interpolation 边界插值"
+  },
+  {
+   "op": "calibrate",
+   "measurement": "src-measurement-oxa-2",
+   "curve": "src-curve-intcal-like",
+   "offset": "src-offset-terrestrial",
+   "as": "cal-boundary"
+  },
+  {
+   "op": "note",
+   "text": "scenario:reservoir-offset 储库偏移分布 + scenario:side-by-side-intervals 并列日历区间"
+  },
+  {
+   "op": "calibrate",
+   "measurement": "src-measurement-oxa-3",
+   "curve": "src-curve-intcal-like",
+   "offset": "src-offset-terrestrial",
+   "as": "cal-marine-nooffset"
+  },
+  {
+   "op": "calibrate",
+   "measurement": "src-measurement-oxa-3",
+   "curve": "src-curve-intcal-like",
+   "offset": "src-offset-marine",
+   "as": "cal-marine-offset"
+  },
+  {
+   "op": "note",
+   "text": "scenario:bce-ce-crossing BCE/CE 跨界"
+  },
+  {
+   "op": "calibrate",
+   "measurement": "src-measurement-oxa-4",
+   "curve": "src-curve-intcal-like",
+   "offset": "src-offset-terrestrial",
+   "as": "cal-bce-ce"
+  },
+  {
+   "op": "note",
+   "text": "scenario:sequence-conflict 层序矛盾"
+  },
+  {
+   "op": "calibrate",
+   "measurement": "src-measurement-oxa-5",
+   "curve": "src-curve-intcal-like",
+   "offset": "src-offset-terrestrial",
+   "as": "cal-seq-older"
+  },
+  {
+   "op": "calibrate",
+   "measurement": "src-measurement-oxa-6",
+   "curve": "src-curve-intcal-like",
+   "offset": "src-offset-terrestrial",
+   "as": "cal-seq-younger"
+  },
+  {
+   "op": "sequence",
+   "constraint": "src-sequence-trench1",
+   "as": "seq-report"
+  },
+  {
+   "op": "decide",
+   "target": "$seq-report",
+   "action": "accept-adjustment",
+   "reviewer": "reviewer-A",
+   "rationale": "接受候选：反转层序记录"
+  },
+  {
+   "op": "decide",
+   "target": "$seq-report",
+   "action": "reject-adjustment",
+   "reviewer": "reviewer-B",
+   "rationale": "拒绝：坚持原层序，要求重采样（互相冲突的人工决定）"
+  },
+  {
+   "op": "undo",
+   "decision": "last"
+  },
+  {
+   "op": "note",
+   "text": "scenario:curve-upgrade 曲线升版"
+  },
+  {
+   "op": "revise",
+   "id": "src-curve-intcal-like",
+   "note": "曲线升版 v2：摆动区形状更新",
+   "payload": {
+    "name": "IntCal-like 演示曲线",
+    "citation": "本仓库内置合成曲线 v2（教学用，非真实 IntCal）",
+    "unit": "c14 yr BP vs cal BP",
+    "coordinateBasis": "cal BP (1950 CE 起算)",
+    "points": [
+     {
+      "calBp": 0,
+      "c14Age": -350.0,
+      "sigma": 22.0
+     },
+     {
+      "calBp": 50,
+      "c14Age": -288.08,
+      "sigma": 23.18
+     },
+     {
+      "calBp": 100,
+      "c14Age": -226.63,
+      "sigma": 24.34
+     },
+     {
+      "calBp": 150,
+      "c14Age": -166.12,
+      "sigma": 25.46
+     },
+     {
+      "calBp": 200,
+      "c14Age": -106.96,
+      "sigma": 26.52
+     },
+     {
+      "calBp": 250,
+      "c14Age": -49.51,
+      "sigma": 27.5
+     },
+     {
+      "calBp": 300,
+      "c14Age": 5.92,
+      "sigma": 28.39
+     },
+     {
+      "calBp": 350,
+      "c14Age": 59.13,
+      "sigma": 29.17
+     },
+     {
+      "calBp": 400,
+      "c14Age": 109.97,
+      "sigma": 29.82
+     },
+     {
+      "calBp": 450,
+      "c14Age": 158.43,
+      "sigma": 30.34
+     },
+     {
+      "calBp": 500,
+      "c14Age": 204.56,
+      "sigma": 30.71
+     },
+     {
+      "calBp": 550,
+      "c14Age": 248.51,
+      "sigma": 30.93
+     },
+     {
+      "calBp": 600,
+      "c14Age": 290.53,
+      "sigma": 31.0
+     },
+     {
+      "calBp": 650,
+      "c14Age": 330.93,
+      "sigma": 30.91
+     },
+     {
+      "calBp": 700,
+      "c14Age": 370.1,
+      "sigma": 30.67
+     },
+     {
+      "calBp": 750,
+      "c14Age": 408.47,
+      "sigma": 30.28
+     },
+     {
+      "calBp": 800,
+      "c14Age": 446.5,
+      "sigma": 29.74
+     },
+     {
+      "calBp": 850,
+      "c14Age": 484.67,
+      "sigma": 29.08
+     },
+     {
+      "calBp": 900,
+      "c14Age": 523.45,
+      "sigma": 28.29
+     },
+     {
+      "calBp": 950,
+      "c14Age": 563.29,
+      "sigma": 27.39
+     },
+     {
+      "calBp": 1000,
+      "c14Age": 604.59,
+      "sigma": 26.39
+     },
+     {
+      "calBp": 1050,
+      "c14Age": 647.71,
+      "sigma": 25.33
+     },
+     {
+      "calBp": 1100,
+      "c14Age": 692.9,
+      "sigma": 24.2
+     },
+     {
+      "calBp": 1150,
+      "c14Age": 740.38,
+      "sigma": 23.04
+     },
+     {
+      "calBp": 1200,
+      "c14Age": 790.23,
+      "sigma": 22.15
+     },
+     {
+      "calBp": 1250,
+      "c14Age": 842.46,
+      "sigma": 23.33
+     },
+     {
+      "calBp": 1300,
+      "c14Age": 896.99,
+      "sigma": 24.48
+     },
+     {
+      "calBp": 1350,
+      "c14Age": 953.63,
+      "sigma": 25.6
+     },
+     {
+      "calBp": 1400,
+      "c14Age": 1012.12,
+      "sigma": 26.65
+     },
+     {
+      "calBp": 1450,
+      "c14Age": 1072.12,
+      "sigma": 27.62
+     },
+     {
+      "calBp": 1500,
+      "c14Age": 1133.24,
+      "sigma": 28.49
+     },
+     {
+      "calBp": 1550,
+      "c14Age": 1195.01,
+      "sigma": 29.25
+     },
+     {
+      "calBp": 1600,
+      "c14Age": 1256.99,
+      "sigma": 29.89
+     },
+     {
+      "calBp": 1650,
+      "c14Age": 1318.69,
+      "sigma": 30.39
+     },
+     {
+      "calBp": 1700,
+      "c14Age": 1379.65,
+      "sigma": 30.74
+     },
+     {
+      "calBp": 1750,
+      "c14Age": 1439.42,
+      "sigma": 30.95
+     },
+     {
+      "calBp": 1800,
+      "c14Age": 1497.62,
+      "sigma": 31.0
+     },
+     {
+      "calBp": 1850,
+      "c14Age": 1553.92,
+      "sigma": 30.89
+     },
+     {
+      "calBp": 1900,
+      "c14Age": 1608.08,
+      "sigma": 30.63
+     },
+     {
+      "calBp": 1950,
+      "c14Age": 1659.91,
+      "sigma": 30.22
+     },
+     {
+      "calBp": 2000,
+      "c14Age": 1709.36,
+      "sigma": 29.67
+     },
+     {
+      "calBp": 2050,
+      "c14Age": 1756.42,
+      "sigma": 28.98
+     },
+     {
+      "calBp": 2100,
+      "c14Age": 1800.61,
+      "sigma": 28.18
+     },
+     {
+      "calBp": 2150,
+      "c14Age": 1835.47,
+      "sigma": 27.27
+     },
+     {
+      "calBp": 2200,
+      "c14Age": 1829.69,
+      "sigma": 26.27
+     },
+     {
+      "calBp": 2250,
+      "c14Age": 1747.59,
+      "sigma": 25.19
+     },
+     {
+      "calBp": 2300,
+      "c14Age": 1689.3,
+      "sigma": 24.06
+     },
+     {
+      "calBp": 2350,
+      "c14Age": 1822.34,
+      "sigma": 22.89
+     },
+     {
+      "calBp": 2400,
+      "c14Age": 2055.63,
+      "sigma": 22.29
+     },
+     {
+      "calBp": 2450,
+      "c14Age": 2198.11,
+      "sigma": 23.47
+     },
+     {
+      "calBp": 2500,
+      "c14Age": 2229.2,
+      "sigma": 24.62
+     },
+     {
+      "calBp": 2550,
+      "c14Age": 2219.17,
+      "sigma": 25.73
+     },
+     {
+      "calBp": 2600,
+      "c14Age": 2222.13,
+      "sigma": 26.77
+     },
+     {
+      "calBp": 2650,
+      "c14Age": 2249.77,
+      "sigma": 27.73
+     },
+     {
+      "calBp": 2700,
+      "c14Age": 2291.94,
+      "sigma": 28.59
+     },
+     {
+      "calBp": 2750,
+      "c14Age": 2340.08,
+      "sigma": 29.34
+     },
+     {
+      "calBp": 2800,
+      "c14Age": 2391.25,
+      "sigma": 29.96
+     },
+     {
+      "calBp": 2850,
+      "c14Age": 2444.84,
+      "sigma": 30.44
+     },
+     {
+      "calBp": 2900,
+      "c14Age": 2500.63,
+      "sigma": 30.78
+     },
+     {
+      "calBp": 2950,
+      "c14Age": 2558.39,
+      "sigma": 30.96
+     },
+     {
+      "calBp": 3000,
+      "c14Age": 2617.81,
+      "sigma": 30.99
+     },
+     {
+      "calBp": 3050,
+      "c14Age": 2678.51,
+      "sigma": 30.87
+     },
+     {
+      "calBp": 3100,
+      "c14Age": 2740.06,
+      "sigma": 30.59
+     },
+     {
+      "calBp": 3150,
+      "c14Age": 2802.02,
+      "sigma": 30.16
+     },
+     {
+      "calBp": 3200,
+      "c14Age": 2863.89,
+      "sigma": 29.59
+     },
+     {
+      "calBp": 3250,
+      "c14Age": 2925.21,
+      "sigma": 28.89
+     },
+     {
+      "calBp": 3300,
+      "c14Age": 2985.52,
+      "sigma": 28.07
+     },
+     {
+      "calBp": 3350,
+      "c14Age": 3044.42,
+      "sigma": 27.15
+     },
+     {
+      "calBp": 3400,
+      "c14Age": 3101.55,
+      "sigma": 26.14
+     },
+     {
+      "calBp": 3450,
+      "c14Age": 3156.62,
+      "sigma": 25.05
+     },
+     {
+      "calBp": 3500,
+      "c14Age": 3209.44,
+      "sigma": 23.91
+     },
+     {
+      "calBp": 3550,
+      "c14Age": 3259.88,
+      "sigma": 22.74
+     },
+     {
+      "calBp": 3600,
+      "c14Age": 3307.94,
+      "sigma": 22.44
+     },
+     {
+      "calBp": 3650,
+      "c14Age": 3353.69,
+      "sigma": 23.62
+     },
+     {
+      "calBp": 3700,
+      "c14Age": 3397.3,
+      "sigma": 24.76
+     },
+     {
+      "calBp": 3750,
+      "c14Age": 3439.02,
+      "sigma": 25.86
+     },
+     {
+      "calBp": 3800,
+      "c14Age": 3479.18,
+      "sigma": 26.9
+     },
+     {
+      "calBp": 3850,
+      "c14Age": 3518.19,
+      "sigma": 27.84
+     },
+     {
+      "calBp": 3900,
+      "c14Age": 3556.47,
+      "sigma": 28.69
+     },
+     {
+      "calBp": 3950,
+      "c14Age": 3594.49,
+      "sigma": 29.42
+     },
+     {
+      "calBp": 4000,
+      "c14Age": 3632.73,
+      "sigma": 30.03
+     },
+     {
+      "calBp": 4050,
+      "c14Age": 3671.65,
+      "sigma": 30.49
+     },
+     {
+      "calBp": 4100,
+      "c14Age": 3711.71,
+      "sigma": 30.81
+     },
+     {
+      "calBp": 4150,
+      "c14Age": 3753.3,
+      "sigma": 30.98
+     },
+     {
+      "calBp": 4200,
+      "c14Age": 3796.75,
+      "sigma": 30.99
+     },
+     {
+      "calBp": 4250,
+      "c14Age": 3842.32,
+      "sigma": 30.84
+     },
+     {
+      "calBp": 4300,
+      "c14Age": 3890.19,
+      "sigma": 30.54
+     },
+     {
+      "calBp": 4350,
+      "c14Age": 3940.44,
+      "sigma": 30.1
+     },
+     {
+      "calBp": 4400,
+      "c14Age": 3993.07,
+      "sigma": 29.51
+     },
+     {
+      "calBp": 4450,
+      "c14Age": 4047.97,
+      "sigma": 28.8
+     },
+     {
+      "calBp": 4500,
+      "c14Age": 4104.94,
+      "sigma": 27.96
+     },
+     {
+      "calBp": 4550,
+      "c14Age": 4163.71,
+      "sigma": 27.03
+     },
+     {
+      "calBp": 4600,
+      "c14Age": 4223.93,
+      "sigma": 26.0
+     },
+     {
+      "calBp": 4650,
+      "c14Age": 4285.18,
+      "sigma": 24.91
+     },
+     {
+      "calBp": 4700,
+      "c14Age": 4347.03,
+      "sigma": 23.77
+     },
+     {
+      "calBp": 4750,
+      "c14Age": 4408.99,
+      "sigma": 22.6
+     },
+     {
+      "calBp": 4800,
+      "c14Age": 4470.6,
+      "sigma": 22.59
+     }
+    ]
+   }
+  },
+  {
+   "op": "calibrate",
+   "measurement": "src-measurement-oxa-1",
+   "curve": "src-curve-intcal-like",
+   "offset": "src-offset-terrestrial",
+   "as": "cal-multimodal-v2"
+  },
+  {
+   "op": "note",
+   "text": "参数修订：储库偏移分布"
+  },
+  {
+   "op": "revise",
+   "id": "src-offset-marine",
+   "note": "参数修订：新 ΔR 评估",
+   "payload": {
+    "name": "海洋储库偏移（局地 ΔR 已并入）",
+    "mean": 380.0,
+    "sigma": 50.0,
+    "unit": "^14C yr",
+    "coordinateBasis": "offset on conventional ^14C age",
+    "distribution": "normal",
+    "note": "参数修订：新 ΔR 评估，400±60 -> 380±50"
+   }
+  },
+  {
+   "op": "calibrate",
+   "measurement": "src-measurement-oxa-3",
+   "curve": "src-curve-intcal-like",
+   "offset": "src-offset-marine",
+   "as": "cal-marine-offset-v2"
+  },
+  {
+   "op": "note",
+   "text": "局部源数据改动：OxA-2 标准差"
+  },
+  {
+   "op": "revise",
+   "id": "src-measurement-oxa-2",
+   "note": "实验室重测标准差",
+   "payload": {
+    "labCode": "OxA-2",
+    "raw": "OxA-2: 4900±60 BP (revised)",
+    "bp": 4900.0,
+    "sigma": 60.0,
+    "unit": "BP (conventional ^14C yr)",
+    "coordinateBasis": "conventional radiocarbon years BP",
+    "material": "bone collagen",
+    "note": "实验室重测标准差，70 -> 60（局部源数据改动）"
+   }
+  },
+  {
+   "op": "calibrate",
+   "measurement": "src-measurement-oxa-2",
+   "curve": "src-curve-intcal-like",
+   "offset": "src-offset-terrestrial",
+   "as": "cal-boundary-v2"
+  },
+  {
+   "op": "note",
+   "text": "done"
+  }
+ ]
+}
