@@ -1,0 +1,28 @@
+{
+  "id": "H02",
+  "kind": "OFFSET_HYPOTHESIS",
+  "payload": {
+    "label": "H-marine",
+    "targetSampleCode": "S03",
+    "mean": {
+      "value": 80.0,
+      "unit": "BP-14C-years",
+      "rawValue": "80 BP",
+      "rawUnit": "BP"
+    },
+    "sigma": {
+      "value": 40.0,
+      "unit": "BP-14C-years",
+      "rawValue": "40 BP",
+      "rawUnit": "BP"
+    },
+    "distribution": "gaussian"
+  },
+  "provenance": {
+    "origin": "casepack",
+    "originRef": "offset-H02.json",
+    "rawRepresentation": null,
+    "note": "碳年候选席离线案例包"
+  },
+  "note": "海洋储库偏移分布：ΔR=80±40（高斯），加在曲线端"
+}

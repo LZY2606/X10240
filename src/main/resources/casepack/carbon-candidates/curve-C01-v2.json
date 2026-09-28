@@ -1,0 +1,1522 @@
+{
+  "id": "C01",
+  "kind": "CURVE",
+  "payload": {
+    "knots": [
+      {
+        "calBP": 0,
+        "radioCarbonBP": 0.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 10,
+        "radioCarbonBP": 10.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 20,
+        "radioCarbonBP": 20.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 30,
+        "radioCarbonBP": 30.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 40,
+        "radioCarbonBP": 40.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 50,
+        "radioCarbonBP": 50.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 60,
+        "radioCarbonBP": 60.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 70,
+        "radioCarbonBP": 70.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 80,
+        "radioCarbonBP": 80.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 90,
+        "radioCarbonBP": 90.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 100,
+        "radioCarbonBP": 100.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 110,
+        "radioCarbonBP": 110.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 120,
+        "radioCarbonBP": 120.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 130,
+        "radioCarbonBP": 130.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 140,
+        "radioCarbonBP": 140.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 150,
+        "radioCarbonBP": 150.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 160,
+        "radioCarbonBP": 160.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 170,
+        "radioCarbonBP": 170.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 180,
+        "radioCarbonBP": 180.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 190,
+        "radioCarbonBP": 190.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 200,
+        "radioCarbonBP": 200.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 210,
+        "radioCarbonBP": 210.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 220,
+        "radioCarbonBP": 220.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 230,
+        "radioCarbonBP": 230.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 240,
+        "radioCarbonBP": 240.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 250,
+        "radioCarbonBP": 250.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 260,
+        "radioCarbonBP": 260.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 270,
+        "radioCarbonBP": 270.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 280,
+        "radioCarbonBP": 280.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 290,
+        "radioCarbonBP": 290.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 300,
+        "radioCarbonBP": 300.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 310,
+        "radioCarbonBP": 310.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 320,
+        "radioCarbonBP": 320.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 330,
+        "radioCarbonBP": 330.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 340,
+        "radioCarbonBP": 340.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 350,
+        "radioCarbonBP": 350.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 360,
+        "radioCarbonBP": 360.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 370,
+        "radioCarbonBP": 370.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 380,
+        "radioCarbonBP": 380.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 390,
+        "radioCarbonBP": 390.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 400,
+        "radioCarbonBP": 400.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 410,
+        "radioCarbonBP": 410.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 420,
+        "radioCarbonBP": 420.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 430,
+        "radioCarbonBP": 430.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 440,
+        "radioCarbonBP": 440.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 450,
+        "radioCarbonBP": 450.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 460,
+        "radioCarbonBP": 460.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 470,
+        "radioCarbonBP": 470.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 480,
+        "radioCarbonBP": 480.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 490,
+        "radioCarbonBP": 490.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 500,
+        "radioCarbonBP": 500.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 510,
+        "radioCarbonBP": 510.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 520,
+        "radioCarbonBP": 520.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 530,
+        "radioCarbonBP": 530.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 540,
+        "radioCarbonBP": 540.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 550,
+        "radioCarbonBP": 550.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 560,
+        "radioCarbonBP": 560.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 570,
+        "radioCarbonBP": 570.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 580,
+        "radioCarbonBP": 580.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 590,
+        "radioCarbonBP": 590.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 600,
+        "radioCarbonBP": 600.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 610,
+        "radioCarbonBP": 610.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 620,
+        "radioCarbonBP": 620.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 630,
+        "radioCarbonBP": 630.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 640,
+        "radioCarbonBP": 640.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 650,
+        "radioCarbonBP": 650.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 660,
+        "radioCarbonBP": 660.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 670,
+        "radioCarbonBP": 670.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 680,
+        "radioCarbonBP": 680.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 690,
+        "radioCarbonBP": 690.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 700,
+        "radioCarbonBP": 700.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 710,
+        "radioCarbonBP": 710.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 720,
+        "radioCarbonBP": 720.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 730,
+        "radioCarbonBP": 730.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 740,
+        "radioCarbonBP": 740.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 750,
+        "radioCarbonBP": 750.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 760,
+        "radioCarbonBP": 760.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 770,
+        "radioCarbonBP": 770.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 780,
+        "radioCarbonBP": 780.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 790,
+        "radioCarbonBP": 790.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 800,
+        "radioCarbonBP": 800.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 810,
+        "radioCarbonBP": 810.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 820,
+        "radioCarbonBP": 820.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 830,
+        "radioCarbonBP": 830.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 840,
+        "radioCarbonBP": 840.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 850,
+        "radioCarbonBP": 850.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 860,
+        "radioCarbonBP": 860.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 870,
+        "radioCarbonBP": 870.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 880,
+        "radioCarbonBP": 880.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 890,
+        "radioCarbonBP": 890.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 900,
+        "radioCarbonBP": 833.9492,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 910,
+        "radioCarbonBP": 889.3156,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 920,
+        "radioCarbonBP": 954.4311,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 930,
+        "radioCarbonBP": 1021.4611,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 940,
+        "radioCarbonBP": 1081.7041,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 950,
+        "radioCarbonBP": 1152.3939,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 960,
+        "radioCarbonBP": 1178.3161,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 970,
+        "radioCarbonBP": 1182.8721,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 980,
+        "radioCarbonBP": 1168.3566,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 990,
+        "radioCarbonBP": 1140.386,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1000,
+        "radioCarbonBP": 1106.6112,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1010,
+        "radioCarbonBP": 1075.0113,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1020,
+        "radioCarbonBP": 1052.1549,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1030,
+        "radioCarbonBP": 1041.825,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1040,
+        "radioCarbonBP": 1044.3156,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1050,
+        "radioCarbonBP": 1056.5553,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1060,
+        "radioCarbonBP": 1073.0205,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1070,
+        "radioCarbonBP": 1087.2195,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1080,
+        "radioCarbonBP": 1093.3986,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1090,
+        "radioCarbonBP": 1088.0699,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1100,
+        "radioCarbonBP": 1071.0009,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1110,
+        "radioCarbonBP": 1045.4315,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1120,
+        "radioCarbonBP": 1017.4608,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1130,
+        "radioCarbonBP": 994.74,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1140,
+        "radioCarbonBP": 984.7651,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1150,
+        "radioCarbonBP": 993.1595,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1160,
+        "radioCarbonBP": 1022.3404,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1170,
+        "radioCarbonBP": 1070.875,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1180,
+        "radioCarbonBP": 1133.6796,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1190,
+        "radioCarbonBP": 1203.0205,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1200,
+        "radioCarbonBP": 1270.0952,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1210,
+        "radioCarbonBP": 1326.8392,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1220,
+        "radioCarbonBP": 1367.5545,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1230,
+        "radioCarbonBP": 1389.9963,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1240,
+        "radioCarbonBP": 1395.6776,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1250,
+        "radioCarbonBP": 1389.3319,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1260,
+        "radioCarbonBP": 1377.6652,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1270,
+        "radioCarbonBP": 1367.6903,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1280,
+        "radioCarbonBP": 1365.0307,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1290,
+        "radioCarbonBP": 1372.5866,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1300,
+        "radioCarbonBP": 1389.8703,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1310,
+        "radioCarbonBP": 1413.1641,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1320,
+        "radioCarbonBP": 1436.4611,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1330,
+        "radioCarbonBP": 1452.971,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1340,
+        "radioCarbonBP": 1456.8392,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1350,
+        "radioCarbonBP": 1444.6787,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1360,
+        "radioCarbonBP": 1416.5557,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1370,
+        "radioCarbonBP": 1376.193,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1380,
+        "radioCarbonBP": 1330.3365,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1390,
+        "radioCarbonBP": 1287.419,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1400,
+        "radioCarbonBP": 1255.8191,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1410,
+        "radioCarbonBP": 1242.1055,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1420,
+        "radioCarbonBP": 1249.6614,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1430,
+        "radioCarbonBP": 1277.9992,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1440,
+        "radioCarbonBP": 1322.918,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1450,
+        "radioCarbonBP": 1377.4658,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1460,
+        "radioCarbonBP": 1408.4864,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1470,
+        "radioCarbonBP": 1458.3986,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1480,
+        "radioCarbonBP": 1496.8029,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1490,
+        "radioCarbonBP": 1521.5557,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1500,
+        "radioCarbonBP": 1534.0688,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1510,
+        "radioCarbonBP": 1510.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1520,
+        "radioCarbonBP": 1520.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1530,
+        "radioCarbonBP": 1530.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1540,
+        "radioCarbonBP": 1540.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1550,
+        "radioCarbonBP": 1550.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1560,
+        "radioCarbonBP": 1560.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1570,
+        "radioCarbonBP": 1570.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1580,
+        "radioCarbonBP": 1580.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1590,
+        "radioCarbonBP": 1590.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1600,
+        "radioCarbonBP": 1600.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1610,
+        "radioCarbonBP": 1610.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1620,
+        "radioCarbonBP": 1620.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1630,
+        "radioCarbonBP": 1630.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1640,
+        "radioCarbonBP": 1640.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1650,
+        "radioCarbonBP": 1650.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1660,
+        "radioCarbonBP": 1660.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1670,
+        "radioCarbonBP": 1670.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1680,
+        "radioCarbonBP": 1680.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1690,
+        "radioCarbonBP": 1690.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1700,
+        "radioCarbonBP": 1700.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1710,
+        "radioCarbonBP": 1710.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1720,
+        "radioCarbonBP": 1720.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1730,
+        "radioCarbonBP": 1730.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1740,
+        "radioCarbonBP": 1740.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1750,
+        "radioCarbonBP": 1750.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1760,
+        "radioCarbonBP": 1760.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1770,
+        "radioCarbonBP": 1770.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1780,
+        "radioCarbonBP": 1780.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1790,
+        "radioCarbonBP": 1790.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1800,
+        "radioCarbonBP": 1800.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1810,
+        "radioCarbonBP": 1810.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1820,
+        "radioCarbonBP": 1820.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1830,
+        "radioCarbonBP": 1830.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1840,
+        "radioCarbonBP": 1840.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1850,
+        "radioCarbonBP": 1850.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1860,
+        "radioCarbonBP": 1860.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1870,
+        "radioCarbonBP": 1870.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1880,
+        "radioCarbonBP": 1880.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1890,
+        "radioCarbonBP": 1890.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1900,
+        "radioCarbonBP": 1900.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1910,
+        "radioCarbonBP": 1910.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1920,
+        "radioCarbonBP": 1920.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1930,
+        "radioCarbonBP": 1930.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1940,
+        "radioCarbonBP": 1940.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1950,
+        "radioCarbonBP": 1950.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1960,
+        "radioCarbonBP": 1960.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1970,
+        "radioCarbonBP": 1970.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1980,
+        "radioCarbonBP": 1980.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 1990,
+        "radioCarbonBP": 1990.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2000,
+        "radioCarbonBP": 2000.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2010,
+        "radioCarbonBP": 2010.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2020,
+        "radioCarbonBP": 2020.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2030,
+        "radioCarbonBP": 2030.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2040,
+        "radioCarbonBP": 2040.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2050,
+        "radioCarbonBP": 2050.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2060,
+        "radioCarbonBP": 2060.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2070,
+        "radioCarbonBP": 2070.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2080,
+        "radioCarbonBP": 2080.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2090,
+        "radioCarbonBP": 2090.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2100,
+        "radioCarbonBP": 2100.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2110,
+        "radioCarbonBP": 2110.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2120,
+        "radioCarbonBP": 2120.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2130,
+        "radioCarbonBP": 2130.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2140,
+        "radioCarbonBP": 2140.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2150,
+        "radioCarbonBP": 2150.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2160,
+        "radioCarbonBP": 2160.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2170,
+        "radioCarbonBP": 2170.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2180,
+        "radioCarbonBP": 2180.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2190,
+        "radioCarbonBP": 2190.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2200,
+        "radioCarbonBP": 2200.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2210,
+        "radioCarbonBP": 2210.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2220,
+        "radioCarbonBP": 2220.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2230,
+        "radioCarbonBP": 2230.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2240,
+        "radioCarbonBP": 2240.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2250,
+        "radioCarbonBP": 2250.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2260,
+        "radioCarbonBP": 2260.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2270,
+        "radioCarbonBP": 2270.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2280,
+        "radioCarbonBP": 2280.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2290,
+        "radioCarbonBP": 2290.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2300,
+        "radioCarbonBP": 2300.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2310,
+        "radioCarbonBP": 2310.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2320,
+        "radioCarbonBP": 2320.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2330,
+        "radioCarbonBP": 2330.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2340,
+        "radioCarbonBP": 2340.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2350,
+        "radioCarbonBP": 2350.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2360,
+        "radioCarbonBP": 2360.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2370,
+        "radioCarbonBP": 2370.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2380,
+        "radioCarbonBP": 2380.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2390,
+        "radioCarbonBP": 2390.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2400,
+        "radioCarbonBP": 2400.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2410,
+        "radioCarbonBP": 2456.3525,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2420,
+        "radioCarbonBP": 2508.1678,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2430,
+        "radioCarbonBP": 2551.3525,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2440,
+        "radioCarbonBP": 2582.6585,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2450,
+        "radioCarbonBP": 2600.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2460,
+        "radioCarbonBP": 2602.6585,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2470,
+        "radioCarbonBP": 2591.3525,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2480,
+        "radioCarbonBP": 2568.1678,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2490,
+        "radioCarbonBP": 2536.3525,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2500,
+        "radioCarbonBP": 2500.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2510,
+        "radioCarbonBP": 2463.6475,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2520,
+        "radioCarbonBP": 2431.8322,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2530,
+        "radioCarbonBP": 2408.6475,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2540,
+        "radioCarbonBP": 2397.3415,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2550,
+        "radioCarbonBP": 2400.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2560,
+        "radioCarbonBP": 2417.3415,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2570,
+        "radioCarbonBP": 2448.6475,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2580,
+        "radioCarbonBP": 2491.8322,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2590,
+        "radioCarbonBP": 2543.6475,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2600,
+        "radioCarbonBP": 2600.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2610,
+        "radioCarbonBP": 2656.3525,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2620,
+        "radioCarbonBP": 2708.1678,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2630,
+        "radioCarbonBP": 2751.3525,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2640,
+        "radioCarbonBP": 2782.6585,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2650,
+        "radioCarbonBP": 2800.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2660,
+        "radioCarbonBP": 2802.6585,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2670,
+        "radioCarbonBP": 2791.3525,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2680,
+        "radioCarbonBP": 2768.1678,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2690,
+        "radioCarbonBP": 2736.3525,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2700,
+        "radioCarbonBP": 2700.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2710,
+        "radioCarbonBP": 2663.6475,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2720,
+        "radioCarbonBP": 2631.8322,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2730,
+        "radioCarbonBP": 2608.6475,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2740,
+        "radioCarbonBP": 2597.3415,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2750,
+        "radioCarbonBP": 2600.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2760,
+        "radioCarbonBP": 2617.3415,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2770,
+        "radioCarbonBP": 2648.6475,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2780,
+        "radioCarbonBP": 2691.8322,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2790,
+        "radioCarbonBP": 2743.6475,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2800,
+        "radioCarbonBP": 2800.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2810,
+        "radioCarbonBP": 2810.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2820,
+        "radioCarbonBP": 2820.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2830,
+        "radioCarbonBP": 2830.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2840,
+        "radioCarbonBP": 2840.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2850,
+        "radioCarbonBP": 2850.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2860,
+        "radioCarbonBP": 2860.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2870,
+        "radioCarbonBP": 2870.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2880,
+        "radioCarbonBP": 2880.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2890,
+        "radioCarbonBP": 2890.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2900,
+        "radioCarbonBP": 2900.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2910,
+        "radioCarbonBP": 2910.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2920,
+        "radioCarbonBP": 2920.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2930,
+        "radioCarbonBP": 2930.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2940,
+        "radioCarbonBP": 2940.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2950,
+        "radioCarbonBP": 2950.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2960,
+        "radioCarbonBP": 2960.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2970,
+        "radioCarbonBP": 2970.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2980,
+        "radioCarbonBP": 2980.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 2990,
+        "radioCarbonBP": 2990.0,
+        "sigma": 15.0
+      },
+      {
+        "calBP": 3000,
+        "radioCarbonBP": 3000.0,
+        "sigma": 15.0
+      }
+    ],
+    "xUnit": "calBP-years",
+    "yUnit": "BP-14C-years"
+  },
+  "provenance": {
+    "origin": "casepack",
+    "originRef": "curve-C01-v2.json",
+    "rawRepresentation": null,
+    "note": "碳年候选席离线案例包"
+  },
+  "note": "曲线升版 v2：仅多峰区上移 25 14C 年；并列区不变 -> 只令依赖多峰区的结果过期"
+}

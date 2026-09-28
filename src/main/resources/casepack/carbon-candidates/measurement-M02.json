@@ -1,0 +1,29 @@
+{
+  "id": "M02",
+  "kind": "MEASUREMENT",
+  "payload": {
+    "labCode": "M02",
+    "sampleCode": "S02",
+    "age": {
+      "value": 2600.0,
+      "unit": "BP-14C-years",
+      "rawValue": "2600 BP",
+      "rawUnit": "BP"
+    },
+    "sigma": {
+      "value": 20.0,
+      "unit": "BP-14C-years",
+      "rawValue": "20 BP",
+      "rawUnit": "BP"
+    },
+    "curveId": "C01",
+    "defaultOffsetId": null
+  },
+  "provenance": {
+    "origin": "casepack",
+    "originRef": "measurement-M02.json",
+    "rawRepresentation": null,
+    "note": "碳年候选席离线案例包"
+  },
+  "note": "并列样本：14C 2600±20 BP，两个外侧日历区间等概率并列"
+}

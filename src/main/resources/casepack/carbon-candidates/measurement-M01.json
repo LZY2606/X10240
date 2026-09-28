@@ -1,0 +1,29 @@
+{
+  "id": "M01",
+  "kind": "MEASUREMENT",
+  "payload": {
+    "labCode": "M01",
+    "sampleCode": "S01",
+    "age": {
+      "value": 1200.0,
+      "unit": "BP-14C-years",
+      "rawValue": "1200 BP",
+      "rawUnit": "BP"
+    },
+    "sigma": {
+      "value": 25.0,
+      "unit": "BP-14C-years",
+      "rawValue": "25 BP",
+      "rawUnit": "BP"
+    },
+    "curveId": "C01",
+    "defaultOffsetId": null
+  },
+  "provenance": {
+    "origin": "casepack",
+    "originRef": "measurement-M01.json",
+    "rawRepresentation": null,
+    "note": "碳年候选席离线案例包"
+  },
+  "note": "多峰样本：14C 1200±25 BP，校准后 3 个日历候选，禁止压成平均年"
+}

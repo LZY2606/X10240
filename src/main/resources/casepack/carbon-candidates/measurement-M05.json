@@ -1,0 +1,29 @@
+{
+  "id": "M05",
+  "kind": "MEASUREMENT",
+  "payload": {
+    "labCode": "M05",
+    "sampleCode": "S05",
+    "age": {
+      "value": 3060.0,
+      "unit": "BP-14C-years",
+      "rawValue": "3060 BP",
+      "rawUnit": "BP"
+    },
+    "sigma": {
+      "value": 40.0,
+      "unit": "BP-14C-years",
+      "rawValue": "40 BP",
+      "rawUnit": "BP"
+    },
+    "curveId": "C01",
+    "defaultOffsetId": null
+  },
+  "provenance": {
+    "origin": "casepack",
+    "originRef": "measurement-M05.json",
+    "rawRepresentation": null,
+    "note": "碳年候选席离线案例包"
+  },
+  "note": "边界样本：测量超出曲线上界 3000 calBP，触发边界插值诊断"
+}

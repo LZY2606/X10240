@@ -1,0 +1,28 @@
+{
+  "id": "H01",
+  "kind": "OFFSET_HYPOTHESIS",
+  "payload": {
+    "label": "H0",
+    "targetSampleCode": null,
+    "mean": {
+      "value": 0.0,
+      "unit": "BP-14C-years",
+      "rawValue": "0 BP",
+      "rawUnit": "BP"
+    },
+    "sigma": {
+      "value": 0.0,
+      "unit": "BP-14C-years",
+      "rawValue": "0 BP",
+      "rawUnit": "BP"
+    },
+    "distribution": "gaussian"
+  },
+  "provenance": {
+    "origin": "casepack",
+    "originRef": "offset-H01.json",
+    "rawRepresentation": null,
+    "note": "碳年候选席离线案例包"
+  },
+  "note": "零偏移基线假设"
+}

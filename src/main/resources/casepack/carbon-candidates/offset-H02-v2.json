@@ -1,0 +1,28 @@
+{
+  "id": "H02",
+  "kind": "OFFSET_HYPOTHESIS",
+  "payload": {
+    "label": "H-marine-revised",
+    "targetSampleCode": "S03",
+    "mean": {
+      "value": 120.0,
+      "unit": "BP-14C-years",
+      "rawValue": "120 BP",
+      "rawUnit": "BP"
+    },
+    "sigma": {
+      "value": 30.0,
+      "unit": "BP-14C-years",
+      "rawValue": "30 BP",
+      "rawUnit": "BP"
+    },
+    "distribution": "gaussian"
+  },
+  "provenance": {
+    "origin": "casepack",
+    "originRef": "offset-H02-v2.json",
+    "rawRepresentation": null,
+    "note": "碳年候选席离线案例包"
+  },
+  "note": "参数修订：ΔR 80±40 -> 120±30，父版本 v1"
+}

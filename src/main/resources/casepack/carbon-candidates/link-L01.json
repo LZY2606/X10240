@@ -1,0 +1,17 @@
+{
+  "id": "L01",
+  "kind": "SEQUENCE_LINK",
+  "payload": {
+    "label": "探沟A：下层S01老于上层S02",
+    "olderSampleCode": "S01",
+    "youngerSampleCode": "S02",
+    "relation": "older_than"
+  },
+  "provenance": {
+    "origin": "casepack",
+    "originRef": "link-L01.json",
+    "rawRepresentation": null,
+    "note": "碳年候选席离线案例包"
+  },
+  "note": "层序矛盾：S01(~1200 14C BP) 被约束为老于 S02(~2600)，触发冲突与候选调整"
+}

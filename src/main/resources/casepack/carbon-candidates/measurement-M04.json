@@ -1,0 +1,29 @@
+{
+  "id": "M04",
+  "kind": "MEASUREMENT",
+  "payload": {
+    "labCode": "M04",
+    "sampleCode": "S04",
+    "age": {
+      "value": 1950.0,
+      "unit": "BP-14C-years",
+      "rawValue": "1950 BP",
+      "rawUnit": "BP"
+    },
+    "sigma": {
+      "value": 60.0,
+      "unit": "BP-14C-years",
+      "rawValue": "60 BP",
+      "rawUnit": "BP"
+    },
+    "curveId": "C01",
+    "defaultOffsetId": null
+  },
+  "provenance": {
+    "origin": "casepack",
+    "originRef": "measurement-M04.json",
+    "rawRepresentation": null,
+    "note": "碳年候选席离线案例包"
+  },
+  "note": "跨界样本：日历候选跨越 BCE/CE（含 0=1 BCE）"
+}

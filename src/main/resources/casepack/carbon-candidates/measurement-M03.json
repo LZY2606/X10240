@@ -1,0 +1,29 @@
+{
+  "id": "M03",
+  "kind": "MEASUREMENT",
+  "payload": {
+    "labCode": "M03",
+    "sampleCode": "S03",
+    "age": {
+      "value": 1280.0,
+      "unit": "BP-14C-years",
+      "rawValue": "1280 BP",
+      "rawUnit": "BP"
+    },
+    "sigma": {
+      "value": 25.0,
+      "unit": "BP-14C-years",
+      "rawValue": "25 BP",
+      "rawUnit": "BP"
+    },
+    "curveId": "C01",
+    "defaultOffsetId": "H02"
+  },
+  "provenance": {
+    "origin": "casepack",
+    "originRef": "measurement-M03.json",
+    "rawRepresentation": null,
+    "note": "碳年候选席离线案例包"
+  },
+  "note": "海洋样本：在 H0(无偏移) 与 H-marine(储库偏移分布) 下候选不同"
+}

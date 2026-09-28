@@ -1,0 +1,17 @@
+{
+  "id": "X01",
+  "kind": "EXCLUSION",
+  "payload": {
+    "label": "田野排除：S02 最年轻区间不可用",
+    "targetSampleCode": "S02",
+    "targetIntervalId": null,
+    "reason": "该候选与已发表地层年代下限冲突（田野记录 TrenchA-log2026-07）"
+  },
+  "provenance": {
+    "origin": "casepack",
+    "originRef": "exclusion-X01.json",
+    "rawRepresentation": null,
+    "note": "碳年候选席离线案例包"
+  },
+  "note": "带明确来源的排除决定；脚本中作为裁定演示的基线决定"
+}

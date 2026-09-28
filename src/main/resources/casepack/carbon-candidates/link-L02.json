@@ -1,0 +1,17 @@
+{
+  "id": "L02",
+  "kind": "SEQUENCE_LINK",
+  "payload": {
+    "label": "探沟A：S05 老于 S04",
+    "olderSampleCode": "S05",
+    "youngerSampleCode": "S04",
+    "relation": "older_than"
+  },
+  "provenance": {
+    "origin": "casepack",
+    "originRef": "link-L02.json",
+    "rawRepresentation": null,
+    "note": "碳年候选席离线案例包"
+  },
+  "note": "一致层序对照"
+}

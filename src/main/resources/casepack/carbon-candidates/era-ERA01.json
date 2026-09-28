@@ -1,0 +1,16 @@
+{
+  "id": "ERA01",
+  "kind": "ERA_SYSTEM",
+  "payload": {
+    "label": "天文年/Gregorian BCE-CE",
+    "zeroConvention": "astronomical_year_zero",
+    "coordinates": "astro = 1950 - calBP; 0 = 1 BCE; astro>=1 -> CE"
+  },
+  "provenance": {
+    "origin": "casepack",
+    "originRef": "era-ERA01.json",
+    "rawRepresentation": null,
+    "note": "碳年候选席离线案例包"
+  },
+  "note": "BCE/CE 跨界坐标基准"
+}

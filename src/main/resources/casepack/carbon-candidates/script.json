@@ -1,0 +1,171 @@
+{
+  "casepackId": "carbon-candidates-v1",
+  "title": "碳年候选席：校准曲线、储库偏移与多峰年代证据",
+  "description": "完整叙事脚本：基线导入->校准/层序->参数修订->局部源改动(曲线升版)->冲突人工决定->时间旅行/导出再导入",
+  "projectName": "碳年候选席-离线案例",
+  "steps": [
+    {
+      "op": "submit",
+      "file": "curve-C01-v1.json"
+    },
+    {
+      "op": "submit",
+      "file": "era-ERA01.json"
+    },
+    {
+      "op": "submit",
+      "file": "offset-H01.json"
+    },
+    {
+      "op": "submit",
+      "file": "offset-H02.json"
+    },
+    {
+      "op": "submit",
+      "file": "measurement-M01.json"
+    },
+    {
+      "op": "submit",
+      "file": "measurement-M02.json"
+    },
+    {
+      "op": "submit",
+      "file": "measurement-M03.json"
+    },
+    {
+      "op": "submit",
+      "file": "measurement-M04.json"
+    },
+    {
+      "op": "submit",
+      "file": "measurement-M05.json"
+    },
+    {
+      "op": "submit",
+      "file": "link-L01.json"
+    },
+    {
+      "op": "submit",
+      "file": "link-L02.json"
+    },
+    {
+      "op": "submit",
+      "file": "exclusion-X01.json"
+    },
+    {
+      "op": "calibrate",
+      "measurementId": "M01",
+      "offsetId": null
+    },
+    {
+      "op": "calibrate",
+      "measurementId": "M02",
+      "offsetId": null
+    },
+    {
+      "op": "calibrate",
+      "measurementId": "M03",
+      "offsetId": null
+    },
+    {
+      "op": "calibrate",
+      "measurementId": "M03",
+      "offsetId": "H02"
+    },
+    {
+      "op": "calibrate",
+      "measurementId": "M04",
+      "offsetId": null
+    },
+    {
+      "op": "calibrate",
+      "measurementId": "M05",
+      "offsetId": null
+    },
+    {
+      "op": "sequence",
+      "linkId": "L01"
+    },
+    {
+      "op": "sequence",
+      "linkId": "L02"
+    },
+    {
+      "op": "revise",
+      "file": "offset-H02-v2.json"
+    },
+    {
+      "op": "calibrate",
+      "measurementId": "M03",
+      "offsetId": "H02"
+    },
+    {
+      "op": "submit",
+      "file": "curve-C01-v2.json"
+    },
+    {
+      "op": "calibrate",
+      "measurementId": "M01",
+      "offsetId": null
+    },
+    {
+      "op": "calibrate",
+      "measurementId": "M02",
+      "offsetId": null
+    },
+    {
+      "op": "calibrate",
+      "measurementId": "M03",
+      "offsetId": null
+    },
+    {
+      "op": "calibrate",
+      "measurementId": "M04",
+      "offsetId": null
+    },
+    {
+      "op": "calibrate",
+      "measurementId": "M05",
+      "offsetId": null
+    },
+    {
+      "op": "sequence",
+      "linkId": "L01"
+    },
+    {
+      "op": "sequence",
+      "linkId": "L02"
+    },
+    {
+      "op": "assertStale",
+      "measurementId": "M03",
+      "offsetId": "H02"
+    },
+    {
+      "op": "decide",
+      "measurementId": "M02",
+      "accept": false,
+      "intervalRef": "youngest",
+      "reason": "采纳田野排除 X01，否定 S02 最年轻日历区间（不改写测量）"
+    },
+    {
+      "op": "revertDecision",
+      "measurementId": "M02",
+      "intervalRef": "youngest"
+    },
+    {
+      "op": "decide",
+      "measurementId": "M02",
+      "accept": true,
+      "intervalRef": "youngest",
+      "reason": "复核后保留该候选，撤销田野排除（冲突人工决定，写历史）"
+    },
+    {
+      "op": "decide",
+      "measurementId": "M02",
+      "accept": false,
+      "intervalRef": "youngest",
+      "reason": "再次复核：维持 X01 排除（相互冲突的人工决定均留痕）"
+    }
+  ]
+}
